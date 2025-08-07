@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npx tinacms build && hugo --minify"
   publish = "public"
 
 [build.environment]
@@ -8,4 +8,3 @@
 
 [context.production.environment]
   HUGO_ENV = "production"
-  TINA_PUBLIC_IS_LOCAL = "false"
