@@ -1,5 +1,5 @@
 [build]
-  command = "hugo"
+  command = "npm run build"
   publish = "public"
 
 [build.environment]
@@ -8,9 +8,4 @@
 
 [context.production.environment]
   HUGO_ENV = "production"
-
-# Redirect rules for clean URLs
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+  TINA_PUBLIC_IS_LOCAL = "false"

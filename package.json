@@ -1,24 +1,23 @@
 {
   "name": "anoopkurup-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal marketing website built with Hugo and TinaCMS",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tinacms dev -c \"hugo server -D\"",
+    "build": "npx tinacms build && hugo --minify",
+    "tina:dev": "npx tinacms dev",
+    "tina:build": "npx tinacms build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@tinacms/datalayer": "^1.4.1",
-    "next-auth": "^4.24.11",
-    "tinacms": "^2.8.2",
-    "tinacms-authjs": "^11.0.2",
-    "tinacms-gitprovider-github": "^3.0.1",
-    "upstash-redis-level": "^1.1.1"
+    "@tinacms/datalayer": "^1.2.30",
+    "next-auth": "^4.21.1",
+    "tinacms": "^2.2.1",
+    "tinacms-authjs": "^1.0.2",
+    "tinacms-gitprovider-github": "^1.0.12",
+    "upstash-redis-level": "^1.0.0"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.10.2",
-    "@types/node": "^24.2.0"
+    "@tinacms/cli": "^1.5.30",
+    "@types/node": "^20.0.0"
   }
 }
