@@ -1,0 +1,16 @@
+[build]
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.120.4"
+  NODE_VERSION = "18"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+# Redirect rules for clean URLs
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
