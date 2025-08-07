@@ -1,13 +1,10 @@
 [build]
-  command = "npx tinacms build && hugo --minify"
+  command = "hugo --minify"
   publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.120.4"
   NODE_VERSION = "18"
-  NEXT_PUBLIC_TINA_CLIENT_ID = "fce89899-bd8b-4948-9eff-f1550ea39cbf"
-  TINA_TOKEN = "43dcd94a0752723f5a28f5d95b49c7db151cb833"
-  TINA_PUBLIC_IS_LOCAL = "false"
 
 [context.production.environment]
   HUGO_ENV = "production"
