@@ -1,0 +1,36 @@
+baseURL: 'https://anoopkurup.com'
+languageCode: 'en-us'
+title: 'Anoop Kurup - B2B Marketing Strategist'
+theme: ''
+
+params:
+  description: 'Professional B2B marketing consultant with 18+ years of experience in lead generation and content marketing'
+  author: 'Anoop Kurup'
+  email: 'contact@anoopkurup.com'
+  phone: '+91-XXXXXXXXXX'
+
+menu:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 1
+    - name: 'About'
+      url: '/about/'
+      weight: 2
+    - name: 'Services'
+      url: '/services/'
+      weight: 3
+    - name: 'Courses'
+      url: '/courses/'
+      weight: 4
+    - name: 'Blog'
+      url: '/blog/'
+      weight: 5
+    - name: 'Contact'
+      url: '/contact/'
+      weight: 6
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
