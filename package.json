@@ -1,29 +1,9 @@
 {
   "name": "anoopkurup-website",
   "version": "1.0.0",
-  "description": "Personal marketing website built with Hugo and TinaCMS",
-  "main": "index.js",
+  "description": "Hugo website",
   "scripts": {
-    "dev": "npx tinacms dev -c \"hugo server -D\"",
-    "build": "npx tinacms build && hugo --minify",
-    "tina:dev": "npx tinacms dev",
-    "tina:build": "npx tinacms build",
-    "hugo:dev": "hugo server -D",
-    "hugo:build": "hugo --minify"
-  },
-  "keywords": [
-    "hugo",
-    "tinacms",
-    "marketing",
-    "website"
-  ],
-  "author": "Anoop Kurup",
-  "license": "ISC",
-  "dependencies": {
-    "tinacms": "^2.8.2"
-  },
-  "devDependencies": {
-    "@tinacms/cli": "^1.10.2",
-    "@types/node": "^24.2.0"
+    "build": "hugo --minify",
+    "dev": "hugo server -D"
   }
 }
