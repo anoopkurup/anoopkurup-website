@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="consultation-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <p class="page-description">{{ .Description }}</p>
+    </div>
+</section>
+
+<section class="consultation-content">
+    <div class="container">
+        <div class="consultation-wrapper">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+
+<style>
+.consultation-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+}
+
+.consultation-content {
+    padding: var(--spacing-2xl) 0;
+}
+
+.consultation-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.consultation-booking {
+    background: var(--background-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin: var(--spacing-xl) 0;
+    border: 1px solid var(--border-light);
+}
+
+.consultation-booking p {
+    margin-bottom: var(--spacing-md);
+}
+
+.consultation-booking small {
+    display: block;
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+}
+</style>
+{{ end }}
