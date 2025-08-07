@@ -11,7 +11,12 @@
     "hugo:dev": "hugo server -D",
     "hugo:build": "hugo --minify"
   },
-  "keywords": ["hugo", "tinacms", "marketing", "website"],
+  "keywords": [
+    "hugo",
+    "tinacms",
+    "marketing",
+    "website"
+  ],
   "author": "Anoop Kurup",
   "license": "ISC",
   "dependencies": {
