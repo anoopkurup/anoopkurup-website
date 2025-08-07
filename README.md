@@ -1,2 +1,1 @@
-# anoopkurup-website
-Personal marketing website
+# Anoop Kurup - Marketing Website
