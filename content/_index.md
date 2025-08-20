@@ -3,7 +3,7 @@ title: "Anoop Kurup - Clarity. Strategy. Systems."
 description: "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."
 
 hero:
-  title: "👉 Clarity. Strategy. Systems."
+  title: "Clarity. Strategy. Systems."
   subtitle: "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."
   primary_button:
     text: "Work With Me"

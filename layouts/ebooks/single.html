@@ -152,6 +152,48 @@
   </section>
 {{ end }}
 
+<!-- Testimonials -->
+{{ if .Params.testimonials }}
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Readers Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        {{ range .Params.testimonials }}
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>{{ .quote }}</p>
+              <div class="testimonial-author">— {{ .author }}</div>
+              {{ with .ebook }}<div style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">{{ . }}</div>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- FAQ Section -->
+{{ if .Params.faq }}
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="grid-2">
+        {{ range .Params.faq }}
+          <div class="card">
+            <h3>{{ .question }}</h3>
+            <p>{{ .answer | markdownify }}</p>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+
 {{ if .Params.newsletter }}
   <section class="newsletter">
     <div class="container">
