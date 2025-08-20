@@ -1,3 +1,134 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://anoopkurup.com"
+languageCode = "en-us"
+title = "Anoop Kurup"
+theme = ""
+
+[params]
+  description = "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."
+  author = "Anoop Kurup"
+  email = "mail@anoopkurup.com"
+  
+  # Social media links
+  linkedin = "#"
+  youtube = "#"
+  instagram = "#"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+  
+  [[menu.main]]
+    name = "Fix your Marketing"
+    url = "/consulting/"
+    weight = 30
+  
+  [[menu.main]]
+    name = "Workshops"
+    url = "/workshops/"
+    weight = 40
+    hasChildren = true
+  
+  [[menu.main]]
+    name = "AI Lead Machine"
+    url = "/workshops/ai-lead-machine/"
+    parent = "Workshops"
+    weight = 41
+  
+  [[menu.main]]
+    name = "100 Day Sprint"
+    url = "/workshops/100-days-sprint/"
+    parent = "Workshops"
+    weight = 42
+  
+  [[menu.main]]
+    name = "AI Solutions"
+    url = "/ai-solutions/"
+    weight = 50
+  
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 60
+  
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 70
+
+  # Footer menu
+  [[menu.footer_primary]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  
+  [[menu.footer_primary]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+  
+  [[menu.footer_primary]]
+    name = "Consulting"
+    url = "/consulting/"
+    weight = 30
+  
+  [[menu.footer_primary]]
+    name = "Workshops"
+    url = "/workshops/"
+    weight = 40
+  
+  [[menu.footer_primary]]
+    name = "AI Solutions"
+    url = "/ai-solutions/"
+    weight = 50
+  
+  [[menu.footer_primary]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 60
+  
+  [[menu.footer_primary]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 70
+
+  [[menu.footer_secondary]]
+    name = "Approach"
+    url = "/approach/"
+    weight = 10
+  
+  [[menu.footer_secondary]]
+    name = "Podcast"
+    url = "/podcast/"
+    weight = 20
+  
+  [[menu.footer_secondary]]
+    name = "E-Books"
+    url = "/ebooks/"
+    weight = 30
+  
+  [[menu.footer_secondary]]
+    name = "AI Prompts and Workflows"
+    url = "/ai-workflows/"
+    weight = 40
+
+  [[menu.footer_legal]]
+    name = "Privacy Policy"
+    url = "/legal/privacy-policy/"
+    weight = 10
+  
+  [[menu.footer_legal]]
+    name = "Terms and Conditions"
+    url = "/legal/terms-conditions/"
+    weight = 20
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

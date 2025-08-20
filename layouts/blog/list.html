@@ -1,0 +1,193 @@
+{{ define "main" }}
+<!-- Hero -->
+<header style="background: var(--antiflash-white); padding: 80px 0;">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p style="font-size: 1.125rem; color: var(--charcoal); max-width: 740px;">
+      {{ .Description | default "Articles on growth strategy, positioning, and AI-enabled lead generation for professional service businesses." }}
+    </p>
+  </div>
+</header>
+
+<!-- Blog Grid -->
+<main class="blog">
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Sample blog posts -->
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Aug 18, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>8 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">Offer Architecture: The Backbone of a Predictable Lead Engine</a></h3>
+            <p>Turn scattered services into a laddered offer suite that shortens sales cycles and raises close rates.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Strategy</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Offers</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Aug 10, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>6 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">The Positioning Matrix for B2B Services</a></h3>
+            <p>Map your services against pain, urgency, and value to find a defendable, premium position in your market.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Positioning</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Strategy</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Aug 02, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>9 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">From AIDA to AI: Turning Messaging Frameworks into Workflows</a></h3>
+            <p>Operationalize classic copy frameworks with prompt chains that output consistent, on-brand content.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Messaging</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">AI & Automation</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Jul 26, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>7 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">A LinkedIn Content System That Scales Without Burning Out</a></h3>
+            <p>Design an idea pipeline, batching cadence, and repurposing rhythm that compounds reach.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">LinkedIn</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Workflows</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Jul 18, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>5 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">Pricing Signals: What Your Rates Tell Prospects</a></h3>
+            <p>Use pricing to reinforce your positioning, not sabotage it—without competing on discounts.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Positioning</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Strategy</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card animate-fade-in">
+          <div class="blog-image">
+            <div class="icon-article" aria-hidden="true"></div>
+          </div>
+          <div class="blog-content">
+            <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <span>Jul 10, 2025</span>
+              <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+              <span>10 min read</span>
+            </div>
+            <h3><a class="card-link" href="#">The MQL–SQL Handshake: Fixing the Drop-Off</a></h3>
+            <p>Align definitions, SLAs, and handovers so leads aren't lost between marketing and sales.</p>
+            <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Workflows</span>
+              <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Strategy</span>
+            </div>
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- If you have actual blog posts, they will also show here -->
+        {{ range .Pages }}
+          <article class="blog-card animate-fade-in">
+            <div class="blog-image">
+              <div class="icon-article" aria-hidden="true"></div>
+            </div>
+            <div class="blog-content">
+              <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+                <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+                <span>{{ .Params.read_time | default "5 min read" }}</span>
+              </div>
+              <h3><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p>{{ .Summary }}</p>
+              {{ if .Params.tags }}
+                <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
+                  {{ range .Params.tags }}
+                    <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+            <div class="blog-author">
+              By <a href="{{ "about/" | relURL }}" class="author-link">{{ .Params.author | default "Anoop Kurup" }}</a>
+            </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Get the Lead Machine Newsletter</h2>
+      <p>Actionable ideas on strategy, positioning, and AI workflows. No fluff—just systems that work.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="you@company.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</main>
+{{ end }}

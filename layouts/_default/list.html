@@ -1,0 +1,131 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text animate-fade-in">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="subtitle">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.hero.subtitle }}
+        <p class="subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="hero-image animate-fade-in">
+      <div class="hero-icon"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+{{ if .Content }}
+  <section class="about">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}
+
+<!-- List Items (if any pages exist in this section) -->
+{{ if .Pages }}
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ .Params.list_title | default (printf "%s" .Title) }}</h2>
+        {{ with .Params.list_subtitle }}
+          <p>{{ . }}</p>
+        {{ end }}
+      </div>
+      
+      <div class="grid-3">
+        {{ range .Pages }}
+          <div class="card animate-fade-in">
+            {{ with .Params.icon }}
+              <div class="card-icon {{ . }}"></div>
+            {{ end }}
+            <h3><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Description }}
+              <p>{{ . }}</p>
+            {{ else }}
+              <p>{{ .Summary }}</p>
+            {{ end }}
+            {{ if .Params.tags }}
+              <div class="tags" style="margin-top: 1rem;">
+                {{ range .Params.tags }}
+                  <span class="tag">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- Custom Sections from Front Matter -->
+{{ range .Params.sections }}
+  <section class="{{ .class }}">
+    <div class="container">
+      {{ if .header }}
+        <div class="section-header">
+          <h2>{{ .header.title }}</h2>
+          {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+        </div>
+      {{ end }}
+      
+      {{ if eq .type "grid" }}
+        <div class="{{ .grid_class | default "grid-3" }}">
+          {{ range .items }}
+            <div class="card">
+              {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+              <h3>{{ .title }}</h3>
+              <p>{{ .description | markdownify }}</p>
+              {{ with .link }}<a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>{{ end }}
+            </div>
+          {{ end }}
+        </div>
+      {{ else if eq .type "timeline" }}
+        <div class="timeline">
+          {{ range .items }}
+            <div class="timeline-item">
+              <div class="timeline-number">{{ .number }}</div>
+              <div class="timeline-content">
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ else if eq .type "content" }}
+        {{ .content | markdownify }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+
+<!-- Newsletter CTA (if enabled) -->
+{{ if .Params.newsletter }}
+  <section class="newsletter">
+    <div class="container">
+      <h2>{{ .Params.newsletter.title }}</h2>
+      <p>{{ .Params.newsletter.subtitle }}</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="{{ .Params.newsletter.placeholder | default "you@example.com" }}" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+{{ end }}
+
+<!-- CTA Section (if defined) -->
+{{ if .Params.cta }}
+  <section class="cta">
+    <div class="container">
+      <h2>{{ .Params.cta.title }}</h2>
+      <p>{{ .Params.cta.subtitle }}</p>
+      <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+  </section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,101 @@
+{{ define "main" }}
+<!-- Hero Section -->
+{{ if .Params.hero }}
+<section class="hero {{ .Params.hero.class }}">
+    <div class="container hero-content">
+        <div class="hero-text animate-fade-in">
+            <h1>{{ .Params.hero.title | default .Title }}</h1>
+            {{ with .Params.hero.subtitle }}
+                <p class="subtitle">{{ . | markdownify }}</p>
+            {{ end }}
+            {{ if .Params.hero.buttons }}
+                <div class="btn-group">
+                    {{ range .Params.hero.buttons }}
+                        <a href="{{ .url | relURL }}" class="btn {{ .class | default "btn-primary" }}">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+        {{ if .Params.hero.image }}
+            <div class="hero-image animate-fade-in">
+                <div class="hero-icon {{ .Params.hero.image.class }}"></div>
+            </div>
+        {{ end }}
+    </div>
+</section>
+{{ else }}
+<!-- Default Hero for pages without hero params -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text animate-fade-in">
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}
+                <p class="subtitle">{{ . }}</p>
+            {{ end }}
+        </div>
+        <div class="hero-image animate-fade-in">
+            <div class="hero-icon"></div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+<!-- Main Content -->
+<section class="{{ .Params.content_class | default "about" }}">
+    <div class="container">
+        {{ .Content }}
+    </div>
+</section>
+
+<!-- Custom Sections -->
+{{ range .Params.sections }}
+    <section class="{{ .class }}">
+        <div class="container">
+            {{ if .header }}
+                <div class="section-header">
+                    <h2>{{ .header.title }}</h2>
+                    {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if eq .type "grid" }}
+                <div class="{{ .grid_class | default "grid-3" }}">
+                    {{ range .items }}
+                        <div class="card">
+                            {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+                            <h3>{{ .title }}</h3>
+                            <p>{{ .description | markdownify }}</p>
+                            {{ with .link }}<a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>{{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "timeline" }}
+                <div class="timeline">
+                    {{ range .items }}
+                        <div class="timeline-item">
+                            <div class="timeline-number">{{ .number }}</div>
+                            <div class="timeline-content">
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "content" }}
+                {{ .content | markdownify }}
+            {{ end }}
+        </div>
+    </section>
+{{ end }}
+
+<!-- CTA Section -->
+{{ if .Params.cta }}
+<section class="cta">
+    <div class="container">
+        <h2>{{ .Params.cta.title }}</h2>
+        <p>{{ .Params.cta.subtitle }}</p>
+        <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+</section>
+{{ end }}
+{{ end }}

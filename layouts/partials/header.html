@@ -1,0 +1,32 @@
+<!-- Navigation -->
+<nav class="header-nav">
+    <div class="nav-container">
+        <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title | default "Anoop Kurup" }}</a>
+        <ul class="nav-links" id="navLinks">
+            {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+                    <li class="dropdown">
+                        <span class="dropdown-toggle">
+                            <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                        </span>
+                        <ul class="dropdown-menu">
+                            {{ range .Children }}
+                                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ else }}
+                    <li><a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                {{ end }}
+            {{ end }}
+            <li class="nav-cta">
+                <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Book a Call</a>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,167 @@
+{{ define "main" }}
+<!-- Add inline styles to ensure they're applied -->
+<style>
+.ebooks-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: start;
+}
+
+.ebook-card-custom {
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 320px;
+}
+
+.ebook-card-custom:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.ebook-image-custom {
+  padding: 2rem;
+  background: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.ebook-cover-custom {
+  max-width: 120px;
+  max-height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.cover-fallback-custom {
+  width: 120px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--oxford-blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.ebook-content-custom {
+  padding: 1.5rem;
+}
+
+.ebook-content-custom h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--oxford-blue);
+  font-weight: 600;
+}
+
+.ebook-content-custom h3 a {
+  color: var(--azure);
+  text-decoration: none;
+}
+
+.ebook-content-custom h3 a:hover {
+  color: var(--oxford-blue);
+}
+
+@media (max-width: 768px) {
+  .ebooks-grid-custom {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>{{ .Params.hero.title | default .Title }}</h1>
+      <p class="subtitle">{{ .Params.hero.subtitle | default .Description }}</p>
+      {{ if .Params.hero.buttons }}
+        <div class="btn-group">
+          {{ range .Params.hero.buttons }}
+            <a class="btn {{ .class | default "btn-primary" }}" href="{{ .url | relURL }}">{{ .text }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    <div class="hero-image">
+      <div class="hero-icon"></div>
+    </div>
+  </div>
+</section>
+
+<!-- E-Books Grid -->
+<section class="ebooks" style="background: var(--white); padding: 80px 0;">
+  <div class="container">
+    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+      <h2>All E-Books</h2>
+      <p>Click a cover to view or download. Descriptions are intentionally short so you can scan fast.</p>
+    </div>
+
+    <div class="ebooks-grid-custom">
+      {{ range .Params.ebooks }}
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            {{ if .cover_image }}
+              <img class="ebook-cover-custom" src="{{ .cover_image | relURL }}" alt="{{ .title }} cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            {{ else }}
+              <div class="cover-fallback-custom">E-BOOK</div>
+            {{ end }}
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="{{ .download_url }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="{{ "about/" | relURL }}" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">{{ .description }}</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              {{ range .tags }}
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+              {{ end }}
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              {{ if .pages }}{{ .pages }} pages{{ end }}{{ if and .pages .price }} • {{ end }}{{ if .price }}{{ .price }}{{ end }}
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ if .Content }}
+  <section class="about">
+    <div class="container">{{ .Content }}</div>
+  </section>
+{{ end }}
+
+{{ if .Params.newsletter }}
+  <section class="newsletter">
+    <div class="container">
+      <h2>{{ .Params.newsletter.title }}</h2>
+      <p>{{ .Params.newsletter.subtitle }}</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+        <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
+        <button type="submit">Get Samples</button>
+      </form>
+    </div>
+  </section>
+{{ end }}
+{{ end }}

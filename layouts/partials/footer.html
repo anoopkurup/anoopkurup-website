@@ -1,0 +1,44 @@
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-main">
+            <!-- Column 1: Brand -->
+            <div class="footer-brand">
+                <div>
+                    <a href="{{ .Site.BaseURL }}" class="footer-logo">{{ .Site.Title | default "Anoop Kurup" }}</a>
+                    <p class="footer-description">
+                        {{ .Site.Params.description | default "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution." }}
+                    </p>
+                </div>
+                <div class="footer-social">
+                    {{ with .Site.Params.linkedin }}<a href="{{ . }}" class="social-icon icon-linkedin" aria-label="LinkedIn"></a>{{ end }}
+                    {{ with .Site.Params.youtube }}<a href="{{ . }}" class="social-icon icon-youtube" aria-label="YouTube"></a>{{ end }}
+                    {{ with .Site.Params.instagram }}<a href="{{ . }}" class="social-icon icon-instagram" aria-label="Instagram"></a>{{ end }}
+                </div>
+            </div>
+            
+            <!-- Column 2: Primary Links -->
+            <nav class="footer-links">
+                {{ range .Site.Menus.footer_primary }}
+                    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                {{ end }}
+            </nav>
+            
+            <!-- Column 3: Secondary Links -->
+            <nav class="footer-links">
+                {{ range .Site.Menus.footer_secondary }}
+                    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                {{ end }}
+            </nav>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title | default "Anoop Kurup" }}. All rights reserved.</p>
+            <div class="footer-legal">
+                {{ range .Site.Menus.footer_legal }}
+                    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>

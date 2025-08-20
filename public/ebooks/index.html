@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Books Library | Anoop Kurup</title>
+<meta name="description" content="Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.">
+
+
+<link rel="stylesheet" href="/css/amksite-css2.css">
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/ebooks/">
+<meta property="og:title" content="E-Books Library">
+<meta property="og:description" content="Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.">
+
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="http://localhost:1313/ebooks/">
+<meta property="twitter:title" content="E-Books Library">
+<meta property="twitter:description" content="Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.">
+
+
+
+</head>
+<body>
+    
+<nav class="header-nav">
+    <div class="nav-container">
+        <a href="http://localhost:1313/" class="logo">Anoop Kurup</a>
+        <ul class="nav-links" id="navLinks">
+            
+                
+                    <li><a href="/">Home</a></li>
+                
+            
+                
+                    <li><a href="/about/">About</a></li>
+                
+            
+                
+                    <li><a href="/consulting/">Fix your Marketing</a></li>
+                
+            
+                
+                    <li class="dropdown">
+                        <span class="dropdown-toggle">
+                            <a href="/workshops/">Workshops</a>
+                        </span>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="/workshops/ai-lead-machine/">AI Lead Machine</a></li>
+                            
+                                <li><a href="/workshops/100-days-sprint/">100 Day Sprint</a></li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li><a href="/ai-solutions/">AI Solutions</a></li>
+                
+            
+                
+                    <li><a href="/blog/">Blog</a></li>
+                
+            
+                
+                    <li><a href="/contact/">Contact</a></li>
+                
+            
+            <li class="nav-cta">
+                <a href="/contact/" class="btn btn-primary">Book a Call</a>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+    
+    <main>
+        
+
+<style>
+.ebooks-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: start;
+}
+
+.ebook-card-custom {
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 320px;
+}
+
+.ebook-card-custom:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.ebook-image-custom {
+  padding: 2rem;
+  background: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.ebook-cover-custom {
+  max-width: 120px;
+  max-height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.cover-fallback-custom {
+  width: 120px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--oxford-blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.ebook-content-custom {
+  padding: 1.5rem;
+}
+
+.ebook-content-custom h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--oxford-blue);
+  font-weight: 600;
+}
+
+.ebook-content-custom h3 a {
+  color: var(--azure);
+  text-decoration: none;
+}
+
+.ebook-content-custom h3 a:hover {
+  color: var(--oxford-blue);
+}
+
+@media (max-width: 768px) {
+  .ebooks-grid-custom {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>E-Books Library</h1>
+      <p class="subtitle">Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.</p>
+      
+        <div class="btn-group">
+          
+            <a class="btn btn-primary" href="/#all-ebooks">Browse All</a>
+          
+            <a class="btn btn-secondary" href="/#free">Free Downloads</a>
+          
+        </div>
+      
+    </div>
+    <div class="hero-image">
+      <div class="hero-icon"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ebooks" style="background: var(--white); padding: 80px 0;">
+  <div class="container">
+    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+      <h2>All E-Books</h2>
+      <p>Click a cover to view or download. Descriptions are intentionally short so you can scan fast.</p>
+    </div>
+
+    <div class="ebooks-grid-custom">
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/sample1.png" alt="The Lead Machine Method™ cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/the-lead-machine-method.pdf" target="_blank" rel="noopener">The Lead Machine Method™</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">Turn scattered marketing into a predictable pipeline using systems, not hacks. Includes frameworks and worksheets.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Strategy</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              45 pages • Free
+            </div>
+          </div>
+        </article>
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/sample2.jpg" alt="AI Lead Machine Playbook cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/ai-lead-machine-playbook.pdf" target="_blank" rel="noopener">AI Lead Machine Playbook</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">Prompts and workflows to automate content and capture demand—without losing your brand&#39;s voice.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">AI &amp; Automation</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              52 pages • $29
+            </div>
+          </div>
+        </article>
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/linkedin-post-systems.jpg" alt="LinkedIn Post Systems cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/linkedin-post-systems.pdf" target="_blank" rel="noopener">LinkedIn Post Systems</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">Proven formats, swipe files, and planning templates to build authority and inbound leads.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Content</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              38 pages • $19
+            </div>
+          </div>
+        </article>
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/instagram-content-engine.jpg" alt="Instagram Content Engine cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/instagram-content-engine.pdf" target="_blank" rel="noopener">Instagram Content Engine</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">A lightweight system for consistent, on-brand posts and stories that convert attention into leads.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Content</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              34 pages • $19
+            </div>
+          </div>
+        </article>
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/blog-article-blueprint.jpg" alt="Blog Article Blueprint cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/blog-article-blueprint.pdf" target="_blank" rel="noopener">Blog Article Blueprint</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">Research-to-draft workflows for authority-building, SEO-friendly articles in half the time.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Writing</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              41 pages • $24
+            </div>
+          </div>
+        </article>
+      
+        <article class="ebook-card-custom animate-fade-in">
+          <div class="ebook-image-custom">
+            
+              <img class="ebook-cover-custom" src="/covers/positioning-playbook.jpg" alt="Positioning Playbook cover"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
+            
+          </div>
+          
+          <div class="ebook-content-custom">
+            <h3><a href="https://your-external-server.com/ebooks/positioning-playbook.pdf" target="_blank" rel="noopener">Positioning Playbook</a></h3>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
+              By <a href="/about/" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">Sharpen your value proposition and make competitors irrelevant with clear, confident messaging.</p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              
+                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">Positioning</span>
+              
+            </div>
+            
+            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+              67 pages • $34
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+
+  <section class="about">
+    <div class="container"><h2 id="about-the-e-books">About the E-Books</h2>
+<p>Each guide is designed to be immediately actionable. You won&rsquo;t find theoretical fluff or generic advice—just proven frameworks, templates, and step-by-step processes you can implement today.</p>
+<h3 id="whats-included">What&rsquo;s Included:</h3>
+<ul>
+<li><strong>Step-by-step frameworks</strong> for each topic</li>
+<li><strong>Editable templates</strong> you can customize for your business</li>
+<li><strong>Real examples</strong> from successful implementations</li>
+<li><strong>Checklists and worksheets</strong> to guide your progress</li>
+<li><strong>Lifetime updates</strong> as I improve and expand the content</li>
+</ul>
+<h3 id="perfect-for">Perfect For:</h3>
+<ul>
+<li>Marketing managers and directors</li>
+<li>Business owners and founders</li>
+<li>Consultants and agencies</li>
+<li>Anyone building systematic marketing processes</li>
+</ul>
+</div>
+  </section>
+
+
+
+  <section class="newsletter">
+    <div class="container">
+      <h2>Want Free Chapters?</h2>
+      <p>Join the newsletter and get sample chapters &#43; templates from new e-books as they launch.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+        <input type="email" placeholder="you@company.com" required />
+        <button type="submit">Get Samples</button>
+      </form>
+    </div>
+  </section>
+
+
+    </main>
+    
+    
+<footer>
+    <div class="footer-content">
+        <div class="footer-main">
+            
+            <div class="footer-brand">
+                <div>
+                    <a href="http://localhost:1313/" class="footer-logo">Anoop Kurup</a>
+                    <p class="footer-description">
+                        I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon icon-linkedin" aria-label="LinkedIn"></a>
+                    <a href="#" class="social-icon icon-youtube" aria-label="YouTube"></a>
+                    <a href="#" class="social-icon icon-instagram" aria-label="Instagram"></a>
+                </div>
+            </div>
+            
+            
+            <nav class="footer-links">
+                
+                    <a href="/">Home</a>
+                
+                    <a href="/about/">About</a>
+                
+                    <a href="/consulting/">Consulting</a>
+                
+                    <a href="/workshops/">Workshops</a>
+                
+                    <a href="/ai-solutions/">AI Solutions</a>
+                
+                    <a href="/blog/">Blog</a>
+                
+                    <a href="/contact/">Contact</a>
+                
+            </nav>
+            
+            
+            <nav class="footer-links">
+                
+                    <a href="/approach/">Approach</a>
+                
+                    <a href="/podcast/">Podcast</a>
+                
+                    <a href="/ebooks/">E-Books</a>
+                
+                    <a href="/ai-workflows/">AI Prompts and Workflows</a>
+                
+            </nav>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Anoop Kurup. All rights reserved.</p>
+            <div class="footer-legal">
+                
+                    <a href="/legal/privacy-policy/">Privacy Policy</a>
+                
+                    <a href="/legal/terms-conditions/">Terms and Conditions</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
