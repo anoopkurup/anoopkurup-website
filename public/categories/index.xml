@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Anoop Kurup</title>
-    <link>http://localhost:8080/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:8080/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation</title>
-      <link>http://localhost:8080/categories/automation/</link>
+      <link>http://localhost:1313/categories/automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/automation/</guid>
+      <guid>http://localhost:1313/categories/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:8080/categories/blog/</link>
+      <link>http://localhost:1313/categories/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/blog/</guid>
+      <guid>http://localhost:1313/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Email</title>
-      <link>http://localhost:8080/categories/email/</link>
+      <link>http://localhost:1313/categories/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/email/</guid>
+      <guid>http://localhost:1313/categories/email/</guid>
       <description></description>
     </item>
     <item>
       <title>Instagram</title>
-      <link>http://localhost:8080/categories/instagram/</link>
+      <link>http://localhost:1313/categories/instagram/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/instagram/</guid>
+      <guid>http://localhost:1313/categories/instagram/</guid>
       <description></description>
     </item>
     <item>
       <title>LinkedIn</title>
-      <link>http://localhost:8080/categories/linkedin/</link>
+      <link>http://localhost:1313/categories/linkedin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/linkedin/</guid>
+      <guid>http://localhost:1313/categories/linkedin/</guid>
       <description></description>
     </item>
     <item>
       <title>Research</title>
-      <link>http://localhost:8080/categories/research/</link>
+      <link>http://localhost:1313/categories/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/research/</guid>
+      <guid>http://localhost:1313/categories/research/</guid>
       <description></description>
     </item>
     <item>
       <title>SEO</title>
-      <link>http://localhost:8080/categories/seo/</link>
+      <link>http://localhost:1313/categories/seo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/seo/</guid>
+      <guid>http://localhost:1313/categories/seo/</guid>
       <description></description>
     </item>
     <item>
       <title>Strategy</title>
-      <link>http://localhost:8080/categories/strategy/</link>
+      <link>http://localhost:1313/categories/strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/categories/strategy/</guid>
+      <guid>http://localhost:1313/categories/strategy/</guid>
       <description></description>
     </item>
   </channel>

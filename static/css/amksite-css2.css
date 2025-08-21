@@ -787,83 +787,47 @@ p {
     margin: 0 auto 3rem;
 }
 
-/* Modern Timeline Design - Card-based Vertical Layout */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    max-width: 860px;
-    margin: 3rem auto 0;
+    position: relative;
+    margin-top: 3rem;
 }
 
 .timeline-item {
-    background: var(--white);
-    border-radius: 14px;
-    padding: 40px 36px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
 }
 
 .timeline-number {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     background: var(--gamboge);
-    color: var(--white);
-    border-radius: 999px;
-    display: inline-flex;
+    color: var(--oxford-blue);
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 16px;
-    margin: 0 auto 16px;
+    font-size: 1.25rem;
+    flex-shrink: 0;
 }
 
 .timeline-content h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: var(--oxford-blue);
-    text-align: center;
+    color: var(--white);
+    margin-bottom: 0.5rem;
 }
 
 .timeline-content p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--charcoal);
-    max-width: 55ch;
-    margin: 0 auto;
-    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
 }
 
-/* Responsive timeline design */
 @media (max-width: 768px) {
     .timeline-item {
-        padding: 28px 22px;
-        max-width: 96%;
-    }
-    
-    .timeline-content h3 {
-        font-size: 1.15rem;
-    }
-    
-    .timeline-content p {
-        font-size: 0.98rem;
-    }
-}
-
-/* Accessibility improvements */
-@media (prefers-contrast: more) {
-    .timeline-item {
-        outline: 2px solid rgba(15, 23, 42, 0.18);
-        box-shadow: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .timeline-item {
-        transition: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
