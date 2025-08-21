@@ -2,10 +2,6 @@
 title: "Contact"
 description: "Get in touch to discuss how we can work together on your marketing strategy and lead generation system."
 
-hero:
-  title: "Let's Talk"
-  subtitle: "Have a project in mind? Want to explore how we can work together? Drop me a message and I'll get back to you soon."
-
 contact_info:
   email: "anoop@example.com"
   social:

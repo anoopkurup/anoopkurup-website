@@ -2,18 +2,6 @@
 title: "Click, Brand & Beyond — Podcast"
 description: "Real conversations on strategy, positioning, and building lead engines that actually work. Bite-sized, practical, and zero fluff."
 
-hero:
-  title: "Click, Brand & Beyond — Podcast"
-  subtitle: "Real conversations on strategy, positioning, and building lead engines that actually work. Bite-sized, practical, and zero fluff."
-  class: "podcast-hero"
-  buttons:
-    - text: "Browse Episodes"
-      url: "#episodes"
-      class: "btn-primary"
-    - text: "Subscribe"
-      url: "#subscribe"
-      class: "btn-secondary"
-
 # Podcast episodes data
 episodes:
   - number: "009"

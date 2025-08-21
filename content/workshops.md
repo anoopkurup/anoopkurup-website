@@ -2,19 +2,6 @@
 title: "Workshops"
 description: "Hands-on, AI-enabled workshops to build a predictable lead generation system: AI Lead Machine and 100 Days Lead Generation Sprint."
 
-hero:
-  title: "Workshops That Turn Strategy Into Action"
-  subtitle: |
-    My workshops are hands-on, practical, and built to help your business create lead generation systems that actually work.
-    No theory. No fluff. Just clear strategy, frameworks, and AI-enabled execution you can put to use immediately.
-  buttons:
-    - text: "AI Lead Machine"
-      url: "#ai-lead-machine"
-      class: "btn-primary"
-    - text: "100 Days Sprint"
-      url: "#sprint-100"
-      class: "btn-secondary"
-
 sections:
   - type: "grid"
     class: "about"

@@ -1,18 +1,14 @@
 {{ define "main" }}
 <!-- Hero Section -->
 <section class="hero">
-  <div class="container hero-content">
-    <div class="hero-text animate-fade-in">
-      <h1>{{ .Title }}</h1>
-      {{ with .Description }}
-        <p class="subtitle">{{ . }}</p>
-      {{ end }}
-      {{ with .Params.hero.subtitle }}
-        <p class="subtitle">{{ . }}</p>
-      {{ end }}
-    </div>
-    <div class="hero-image animate-fade-in">
-      <div class="hero-icon"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="subtitle">{{ . }}</p>
+        {{ end }}
+      </div>
     </div>
   </div>
 </section>

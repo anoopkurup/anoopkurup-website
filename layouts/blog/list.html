@@ -1,13 +1,15 @@
 {{ define "main" }}
 <!-- Hero -->
-<header style="background: var(--antiflash-white); padding: 80px 0;">
+<section class="hero">
   <div class="container">
-    <h1>{{ .Title }}</h1>
-    <p style="font-size: 1.125rem; color: var(--charcoal); max-width: 740px;">
-      {{ .Description | default "Articles on growth strategy, positioning, and AI-enabled lead generation for professional service businesses." }}
-    </p>
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Description | default "Articles on growth strategy, positioning, and AI-enabled lead generation for professional service businesses." }}</p>
+      </div>
+    </div>
   </div>
-</header>
+</section>
 
 <!-- Blog Grid -->
 <main class="blog">

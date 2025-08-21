@@ -1,11 +1,6 @@
 ---
 title: "About"
-description: "Clarity. Systems. Growth. I help professional services and tech-enabled businesses escape chaotic marketing and build systems that consistently generate leads."
-
-hero:
-  title: "Clarity. Systems. Growth."
-  subtitle: "I help professional services and tech-enabled businesses escape chaotic marketing and build systems that consistently generate leads."
-  class: "about"
+description: "I help professional services and tech-enabled businesses escape chaotic marketing and build systems that consistently generate leads."
 
 sections:
   - type: "content"

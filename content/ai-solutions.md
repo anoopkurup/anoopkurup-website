@@ -2,17 +2,6 @@
 title: "AI Solutions"
 description: "AI tools that make marketing cheaper, faster, and consistent. Practical, proven solutions designed for professional services and tech-enabled businesses."
 
-hero:
-  title: "AI Tools That Make Marketing Cheaper, Faster, and Consistent"
-  subtitle: |
-    I build AI-powered solutions that take the heavy lifting out of marketing—so your team can focus on creativity, relationships, and growth.
-    
-    These are not experiments. They are **practical, proven solutions** designed for professional services and tech-enabled businesses.
-  buttons:
-    - text: "Explore Solutions"
-      url: "#solutions"
-      class: "btn-primary"
-
 sections:
   - type: "content"
     class: "about"

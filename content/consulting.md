@@ -2,20 +2,6 @@
 title: "Fix Your Marketing"
 description: "Your marketing isn't broken. It's just scattered. I help professional services and tech-enabled businesses fix their marketing by creating clarity, focus, and a repeatable system for generating leads."
 
-hero:
-  title: "Your Marketing Isn't Broken. It's Just Scattered."
-  subtitle: |
-    I help professional services and tech-enabled businesses fix their marketing by creating clarity, focus, and a repeatable system for generating leads.
-    
-    When marketing is aligned to strategy, your business moves from inconsistent campaigns to consistent growth.
-  buttons:
-    - text: "Book a Call"
-      url: "contact/"
-      class: "btn-primary"
-    - text: "See My Approach"
-      url: "approach/"
-      class: "btn-secondary"
-
 sections:
   - type: "content"
     class: "about"

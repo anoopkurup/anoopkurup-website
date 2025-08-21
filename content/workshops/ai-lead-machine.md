@@ -2,16 +2,6 @@
 title: "AI Lead Machine™"
 description: "Build your predictable lead-generation system in just 6 hours without ads or referrals. Turn AI + free tools into a lead engine that runs on autopilot."
 
-hero:
-  title: "Build Your Predictable Lead-Generation System in Just 6 Hours (Without Ads or Referrals)"
-  subtitle: "Turn AI + free tools into a lead engine that runs on autopilot."
-  buttons:
-    - text: "Reserve Your Seat Now"
-      url: "#pricing"
-      class: "btn-primary"
-  image:
-    class: "icon-robot"
-
 sections:
   - type: "content"
     class: "about"

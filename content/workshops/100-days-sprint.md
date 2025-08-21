@@ -2,14 +2,6 @@
 title: "100 Day Lead Generation Sprint"
 description: "Scale your lead system to 5+ leads per month in 100 days without guesswork or hope. Turn your AI Lead Machine into a predictable revenue engine that works while you sleep."
 
-hero:
-  title: "Scale Your Lead System to 5+ Leads Per Month in 100 Days (Without Guesswork or Hope)"
-  subtitle: "Turn your AI Lead Machine into a predictable revenue engine that works while you sleep."
-  buttons:
-    - text: "Apply for the Sprint"
-      url: "#apply"
-      class: "btn-primary"
-
 sections:
   - type: "content"
     class: "about"

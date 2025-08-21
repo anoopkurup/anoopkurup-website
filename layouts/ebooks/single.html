@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 2rem;
   margin-top: 3rem;
-  justify-content: start;
+  justify-content: center;
 }
 
 .ebook-card-custom {
@@ -16,6 +16,7 @@
   overflow: hidden;
   transition: all 0.3s ease;
   max-width: 320px;
+  text-align: center;
 }
 
 .ebook-card-custom:hover {
@@ -55,6 +56,7 @@
 
 .ebook-content-custom {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .ebook-content-custom h3 {
@@ -82,20 +84,12 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <h1>{{ .Params.hero.title | default .Title }}</h1>
-      <p class="subtitle">{{ .Params.hero.subtitle | default .Description }}</p>
-      {{ if .Params.hero.buttons }}
-        <div class="btn-group">
-          {{ range .Params.hero.buttons }}
-            <a class="btn {{ .class | default "btn-primary" }}" href="{{ .url | relURL }}">{{ .text }}</a>
-          {{ end }}
-        </div>
-      {{ end }}
-    </div>
-    <div class="hero-image">
-      <div class="hero-icon"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Description }}</p>
+      </div>
     </div>
   </div>
 </section>

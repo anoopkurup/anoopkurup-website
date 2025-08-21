@@ -2,17 +2,6 @@
 title: "AI Workflows & Prompt Library"
 description: "Battle-tested workflows and ready-to-use prompts to turn marketing strategy into consistent execution. Browse, filter, and implement immediately."
 
-hero:
-  title: "AI Workflows & Prompt Library"
-  subtitle: "Battle-tested workflows and ready-to-use prompts to turn marketing strategy into consistent execution. Browse, filter, and click through to any workflow's page for full steps, templates, and variations."
-  buttons:
-    - text: "Browse Library"
-      url: "#library"
-      class: "btn-primary"
-    - text: "Request a Custom Workflow"
-      url: "contact/"
-      class: "btn-secondary"
-
 # Workflow categories for filtering
 categories:
   - "LinkedIn"

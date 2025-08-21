@@ -2,18 +2,6 @@
 title: "E-Books Library"
 description: "Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today."
 
-hero:
-  title: "E-Books Library"
-  subtitle: "Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today."
-  class: "hero-ebooks"
-  buttons:
-    - text: "Browse All"
-      url: "#all-ebooks"
-      class: "btn-primary"
-    - text: "Free Downloads"
-      url: "#free"
-      class: "btn-secondary"
-
 # E-books catalog - Local covers, external PDFs
 ebooks:
   - title: "The Lead Machine Method™"

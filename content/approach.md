@@ -2,10 +2,6 @@
 title: "The Lead Machine Method™"
 description: "A structured, AI-enabled approach to transform scattered marketing into a predictable, scalable lead generation system."
 
-hero:
-  title: "The Lead Machine Method™"
-  subtitle: "A structured, AI-enabled approach to transform scattered marketing into a predictable, scalable lead generation system."
-
 sections:
   - type: "content"
     class: "about"
