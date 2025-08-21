@@ -545,7 +545,7 @@
     <div class="container">
       <h2>Get New Workflows in Your Inbox</h2>
       <p>One practical workflow a week. No fluff—just prompts and steps you can use the same day.</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks! You're in.');">
+      <form class="newsletter-form" id="newsletterForm">
         <input type="email" placeholder="you@example.com" aria-label="Email address" required />
         <button type="submit">Subscribe</button>
       </form>
@@ -630,6 +630,15 @@
   const searchInput = document.getElementById('wfSearch');
   const sortSelect = document.getElementById('wfSort');
   const tagBar = document.getElementById('wfTags');
+  const newsletterForm = document.getElementById('newsletterForm');
+
+  
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! You\'re in.');
+    });
+  }
 
   const state = { q: '', tags: new Set(), sort: 'newest' };
 

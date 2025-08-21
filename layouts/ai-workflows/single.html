@@ -145,7 +145,7 @@
     <div class="container">
       <h2>{{ .Params.newsletter.title }}</h2>
       <p>{{ .Params.newsletter.subtitle }}</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks! You're in.');">
+      <form class="newsletter-form" id="newsletterForm">
         <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" aria-label="Email address" required />
         <button type="submit">Subscribe</button>
       </form>
@@ -162,6 +162,15 @@
   const searchInput = document.getElementById('wfSearch');
   const sortSelect = document.getElementById('wfSort');
   const tagBar = document.getElementById('wfTags');
+  const newsletterForm = document.getElementById('newsletterForm');
+
+  // Newsletter form handler
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! You\'re in.');
+    });
+  }
 
   const state = { q: '', tags: new Set(), sort: 'newest' };
 

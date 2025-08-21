@@ -51,17 +51,10 @@
       <description></description>
     </item>
     <item>
-      <title></title>
+      <title>100 Day Lead Generation Sprint</title>
       <link>http://localhost:1313/workshops/100-days-sprint/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/workshops/100-days-sprint/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/workshops/ai-lead-machine/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/workshops/ai-lead-machine/</guid>
       <description></description>
     </item>
     <item>
@@ -69,6 +62,13 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Lead Machine™</title>
+      <link>http://localhost:1313/workshops/ai-lead-machine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshops/ai-lead-machine/</guid>
       <description></description>
     </item>
     <item>
