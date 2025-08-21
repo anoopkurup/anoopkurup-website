@@ -103,6 +103,20 @@ p {
     text-align: center;
 }
 
+/* Fix list alignment in centered sections */
+.about ul, .services ul, .audience ul, .blog ul,
+.about ol, .services ol, .audience ol, .blog ol {
+    display: inline-block;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.about li, .services li, .audience li, .blog li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 /* Center-align content within grid columns */
 .about-content > div, .grid-2 > div {
     text-align: center;
@@ -773,47 +787,83 @@ p {
     margin: 0 auto 3rem;
 }
 
+/* Modern Timeline Design - Card-based Vertical Layout */
 .timeline {
-    position: relative;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    max-width: 860px;
+    margin: 3rem auto 0;
 }
 
 .timeline-item {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: flex-start;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 40px 36px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .timeline-number {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     background: var(--gamboge);
-    color: var(--oxford-blue);
-    border-radius: 50%;
-    display: flex;
+    color: var(--white);
+    border-radius: 999px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.25rem;
-    flex-shrink: 0;
+    font-size: 16px;
+    margin: 0 auto 16px;
 }
 
 .timeline-content h3 {
-    color: var(--white);
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--oxford-blue);
+    text-align: center;
 }
 
 .timeline-content p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+    max-width: 55ch;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Responsive timeline design */
 @media (max-width: 768px) {
     .timeline-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 28px 22px;
+        max-width: 96%;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.15rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.98rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-contrast: more) {
+    .timeline-item {
+        outline: 2px solid rgba(15, 23, 42, 0.18);
+        box-shadow: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-item {
+        transition: none;
     }
 }
 
@@ -1009,6 +1059,43 @@ p {
 .cta p {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
+}
+
+/* Gamboge buttons for dark background sections */
+.approach .btn,
+.cta .btn,
+.newsletter .btn,
+footer .btn {
+    background: var(--gamboge) !important;
+    color: var(--oxford-blue) !important;
+    border: 2px solid var(--gamboge) !important;
+}
+
+.approach .btn:hover,
+.cta .btn:hover,
+.newsletter .btn:hover,
+footer .btn:hover {
+    background: #dc8a09 !important;
+    color: var(--oxford-blue) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3) !important;
+}
+
+.approach .btn-secondary,
+.cta .btn-secondary,
+.newsletter .btn-secondary,
+footer .btn-secondary {
+    background: transparent !important;
+    color: var(--gamboge) !important;
+    border: 2px solid var(--gamboge) !important;
+}
+
+.approach .btn-secondary:hover,
+.cta .btn-secondary:hover,
+.newsletter .btn-secondary:hover,
+footer .btn-secondary:hover {
+    background: var(--gamboge) !important;
+    color: var(--oxford-blue) !important;
 }
 
 /* Footer */
