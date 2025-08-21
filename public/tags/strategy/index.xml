@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Strategy on Anoop Kurup</title>
-    <link>http://localhost:1313/tags/strategy/</link>
+    <link>http://localhost:8080/tags/strategy/</link>
     <description>Recent content in Strategy on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/strategy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:8080/tags/strategy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Your Blog Post Title</title>
-      <link>http://localhost:1313/blog/posts/testpost/</link>
+      <link>http://localhost:8080/blog/posts/testpost/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/testpost/</guid>
+      <guid>http://localhost:8080/blog/posts/testpost/</guid>
       <description>&lt;p&gt;Your blog post content here&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>

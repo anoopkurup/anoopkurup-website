@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E-Books Library | Anoop Kurup</title>
@@ -14,13 +14,13 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/ebooks/">
+<meta property="og:url" content="http://localhost:8080/ebooks/">
 <meta property="og:title" content="E-Books Library">
 <meta property="og:description" content="Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.">
 
 
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://localhost:1313/ebooks/">
+<meta property="twitter:url" content="http://localhost:8080/ebooks/">
 <meta property="twitter:title" content="E-Books Library">
 <meta property="twitter:description" content="Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.">
 
@@ -31,7 +31,7 @@
     
 <nav class="header-nav">
     <div class="nav-container">
-        <a href="http://localhost:1313/" class="logo">Anoop Kurup</a>
+        <a href="http://localhost:8080/" class="logo">Anoop Kurup</a>
         <ul class="nav-links" id="navLinks">
             
                 
@@ -94,7 +94,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
   gap: 2rem;
   margin-top: 3rem;
-  justify-content: start;
+  justify-content: center;
 }
 
 .ebook-card-custom {
@@ -104,6 +104,7 @@
   overflow: hidden;
   transition: all 0.3s ease;
   max-width: 320px;
+  text-align: center;
 }
 
 .ebook-card-custom:hover {
@@ -143,6 +144,7 @@
 
 .ebook-content-custom {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .ebook-content-custom h3 {
@@ -170,22 +172,12 @@
 
 
 <section class="hero">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <h1>E-Books Library</h1>
-      <p class="subtitle">Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.</p>
-      
-        <div class="btn-group">
-          
-            <a class="btn btn-primary" href="/#all-ebooks">Browse All</a>
-          
-            <a class="btn btn-secondary" href="/#free">Free Downloads</a>
-          
-        </div>
-      
-    </div>
-    <div class="hero-image">
-      <div class="hero-icon"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>E-Books Library</h1>
+        <p class="subtitle">Practical, no-fluff guides on positioning, AI-enabled lead generation, and content systems. Each e-book includes templates you can put to work today.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -494,7 +486,7 @@
             
             <div class="footer-brand">
                 <div>
-                    <a href="http://localhost:1313/" class="footer-logo">Anoop Kurup</a>
+                    <a href="http://localhost:8080/" class="footer-logo">Anoop Kurup</a>
                     <p class="footer-description">
                         I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution.
                     </p>

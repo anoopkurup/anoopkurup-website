@@ -90,6 +90,43 @@ p {
     p { font-size: 1rem; }
 }
 
+/* Center-aligned content in main sections */
+.about h1, .about h2, .about h3, .about p,
+.services h1, .services h2, .services h3, .services p,
+.audience h1, .audience h2, .audience h3, .audience p,
+.blog h1, .blog h2, .blog h3, .blog p {
+    text-align: center;
+}
+
+/* Center-aligned content in section content blocks */
+.about .content, .services .content, .audience .content, .blog .content {
+    text-align: center;
+}
+
+/* Fix list alignment in centered sections */
+.about ul, .services ul, .audience ul, .blog ul,
+.about ol, .services ol, .audience ol, .blog ol {
+    display: inline-block;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.about li, .services li, .audience li, .blog li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Center-align content within grid columns */
+.about-content > div, .grid-2 > div {
+    text-align: center;
+}
+
+/* Ensure form elements and contact info are centered */
+.contact form, .contact .card {
+    text-align: center;
+}
+
 /* Navigation */
 .header-nav {
     background: var(--white);
@@ -337,6 +374,7 @@ p {
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -351,83 +389,123 @@ p {
 
 /* Hero Section */
 .hero {
-    background: var(--antiflash-white);
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    padding: 100px 0 80px;
+    position: relative !important;
+    min-height: 70vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 120px 0 100px !important;
+    background: linear-gradient(135deg, var(--oxford-blue) 0%, var(--azure) 100%) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    color: var(--white) !important;
+}
+
+/* Hero background image support */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 37, 64, 0.7);
+    z-index: 1;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+}
+
+.hero-text {
+    text-align: center !important;
 }
 
 .hero-text h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem !important;
+    color: var(--white) !important;
+    font-size: 3.5rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    text-align: center !important;
 }
 
 .hero-text .subtitle {
-    font-size: 1.25rem;
-    color: var(--charcoal);
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    font-size: 1.4rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin-bottom: 2.5rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    text-align: center !important;
 }
 
+/* Hide old hero image completely */
 .hero-image {
-    position: relative;
-    height: 400px;
-    background: var(--oxford-blue);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    display: none !important;
 }
 
-/* Simple line icon representation */
-.hero-icon {
-    width: 150px;
-    height: 150px;
-    border: 3px solid var(--white);
-    border-radius: 12px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Hero buttons styling */
+.hero .btn-group {
+    margin-top: 2rem !important;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
-.hero-icon::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 2px solid var(--white);
-    border-radius: 50%;
+.hero .btn {
+    font-size: 1.1rem !important;
+    padding: 16px 32px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
 }
 
-.hero-icon::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 2px;
-    background: var(--white);
-    transform: rotate(45deg);
+.hero .btn-primary {
+    background: var(--white) !important;
+    color: var(--oxford-blue) !important;
+    border: 2px solid var(--white) !important;
 }
 
+.hero .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hero .btn-secondary {
+    background: transparent !important;
+    color: var(--white) !important;
+    border: 2px solid var(--white) !important;
+}
+
+.hero .btn-secondary:hover {
+    background: var(--white) !important;
+    color: var(--oxford-blue) !important;
+}
+
+/* Responsive hero section */
 @media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .hero-image {
-        height: 250px;
-    }
     .hero {
-        min-height: auto;
-        padding: 60px 0;
+        min-height: 60vh;
+        padding: 80px 0 60px;
+        background-attachment: scroll;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero .btn {
+        font-size: 1rem;
+        padding: 14px 28px;
     }
 }
 
@@ -438,6 +516,7 @@ p {
     border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .card:hover {
@@ -622,6 +701,7 @@ p {
 /* About Section */
 .about {
     background: var(--white);
+    text-align: center;
 }
 
 .about-content {
@@ -671,14 +751,22 @@ p {
     }
 }
 
+/* Contact Section */
+.contact {
+    background: var(--white);
+    text-align: center;
+}
+
 /* Who I Work With Section */
 .audience {
     background: var(--light-gray);
+    text-align: center;
 }
 
 /* Services Section */
 .services {
     background: var(--white);
+    text-align: center;
 }
 
 /* Approach Section */
@@ -699,53 +787,90 @@ p {
     margin: 0 auto 3rem;
 }
 
+/* Modern Timeline Design - Card-based Vertical Layout */
 .timeline {
-    position: relative;
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    max-width: 860px;
+    margin: 3rem auto 0;
 }
 
 .timeline-item {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    align-items: flex-start;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 40px 36px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .timeline-number {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     background: var(--gamboge);
-    color: var(--oxford-blue);
-    border-radius: 50%;
-    display: flex;
+    color: var(--white);
+    border-radius: 999px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.25rem;
-    flex-shrink: 0;
+    font-size: 16px;
+    margin: 0 auto 16px;
 }
 
 .timeline-content h3 {
-    color: var(--white);
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--oxford-blue);
+    text-align: center;
 }
 
 .timeline-content p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+    max-width: 55ch;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Responsive timeline design */
 @media (max-width: 768px) {
     .timeline-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 28px 22px;
+        max-width: 96%;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.15rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.98rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-contrast: more) {
+    .timeline-item {
+        outline: 2px solid rgba(15, 23, 42, 0.18);
+        box-shadow: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-item {
+        transition: none;
     }
 }
 
 /* Blog Section */
 .blog {
     background: var(--white);
+    text-align: center;
 }
 
 .blog-grid {
@@ -934,6 +1059,43 @@ p {
 .cta p {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
+}
+
+/* Gamboge buttons for dark background sections */
+.approach .btn,
+.cta .btn,
+.newsletter .btn,
+footer .btn {
+    background: var(--gamboge) !important;
+    color: var(--oxford-blue) !important;
+    border: 2px solid var(--gamboge) !important;
+}
+
+.approach .btn:hover,
+.cta .btn:hover,
+.newsletter .btn:hover,
+footer .btn:hover {
+    background: #dc8a09 !important;
+    color: var(--oxford-blue) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3) !important;
+}
+
+.approach .btn-secondary,
+.cta .btn-secondary,
+.newsletter .btn-secondary,
+footer .btn-secondary {
+    background: transparent !important;
+    color: var(--gamboge) !important;
+    border: 2px solid var(--gamboge) !important;
+}
+
+.approach .btn-secondary:hover,
+.cta .btn-secondary:hover,
+.newsletter .btn-secondary:hover,
+footer .btn-secondary:hover {
+    background: var(--gamboge) !important;
+    color: var(--oxford-blue) !important;
 }
 
 /* Footer */
