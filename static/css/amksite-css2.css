@@ -103,20 +103,6 @@ p {
     text-align: center;
 }
 
-/* Fix list alignment in centered sections */
-.about ul, .services ul, .audience ul, .blog ul,
-.about ol, .services ol, .audience ol, .blog ol {
-    display: inline-block;
-    text-align: left;
-    max-width: 600px;
-    margin: 1rem auto;
-}
-
-.about li, .services li, .audience li, .blog li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
 /* Center-align content within grid columns */
 .about-content > div, .grid-2 > div {
     text-align: center;
