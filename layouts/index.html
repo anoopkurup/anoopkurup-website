@@ -37,13 +37,24 @@
         <div class="section-header">
             <h2>{{ .Params.audience.title | default "Who I Work With" }}</h2>
             <p>{{ .Params.audience.subtitle | default "I specialize in helping service businesses and consultants build sustainable growth systems." }}</p>
+            {{ with .Params.audience.intro }}
+                <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--charcoal); opacity: 0.9;">{{ . }}</p>
+            {{ end }}
         </div>
         <div class="grid-3">
             {{ range .Params.audience.items | default (slice (dict "icon" "icon-chart" "title" "Professional Service Firms" "description" "Marketing, IPR, law, training, education, recruitment — businesses that sell expertise and knowledge.") (dict "icon" "icon-computer" "title" "Tech-Enabled Businesses" "description" "SaaS, IT services, productized services — companies leveraging technology to deliver value at scale.") (dict "icon" "icon-target" "title" "Consultants & Experts" "description" "Growing beyond referrals — independent professionals ready to build systematic lead generation.")) }}
-                <div class="card">
-                    <div class="card-icon {{ .icon }}"></div>
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .description }}</p>
+                <div class="audience-card">
+                    <div class="card-content">
+                        <div class="card-icon {{ .icon }}"></div>
+                        <h3>{{ .title }}</h3>
+                        {{ with .subheading }}
+                            <h4 class="audience-subheading">"{{ . }}"</h4>
+                        {{ end }}
+                        <p>{{ .description }}</p>
+                        {{ with .results }}
+                            <p class="audience-results"><strong>{{ . }}</strong></p>
+                        {{ end }}
+                    </div>
                 </div>
             {{ end }}
         </div>
@@ -60,10 +71,14 @@
         <div class="grid-3">
             {{ range .Params.services.items | default (slice (dict "icon" "icon-handshake" "title" "Consulting" "description" "Hands-on strategy and positioning for marketing, lead generation, and growth." "link" "consulting/") (dict "icon" "icon-graduation" "title" "Workshops" "description" "Intensive, practical sessions to build your lead generation machine." "link" "workshops/") (dict "icon" "icon-robot" "title" "AI Tools" "description" "AI-enabled tools that make marketing faster, cheaper, and more consistent." "link" "ai-solutions/")) }}
                 <div class="card">
-                    <div class="card-icon {{ .icon }}"></div>
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .description }}</p>
-                    <a href="{{ .link | relURL }}" class="card-link">{{ .link_text | default "Explore" }} →</a>
+                    <div class="card-content">
+                        <div class="card-icon {{ .icon }}"></div>
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ .link | relURL }}" class="card-link">{{ .link_text | default "Explore" }} →</a>
+                    </div>
                 </div>
             {{ end }}
         </div>
@@ -71,21 +86,19 @@
 </section>
 
 <!-- Approach Section -->
-<section class="approach">
-    <div class="container">
-        <h2>{{ .Params.approach.title | default "My Approach" }}</h2>
-        <p>{{ .Params.approach.subtitle | default "My work is built on three principles that drive real results:" }}</p>
-        <div class="timeline">
-            {{ range .Params.approach.items | default (slice (dict "number" "1" "title" "Clarity before tools" "description" "Strategy first, tech second. We start with understanding your business, not picking tools.") (dict "number" "2" "title" "AI without hype" "description" "Practical, everyday workflows that cut costs and save time — no buzzwords, just results.") (dict "number" "3" "title" "Systems over heroics" "description" "Repeatable processes that outlast founder energy and scale with your team.")) }}
-                <div class="timeline-item">
-                    <div class="timeline-number">{{ .number }}</div>
-                    <div class="timeline-content">
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .description }}</p>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
+<section class="process">
+    <h2 class="process__title">{{ .Params.approach.title | default "My Approach" }}</h2>
+    {{ with .Params.approach.subtitle | default "My work is built on three principles that drive real results:" }}
+        <p style="text-align: center; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto 3rem; font-size: 1.125rem;">{{ . }}</p>
+    {{ end }}
+    <div class="process__list">
+        {{ range .Params.approach.items | default (slice (dict "number" "1" "title" "Clarity before tools" "description" "Strategy first, tech second. We start with understanding your business, not picking tools.") (dict "number" "2" "title" "AI without hype" "description" "Practical, everyday workflows that cut costs and save time — no buzzwords, just results.") (dict "number" "3" "title" "Systems over heroics" "description" "Repeatable processes that outlast founder energy and scale with your team.")) }}
+            <div class="process__card">
+                <div class="process__num">{{ .number }}</div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+            </div>
+        {{ end }}
     </div>
 </section>
 

@@ -119,56 +119,98 @@ sections:
       ### Growing Teams
       Companies with 10-50 employees who need consistent marketing output but don't have dedicated content teams.
 
-# Testimonials/case studies
-testimonials:
-  - quote: "The LinkedIn Post Creator alone saves me 5 hours per week. The posts perform better than what I was writing manually, and I'm finally consistent with my posting."
-    author: "Sarah Chen, Marketing Consultant"
-    
-  - quote: "Our blog went from 2 posts per month to 8, and traffic increased 300% in 6 months. The AI solutions don't replace strategy—they accelerate execution."
-    author: "Michael Rodriguez, Agency Owner"
-
-# FAQ section
-faq:
-  - question: "How do these differ from ChatGPT or other AI tools?"
-    answer: "These are specialized, workflow-driven solutions trained on marketing best practices for service businesses. Instead of starting from scratch each time, you get proven frameworks and prompts that consistently deliver results."
-    
-  - question: "Will the content sound robotic or generic?"
-    answer: "No. Each solution is customized to your brand voice, industry, and audience. The AI learns your style and tone to create content that sounds authentically like you."
-    
-  - question: "Do I need technical skills to use these?"
-    answer: "Not at all. These are designed for marketers and business owners, not developers. You'll get simple interfaces and clear instructions for everything."
-    
-  - question: "Can I customize the content before publishing?"
-    answer: "Absolutely. Think of these as intelligent first drafts. You can edit, refine, and adjust anything before it goes live. Many clients use them as starting points that save 70-80% of their writing time."
-    
-  - question: "What if I don't like the results?"
-    answer: "Each solution comes with a 30-day money-back guarantee. We'll also work with you to refine the outputs until they meet your standards."
-
-# Pricing/packages (optional)
-packages:
-  - name: "LinkedIn Post Creator"
-    price: "$97/month"
-    features:
-      - "Daily LinkedIn post ideas"
-      - "Brand voice training"
-      - "Performance analytics"
-      - "Content calendar integration"
+  - type: "content"
+    class: "about"
+    content: |
+      ## About These AI Solutions
       
-  - name: "Blog Article Writer"
-    price: "$197/month"
-    features:
-      - "2-4 articles per month"
-      - "SEO optimization"
-      - "Research and fact-checking"
-      - "Editorial calendar planning"
+      Each solution is built on 3+ years of testing AI workflows with professional service businesses. They're not generic tools—they're specialized systems designed to:
       
-  - name: "Complete Content Suite"
-    price: "$297/month"
-    features:
-      - "All LinkedIn and Blog features"
-      - "Instagram content creation"
-      - "Cross-platform content repurposing"
-      - "Priority support and customization"
+      - **Save time** while maintaining quality
+      - **Build authority** through consistent, expert content  
+      - **Generate leads** with strategically crafted messaging
+      - **Scale your voice** without losing authenticity
+      
+      ### What You Get:
+      - Custom AI workflows trained on your brand and industry
+      - Proven content frameworks that convert prospects
+      - Simple interfaces that require no technical knowledge
+      - Ongoing optimization based on performance data
+      - Direct support from me when you need adjustments
+      
+      ### What You Don't Get:
+      - Generic, one-size-fits-all AI outputs
+      - Content that sounds robotic or off-brand
+      - Complex technical setup or maintenance
+      - Hidden costs or surprise charges
+
+  - type: "testimonials"
+    class: "testimonials"
+    header:
+      title: "What Clients Say"
+    items:
+      - quote: "The LinkedIn Post Creator alone saves me 5 hours per week. The posts perform better than what I was writing manually, and I'm finally consistent with my posting."
+        author: "Sarah Chen, Marketing Consultant"
+      - quote: "Our blog went from 2 posts per month to 8, and traffic increased 300% in 6 months. The AI solutions don't replace strategy—they accelerate execution."
+        author: "Michael Rodriguez, Agency Owner"
+
+  - type: "faq"
+    class: "about"
+    header:
+      title: "Frequently Asked Questions"
+    items:
+      - question: "How do these differ from ChatGPT or other AI tools?"
+        answer: "These are specialized, workflow-driven solutions trained on marketing best practices for service businesses. Instead of starting from scratch each time, you get proven frameworks and prompts that consistently deliver results."
+      - question: "Will the content sound robotic or generic?"
+        answer: "No. Each solution is customized to your brand voice, industry, and audience. The AI learns your style and tone to create content that sounds authentically like you."
+      - question: "Do I need technical skills to use these?"
+        answer: "Not at all. These are designed for marketers and business owners, not developers. You'll get simple interfaces and clear instructions for everything."
+      - question: "Can I customize the content before publishing?"
+        answer: "Absolutely. Think of these as intelligent first drafts. You can edit, refine, and adjust anything before it goes live. Many clients use them as starting points that save 70-80% of their writing time."
+      - question: "What if I don't like the results?"
+        answer: "Each solution comes with a 30-day money-back guarantee. We'll also work with you to refine the outputs until they meet your standards."
+
+  - type: "pricing"
+    class: "services"
+    header:
+      title: "Choose Your Package"
+      subtitle: "Flexible pricing to fit your content needs and budget"
+    items:
+      - name: "LinkedIn Post Creator"
+        price: "$97/month"
+        features:
+          - "Daily LinkedIn post ideas"
+          - "Brand voice training"
+          - "Performance analytics"
+          - "Content calendar integration"
+        button:
+          text: "Get Started"
+          url: "contact/"
+          class: "btn-primary"
+      - name: "Blog Article Writer"
+        price: "$197/month"
+        features:
+          - "2-4 articles per month"
+          - "SEO optimization"
+          - "Research and fact-checking"
+          - "Editorial calendar planning"
+        button:
+          text: "Get Started"
+          url: "contact/"
+          class: "btn-primary"
+      - name: "Complete Content Suite"
+        price: "$297/month"
+        featured: true
+        features:
+          - "All LinkedIn and Blog features"
+          - "Instagram content creation"
+          - "Cross-platform content repurposing"
+          - "Priority support and customization"
+        button:
+          text: "Get Started"
+          url: "contact/"
+          class: "btn-primary"
+
 
 cta:
   title: "Ready to Supercharge Your Marketing with AI?"
@@ -177,25 +219,3 @@ cta:
     text: "Get Started"
     url: "contact/"
 ---
-
-## About These AI Solutions
-
-Each solution is built on 3+ years of testing AI workflows with professional service businesses. They're not generic tools—they're specialized systems designed to:
-
-- **Save time** while maintaining quality
-- **Build authority** through consistent, expert content  
-- **Generate leads** with strategically crafted messaging
-- **Scale your voice** without losing authenticity
-
-### What You Get:
-- Custom AI workflows trained on your brand and industry
-- Proven content frameworks that convert prospects
-- Simple interfaces that require no technical knowledge
-- Ongoing optimization based on performance data
-- Direct support from me when you need adjustments
-
-### What You Don't Get:
-- Generic, one-size-fits-all AI outputs
-- Content that sounds robotic or off-brand
-- Complex technical setup or maintenance
-- Hidden costs or surprise charges

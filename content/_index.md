@@ -10,18 +10,25 @@ about:
     I combine **marketing fundamentals**, **systems thinking**, and **AI workflows** to help you scale without chaos — and without burning out.
 
 audience:
-  title: "Who I Work With"
-  subtitle: "I specialize in helping service businesses and consultants build sustainable growth systems."
+  title: "I Work Best With"
+  subtitle: "Over 200+ engagements, I've discovered which types of businesses get the most transformative results from systematic marketing approaches."
+  intro: "Not every business is ready for what I do. The companies that see dramatic improvements share three characteristics: they value expertise over price, they're willing to invest in systems that compound over time, and they understand that sustainable growth comes from consistent execution, not silver bullets."
   items:
     - icon: "icon-chart"
       title: "Professional Service Firms"
-      description: "Marketing, IPR, law, training, education, recruitment — businesses that sell expertise and knowledge."
-    - icon: "icon-computer"
+      subheading: "Beyond Referrals"
+      description: "Marketing agencies, law firms, consulting practices, training companies, and specialized B2B services firms with 10-50 employees. These are businesses built on expertise and relationships, but they've hit the ceiling of what referrals alone can deliver. They need systematic approaches to demonstrate thought leadership, build authority, and generate predictable demand without compromising their professional reputation or appearing 'salesy' to their sophisticated clients."
+      results: "Typical results: 40-60% increase in qualified leads within 90 days, 25-35% improvement in close rates through better positioning."
+    - icon: "icon-computer"  
       title: "Tech-Enabled Businesses"
-      description: "SaaS, IT services, productized services — companies leveraging technology to deliver value at scale."
+      subheading: "Scale Without Chaos"
+      description: "SaaS companies, IT service providers, digital agencies, and productized service businesses experiencing rapid growth or planning for it. These companies understand technology but struggle with marketing systems that can keep pace with their ambitions. They have solid products and early traction but need marketing processes that scale efficiently, generate qualified leads consistently, and support their sales team with better-qualified prospects."
+      results: "Typical results: 50-80% reduction in sales cycle length, 3x improvement in marketing-qualified lead conversion rates."
     - icon: "icon-target"
-      title: "Consultants & Experts"
-      description: "Growing beyond referrals — independent professionals ready to build systematic lead generation."
+      title: "Consultants & Experts"  
+      subheading: "Systematic Growth"
+      description: "Independent professionals, boutique consultancies, and subject matter experts earning $150K+ annually who are ready to scale beyond personal capacity. These are recognized experts in their fields who've outgrown the feast-or-famine cycle of networking and referrals. They want to build personal brands and systematic lead generation that attracts ideal clients automatically, without constant networking, speaking, or cold outreach that doesn't scale."
+      results: "Typical results: 2-3x increase in inbound inquiries, 50-70% improvement in project value and client quality."
 
 services:
   title: "What I Offer"

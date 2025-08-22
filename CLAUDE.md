@@ -48,4 +48,40 @@ This is a Hugo static site generator project. Hugo is available at `/opt/homebre
 - Custom JS: `static/js/main.js`
 
 ### Content Organization
-The site uses Hugo's section-based content organization with specialized landing pages for business services, detailed workshop descriptions, and categorized AI solution offerings.
+The site uses Hugo's section-based content organization with the following structure:
+
+#### Root Level Pages
+- `_index.md` - Homepage/landing page
+- `about.md` - About page
+- `approach.md` - Business approach and methodology
+- `consulting.md` - Consulting services overview
+- `contact.md` - Contact information and forms
+- `ebooks.md` - Digital resources and downloads
+- `podcast.md` - Podcast content and episodes
+- `ai-workflows.md` - AI workflow solutions
+
+#### Sections with Subsections
+- **AI Solutions** (`/ai-solutions/`)
+  - `ai-solutions.md` - Main AI solutions landing page
+  - `blog-articles.md` - AI-powered blog article services
+  - `instagram-content.md` - Instagram content creation services
+  - `linkedin-content.md` - LinkedIn content strategy services
+
+- **Workshops** (`/workshops/`)
+  - `workshops.md` - Main workshops landing page
+  - `100-days-sprint.md` - 100-day business sprint program
+  - `ai-lead-machine.md` - AI lead generation workshop
+
+- **Blog** (`/blog/`)
+  - `_index.md` - Blog section index
+  - `posts/` - Individual blog post files
+
+- **Legal** (`/legal/`)
+  - `privacy-policy.md` - Privacy policy
+  - `terms-conditions.md` - Terms and conditions
+
+#### Content Structure Notes
+- Each section can have both a main landing page and subsection pages
+- Use `_index.md` for section landing pages that list other content
+- Individual content pages use descriptive filenames
+- Specialized landing pages for business services with detailed workshop descriptions and categorized AI solution offerings

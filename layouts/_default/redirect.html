@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Redirecting...</title>
+    <meta name="description" content="{{ .Description }}">
+    
+    <!-- Redirect after 3 seconds -->
+    <meta http-equiv="refresh" content="3;url={{ .Params.redirect_url | relURL }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Params.redirect_url | absURL }}">
+    
+    <!-- Basic styling for redirect page -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            background: #f8fafc;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0a2540; margin-bottom: 1rem; }
+        p { color: #374151; margin-bottom: 1.5rem; }
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 0.5rem;
+        }
+        .btn:hover { background: #2563eb; }
+        .countdown { font-weight: bold; color: #3b82f6; }
+        ul { text-align: left; max-width: 400px; margin: 1.5rem auto; }
+    </style>
+    
+    <!-- JavaScript for countdown and immediate redirect option -->
+    <script>
+        let seconds = 3;
+        function updateCountdown() {
+            const element = document.getElementById('countdown');
+            if (element) {
+                element.textContent = seconds;
+                seconds--;
+                if (seconds >= 0) {
+                    setTimeout(updateCountdown, 1000);
+                }
+            }
+        }
+        
+        function redirectNow() {
+            window.location.href = '{{ .Params.redirect_url | relURL }}';
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateCountdown);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        
+        {{ .Content }}
+        
+        <p>Redirecting in <span id="countdown" class="countdown">3</span> seconds...</p>
+        
+        <div>
+            <a href="{{ .Params.redirect_url | relURL }}" class="btn" onclick="redirectNow()">Go Now</a>
+            <a href="{{ "/" | relURL }}" class="btn" style="background: #6b7280;">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

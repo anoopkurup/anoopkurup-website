@@ -22,6 +22,22 @@
 
 <!-- Custom Sections -->
 {{ range .Params.sections }}
+    {{ if eq .type "timeline" }}
+    <section class="process">
+        {{ if .header }}
+            <h2 class="process__title">{{ .header.title }}</h2>
+        {{ end }}
+        <div class="process__list">
+            {{ range .items }}
+                <div class="process__card">
+                    <div class="process__num">{{ .number }}</div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ else }}
     <section class="{{ .class }}">
         <div class="container">
             {{ if .header }}
@@ -35,30 +51,68 @@
                 <div class="{{ .grid_class | default "grid-3" }}">
                     {{ range .items }}
                         <div class="card">
-                            {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
-                            <h3>{{ .title }}</h3>
-                            <p>{{ .description | markdownify }}</p>
-                            {{ with .link }}<a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>{{ end }}
-                        </div>
-                    {{ end }}
-                </div>
-            {{ else if eq .type "timeline" }}
-                <div class="timeline">
-                    {{ range .items }}
-                        <div class="timeline-item">
-                            <div class="timeline-number">{{ .number }}</div>
-                            <div class="timeline-content">
+                            <div class="card-content">
+                                {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
                                 <h3>{{ .title }}</h3>
-                                <p>{{ .description }}</p>
+                                <p>{{ .description | markdownify }}</p>
                             </div>
+                            {{ with .link }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>
+                                </div>
+                            {{ end }}
                         </div>
                     {{ end }}
                 </div>
             {{ else if eq .type "content" }}
                 {{ .content | markdownify }}
+            {{ else if eq .type "testimonials" }}
+                <div class="testimonial-grid">
+                    {{ range .items }}
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>{{ .quote }}</p>
+                                <div class="testimonial-author">{{ .author }}</div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "faq" }}
+                <div class="faq-grid">
+                    {{ range .items }}
+                        <div class="faq-item">
+                            <h3>{{ .question }}</h3>
+                            <p>{{ .answer }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "pricing" }}
+                <div class="pricing-grid">
+                    {{ range .items }}
+                        <div class="pricing-card{{ if .featured }} pricing-card--featured{{ end }}">
+                            <div class="card-content">
+                                <div class="pricing-header">
+                                    <h3>{{ .name }}</h3>
+                                    <div class="pricing-price">{{ .price }}</div>
+                                </div>
+                                <ul class="pricing-features">
+                                    {{ range .features }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                            {{ with .button }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="btn {{ .class | default "btn-primary" }}">{{ .text }}</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
             {{ end }}
         </div>
     </section>
+    {{ end }}
 {{ end }}
 
 <!-- CTA Section -->

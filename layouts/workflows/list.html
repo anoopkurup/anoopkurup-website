@@ -1,0 +1,338 @@
+{{ define "head" }}
+<style>
+  .wf-controls { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 1rem; align-items: center; margin-top: 1.5rem; }
+  @media (max-width: 900px) { .wf-controls { grid-template-columns: 1fr; } }
+  .wf-search input[type="search"] { width: 100%; padding: 14px 16px; border: 1px solid var(--border-gray); border-radius: 10px; font-size: 1rem; }
+  .wf-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .wf-tag { padding: 8px 12px; border: 1px solid var(--border-gray); border-radius: 999px; font-size: .9rem; background: var(--light-gray); cursor: pointer; transition: all var(--animate-duration) ease; user-select: none; }
+  .wf-tag[data-active="true"] { background: var(--azure); color: var(--white); border-color: var(--azure); }
+  .wf-sort { display: flex; gap: .5rem; align-items: center; justify-content: flex-end; }
+  .wf-sort select { padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border-gray); background: var(--white); font-size: .95rem; }
+  .workflow-card .workflow-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 0; }
+  .badge { display: inline-block; padding: 4px 10px; font-size: .8rem; border-radius: 999px; background: var(--antiflash-white); border: 1px solid var(--border-gray); color: var(--charcoal); }
+  .workflow-meta { display: flex; gap: 1rem; align-items: center; font-size: .9rem; color: #6b7280; margin-top: .75rem; }
+  .copy-btn { display: inline-flex; align-items: center; gap: .4rem; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-gray); background: #fff; font-weight: 600; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; font-size: .9rem; }
+  .copy-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+  .wf-empty { text-align: center; padding: 3rem 1rem; color: #6b7280; }
+  .featured-badge { position: absolute; top: 12px; right: 12px; background: var(--gamboge); color: var(--white); padding: 4px 8px; border-radius: 4px; font-size: .75rem; font-weight: 600; }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        <p class="subtitle">{{ .Description }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Stats Section -->
+{{ if .Params.stats }}
+<section class="services" style="padding: 40px 0;">
+  <div class="container">
+    <div class="grid-4">
+      <div class="card">
+        <h3>{{ .Params.stats.total_workflows }}+</h3>
+        <p>Battle-tested workflows</p>
+      </div>
+      <div class="card">
+        <h3>{{ .Params.stats.avg_time_saved }}</h3>
+        <p>Average time saved weekly</p>
+      </div>
+      <div class="card">
+        <h3>{{ .Params.stats.user_satisfaction }}</h3>
+        <p>User satisfaction rate</p>
+      </div>
+      <div class="card">
+        <h3>{{ .Params.stats.total_downloads }}</h3>
+        <p>Total implementations</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Library -->
+<main id="library" class="blog">
+  <div class="container">
+    <div class="section-header">
+      <h2>Explore the Workflow Library</h2>
+      <p>Use search, tags, and sort to quickly find the right AI workflow. Each workflow opens in its own detailed page.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="wf-controls">
+      <div class="wf-search">
+        <label for="wfSearch" class="sr-only">Search</label>
+        <input id="wfSearch" type="search" placeholder="Search by title, goal, or keywords…" />
+      </div>
+
+      <div class="wf-tags" id="wfTags">
+        {{ range .Params.categories }}
+          <button class="wf-tag" data-tag="{{ . }}">{{ . }}</button>
+        {{ end }}
+      </div>
+
+      <div class="wf-sort">
+        <label for="wfSort">Sort:</label>
+        <select id="wfSort" aria-label="Sort workflows">
+          <option value="newest" selected>Newest</option>
+          <option value="a-z">A → Z</option>
+          <option value="popularity">Most Popular</option>
+          <option value="difficulty">Difficulty</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div id="wfGrid" class="grid-3" style="margin-top:2rem;">
+      {{ range .Pages }}
+        <article class="card workflow-card" 
+                 data-tags="{{ delimit .Params.tags "," }}"
+                 data-title="{{ .Title | lower }}"
+                 data-desc="{{ .Description | lower }}"
+                 data-date="{{ .Date.Format "2006-01-02" }}"
+                 data-popularity="{{ .Params.popularity | default 50 }}"
+                 data-difficulty="{{ .Params.difficulty | lower }}">
+          
+          {{ if .Params.featured }}
+            <div class="featured-badge">Featured</div>
+          {{ end }}
+          
+          <div class="card-content">
+            <div class="card-icon icon-robot"></div>
+            <h3><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Description }}</p>
+            
+            <div class="workflow-tags">
+              {{ range .Params.tags }}
+                <span class="badge">{{ . }}</span>
+              {{ end }}
+            </div>
+            
+            <div class="workflow-meta">
+              <span>⏱ {{ .Params.estimated_time }}</span>
+              <span>•</span>
+              <span>🎯 {{ .Params.difficulty }}</span>
+              {{ with .Params.popularity }}
+                <span>•</span>
+                <span>🔥 {{ . }}%</span>
+              {{ end }}
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <div class="btn-group" style="gap: 0.5rem; flex-direction: column;">
+              <a class="btn btn-primary" href="{{ .RelPermalink }}">View Workflow</a>
+              {{ with .Params.starter_prompt }}
+                <button class="copy-btn" data-prompt="{{ . | htmlEscape }}">📋 Copy Starter Prompt</button>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+
+    <div id="wfEmpty" class="wf-empty" style="display:none;">
+      <h3>No workflows found</h3>
+      <p>Try clearing some filters or adjusting your search terms.</p>
+    </div>
+  </div>
+</main>
+
+<!-- Instructions -->
+{{ if .Params.instructions }}
+  <section class="audience">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ .Params.instructions.title }}</h2>
+      </div>
+      <div class="grid-4">
+        {{ range .Params.instructions.steps }}
+          <div class="card">
+            <div class="card-content">
+              <h3>{{ .step }}</h3>
+              <p>{{ .description }}</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- Difficulty Levels -->
+{{ if .Params.difficulty_levels }}
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Difficulty Levels</h2>
+        <p>Choose workflows that match your experience and available time</p>
+      </div>
+      <div class="grid-3">
+        {{ range .Params.difficulty_levels }}
+          <div class="card">
+            <div class="card-content">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">{{ .icon }}</div>
+              <h3>{{ .level }}</h3>
+              <p>{{ .description }}</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- Content -->
+{{ if .Content }}
+  <section class="about">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}
+
+<!-- Newsletter CTA -->
+{{ if .Params.newsletter }}
+  <section class="newsletter">
+    <div class="container">
+      <h2>{{ .Params.newsletter.title }}</h2>
+      <p>{{ .Params.newsletter.subtitle }}</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+{{ end }}
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  // Workflow filtering and sorting functionality
+  const grid = document.getElementById('wfGrid');
+  const emptyState = document.getElementById('wfEmpty');
+  const searchInput = document.getElementById('wfSearch');
+  const sortSelect = document.getElementById('wfSort');
+  const tagBar = document.getElementById('wfTags');
+  const newsletterForm = document.getElementById('newsletterForm');
+
+  // Newsletter form handler
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks! You\'re in.');
+    });
+  }
+
+  const state = { q: '', tags: new Set(), sort: 'newest' };
+
+  function render(items) {
+    grid.innerHTML = '';
+    if (!items.length) {
+      emptyState.style.display = 'block';
+      return;
+    }
+    emptyState.style.display = 'none';
+
+    items.forEach(item => {
+      grid.appendChild(item);
+    });
+
+    // Bind copy buttons
+    grid.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-prompt');
+        try {
+          await navigator.clipboard.writeText(text);
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '✅ Copied!';
+          setTimeout(() => btn.innerHTML = originalText, 1200);
+        } catch {
+          alert('Could not copy. Please copy manually.');
+        }
+      });
+    });
+  }
+
+  function applyFilters() {
+    let items = Array.from(document.querySelectorAll('.workflow-card'));
+
+    // Search
+    if (state.q) {
+      const q = state.q.toLowerCase();
+      items = items.filter(i =>
+        i.getAttribute('data-title').includes(q) ||
+        i.getAttribute('data-desc').includes(q) ||
+        i.getAttribute('data-tags').toLowerCase().includes(q)
+      );
+    }
+
+    // Tags
+    if (state.tags.size) {
+      items = items.filter(i => {
+        const tags = i.getAttribute('data-tags').split(',').map(t => t.trim().toLowerCase());
+        return Array.from(state.tags).some(t => tags.includes(t.toLowerCase()));
+      });
+    }
+
+    // Sort
+    if (state.sort === 'newest') {
+      items.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+    } else if (state.sort === 'a-z') {
+      items.sort((a, b) => a.getAttribute('data-title').localeCompare(b.getAttribute('data-title')));
+    } else if (state.sort === 'popularity') {
+      items.sort((a, b) => parseInt(b.getAttribute('data-popularity') || 0) - parseInt(a.getAttribute('data-popularity') || 0));
+    } else if (state.sort === 'difficulty') {
+      const difficultyOrder = { 'easy': 1, 'intermediate': 2, 'advanced': 3 };
+      items.sort((a, b) => {
+        const aDiff = difficultyOrder[a.getAttribute('data-difficulty')] || 2;
+        const bDiff = difficultyOrder[b.getAttribute('data-difficulty')] || 2;
+        return aDiff - bDiff;
+      });
+    }
+
+    render(items);
+  }
+
+  // Event listeners
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      state.q = e.target.value.trim();
+      applyFilters();
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      state.sort = e.target.value;
+      applyFilters();
+    });
+  }
+
+  if (tagBar) {
+    tagBar.querySelectorAll('.wf-tag').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tag = btn.getAttribute('data-tag');
+        const active = btn.getAttribute('data-active') === 'true';
+        btn.setAttribute('data-active', String(!active));
+        if (active) {
+          state.tags.delete(tag);
+        } else {
+          state.tags.add(tag);
+        }
+        applyFilters();
+      });
+    });
+  }
+
+  // Initialize
+  applyFilters();
+</script>
+{{ end }}
