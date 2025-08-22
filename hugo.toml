@@ -115,7 +115,7 @@ theme = ""
   
   [[menu.footer_secondary]]
     name = "AI Prompts and Workflows"
-    url = "/ai-workflows/"
+    url = "/workflows/"
     weight = 40
 
   [[menu.footer_legal]]
