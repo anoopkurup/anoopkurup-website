@@ -20,6 +20,57 @@
     <loc>http://localhost:1313/blog/posts/testpost/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/workflows/ai-lead-machine/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/workflows/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/automation/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/automation/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/blog/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/email/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/instagram/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/linkedin/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/research/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/seo/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/strategy/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linkedin/</loc>
+    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/workflows/linkedin-post-creator/</loc>
+    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/workflows/blog-article-writer/</loc>
+    <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/seo/</loc>
+    <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/ai-solutions/blog-articles/</loc>
   </url><url>
     <loc>http://localhost:1313/ai-solutions/instagram-content/</loc>
@@ -40,33 +91,15 @@
   </url><url>
     <loc>http://localhost:1313/ai-workflows/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/automation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/blog/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
     <loc>http://localhost:1313/podcast/</loc>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
     <loc>http://localhost:1313/ebooks/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/email/</loc>
-  </url><url>
     <loc>http://localhost:1313/consulting/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/instagram/</loc>
-  </url><url>
     <loc>http://localhost:1313/legal/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/linkedin/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/research/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/seo/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/strategy/</loc>
   </url><url>
     <loc>http://localhost:1313/approach/</loc>
   </url><url>

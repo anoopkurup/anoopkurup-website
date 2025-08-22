@@ -6,12 +6,13 @@
     <description>Recent content in Blog on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Workflows &amp; Prompt Library</title>
-      <link>http://localhost:1313/ai-workflows/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ai-workflows/</guid>
+      <link>http://localhost:1313/workflows/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workflows/</guid>
       <description>&lt;h2 id=&#34;about-the-workflow-library&#34;&gt;About the Workflow Library&lt;/h2&gt;&#xA;&lt;p&gt;This collection represents 3+ years of testing, refining, and implementing AI workflows with professional service businesses. Each workflow is battle-tested and includes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Starter prompts&lt;/strong&gt; you can copy and paste immediately&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Step-by-step instructions&lt;/strong&gt; for customization&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real examples&lt;/strong&gt; from successful implementations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Variation suggestions&lt;/strong&gt; for different use cases&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance tips&lt;/strong&gt; to get better results&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-these-work&#34;&gt;Why These Work&lt;/h3&gt;&#xA;&lt;p&gt;Unlike generic AI prompts you find online, these workflows are designed specifically for B2B service businesses. They account for:&lt;/p&gt;</description>
     </item>
   </channel>

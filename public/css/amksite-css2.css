@@ -113,6 +113,24 @@ p {
     text-align: center;
 }
 
+/* Global fix: Center-align bullet lists within centered sections */
+.about ul, .about ol,
+.services ul, .services ol,
+.audience ul, .audience ol,
+.card ul, .card ol {
+    text-align: center;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.about li, 
+.services li,
+.audience li,
+.card li {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 /* Navigation */
 .header-nav {
     background: var(--white);
@@ -380,7 +398,7 @@ p {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 120px 0 100px !important;
+    padding: 120px 0 0 !important;
     background: linear-gradient(135deg, var(--oxford-blue) 0%, var(--azure) 100%) !important;
     background-size: cover !important;
     background-position: center center !important;
@@ -477,7 +495,7 @@ p {
 @media (max-width: 768px) {
     .hero {
         min-height: 60vh;
-        padding: 80px 0 60px;
+        padding: 80px 0 0;
         background-attachment: scroll;
     }
     
@@ -503,11 +521,25 @@ p {
     padding: 2rem;
     transition: all 0.3s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transform: translateY(-4px);
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .card-icon {
@@ -662,25 +694,95 @@ p {
     gap: 0.75rem;
 }
 
-/* Grid Layouts */
+/* Grid Layouts - Using CSS Grid for True Equal Heights */
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-3 > * {
+    /* All grid items automatically get equal heights */
+}
+
+/* When only one item, center it with max-width */
+.grid-3 > *:only-child {
+    max-width: 400px;
+    flex: 0 0 auto;
+}
+
+.grid-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.grid-4 > * {
+    flex: 1 1 0;
+    min-width: 200px;
+    max-width: 250px;
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
-    align-items: center;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.grid-2 > * {
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+/* When only one item, center it with max-width */
+.grid-2 > *:only-child {
+    max-width: 500px;
+    flex: 0 0 auto;
 }
 
 @media (max-width: 768px) {
-    .grid-3, .grid-2 {
+    .grid-3 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .grid-2, .grid-4 {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    
+    .grid-2 > *, .grid-4 > * {
+        flex: none;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .grid-2 > *:only-child {
+        max-width: none;
+    }
+    
+    .pricing-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .pricing-grid > * {
+        flex: none;
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -688,6 +790,28 @@ p {
 .about {
     background: var(--white);
     text-align: center;
+}
+
+/* Hide about section when empty */
+.about:empty {
+    display: none;
+}
+
+.about .container:empty {
+    display: none;
+}
+
+/* If about section only contains whitespace, hide it */
+.about .container:not(:has(*)) {
+    display: none;
+}
+
+/* Hidden section class */
+.hidden-section {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 0 !important;
 }
 
 .about-content {
@@ -745,14 +869,175 @@ p {
 
 /* Who I Work With Section */
 .audience {
-    background: var(--light-gray);
+    background: var(--white);
+    color: var(--charcoal);
     text-align: center;
+    position: relative;
+}
+
+.audience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="1.5" fill="rgba(13,31,45,0.03)"/></svg>') repeat;
+    pointer-events: none;
+}
+
+.audience .section-header h2 {
+    color: var(--oxford-blue);
+}
+
+.audience .section-header p {
+    color: var(--charcoal);
+}
+
+/* Audience Cards - Unique Styling */
+.audience-card {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(13, 31, 45, 0.08);
+}
+
+.audience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(13, 31, 45, 0.15);
+    border-color: var(--azure);
+}
+
+.audience-card .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.audience-card .card-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--azure);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.audience-card h3 {
+    color: var(--oxford-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.audience-subheading {
+    color: var(--azure);
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.audience-card p {
+    color: var(--charcoal);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.audience-results {
+    color: var(--azure) !important;
+    font-size: 0.9rem !important;
+    margin-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid var(--border-gray) !important;
+    font-weight: 600 !important;
+}
+
+/* Audience section container adjustments */
+.audience .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive styling for audience cards */
+@media (max-width: 768px) {
+    .audience-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .audience-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .audience-subheading {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .audience-card p {
+        font-size: 0.95rem;
+        text-align: center; /* Center text on mobile for better readability */
+    }
 }
 
 /* Services Section */
 .services {
     background: var(--white);
     text-align: center;
+}
+
+/* Deliverables Section - Light Grey Background */
+.deliverables {
+    background: var(--light-gray);
+}
+
+/* Problems Section Styling */
+.problems-grid {
+    background: var(--light-gray);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.problems-grid .section-header {
+    padding-top: 4rem;
+}
+
+.problems-grid .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.problems-result {
+    background: var(--oxford-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+}
+
+.problems-result .container {
+    max-width: 800px;
+}
+
+.problems-result p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Approach Section */
@@ -773,6 +1058,136 @@ p {
     margin: 0 auto 3rem;
 }
 
+/* Consulting Process – Centered Number Vertical Timeline */
+.process {
+  background-color: var(--oxford-blue);
+  padding: 60px 20px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.process__title {
+  text-align: center;
+  color: var(--antiflash-white);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+  margin: 0 0 40px;
+}
+
+.process__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.process__card {
+  background: var(--antiflash-white);
+  border-radius: 14px;
+  padding: 40px 36px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 640px;   /* Keeps desktop cards comfortably narrow */
+  margin: 0 auto;     /* Centers the card within the list */
+}
+
+.process__num {
+  width: 40px;
+  height: 40px;
+  background: var(--gamboge);
+  color: #ffffff;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 auto 16px;
+}
+
+.process__card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--charcoal);
+}
+
+.process__card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  max-width: 55ch;
+  margin: 0 auto;
+}
+
+.process__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.process__cta a {
+  background: var(--gamboge);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.process__cta a:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.process__cta a:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+}
+
+.process__cta a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Responsive refinements */
+@media (max-width: 768px) {
+  .process {
+    padding: 44px 16px;
+  }
+
+  .process__card {
+    padding: 28px 22px;
+    max-width: 96%;
+  }
+
+  .process__card h3 {
+    font-size: 1.15rem;
+  }
+
+  .process__card p {
+    font-size: 0.98rem;
+  }
+}
+
+/* Optional: High contrast mode improvement for accessibility */
+@media (prefers-contrast: more) {
+  .process__card {
+    outline: 2px solid rgba(15, 23, 42, 0.18);
+  }
+}
+
+/* Optional: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .process__cta a {
+    transition: none;
+  }
+}
+
+/* Legacy timeline styles for backward compatibility */
 .timeline {
     position: relative;
     margin-top: 3rem;
@@ -824,10 +1239,18 @@ p {
 }
 
 .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.blog-grid > * {
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: 400px;
 }
 
 .blog-card {
@@ -888,8 +1311,15 @@ p {
 }
 
 @media (max-width: 768px) {
-    .blog-grid {
-        grid-template-columns: 1fr;
+    .blog-grid, .testimonial-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .blog-grid > *, .testimonial-grid > * {
+        flex: none;
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -955,9 +1385,18 @@ p {
 }
 
 .testimonial-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.testimonial-grid > * {
+    flex: 1 1 0;
+    min-width: 300px;
+    max-width: 500px;
 }
 
 .testimonial {
@@ -1327,4 +1766,132 @@ footer .footer-links a:hover {
 .author-link:hover {
   color: var(--azure);  /* Shows link color only on hover */
   text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.faq-item h3 {
+  color: var(--oxford-blue);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Pricing Section */
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.pricing-grid > * {
+  flex: 1 1 0;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.pricing-card {
+  background: var(--white);
+  border: 2px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card--featured {
+  border-color: var(--azure);
+  transform: scale(1.05);
+}
+
+.pricing-card--featured::before {
+  content: "Most Popular";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--azure);
+  color: var(--white);
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.pricing-header {
+  margin-bottom: 2rem;
+}
+
+.pricing-card h3 {
+  color: var(--oxford-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--azure);
+  margin-bottom: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.pricing-features li {
+  padding: 0.5rem 0;
+  color: var(--charcoal);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--azure);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pricing-card--featured {
+    transform: none;
+  }
+  
+  .faq-item {
+    padding: 1.5rem;
+  }
 }
