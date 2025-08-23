@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero"{{ if .Params.hero_image }} style="background-image: linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)), url('{{ .Params.hero_image }}'); background-size: cover; background-position: center center; background-attachment: fixed;"{{ end }}>
     <div class="container">
         <div class="hero-content">
             <div class="hero-text animate-fade-in">
