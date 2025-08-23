@@ -15,48 +15,67 @@
 <section class="contact">
   <div class="container">
     <div class="section-header">
-      <h2>Get In Touch</h2>
-      <p>Fill out the form below or connect with me directly via email or social media.</p>
+      <h2>Let's Connect</h2>
+      <p>Use the form for project inquiries, or reach out directly via email or social media.</p>
     </div>
 
     <div class="grid-2">
       <!-- Contact Form -->
       <div>
-        <form class="card" action="{{ .Params.form.action }}" method="{{ .Params.form.method | default "POST" }}">
-          {{ range .Params.form.fields }}
-            <div style="margin-bottom: 1rem;">
-              <label for="{{ .name }}">{{ .label }}</label><br>
-              {{ if eq .type "textarea" }}
-                <textarea id="{{ .name }}" name="{{ .name }}" rows="{{ .rows | default 6 }}"{{ if .required }} required{{ end }}
-                          style="width:100%;padding:12px;border:1px solid var(--border-gray);border-radius:8px;"></textarea>
-              {{ else }}
-                <input type="{{ .type }}" id="{{ .name }}" name="{{ .name }}"{{ if .required }} required{{ end }}
-                       style="width:100%;padding:12px;border:1px solid var(--border-gray);border-radius:8px;">
-              {{ end }}
-            </div>
-          {{ end }}
-          <button type="submit" class="btn btn-primary">{{ .Params.form.submit_text | default "Send Message" }}</button>
-        </form>
+        <div class="card">
+          <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
+          <form action="{{ .Params.form.action }}" method="{{ .Params.form.method | default "POST" }}">
+            {{ range .Params.form.fields }}
+              <div style="margin-bottom: 1.5rem;">
+                <label for="{{ .name }}" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--charcoal);">{{ .label }}</label>
+                {{ if eq .type "textarea" }}
+                  <textarea id="{{ .name }}" name="{{ .name }}" rows="{{ .rows | default 6 }}"{{ if .required }} required{{ end }}
+                            style="width:100%;padding:14px;border:2px solid var(--border-gray);border-radius:8px;font-family:inherit;font-size:1rem;transition:border-color 0.3s ease;"
+                            onfocus="this.style.borderColor='var(--azure)'" 
+                            onblur="this.style.borderColor='var(--border-gray)'"></textarea>
+                {{ else }}
+                  <input type="{{ .type }}" id="{{ .name }}" name="{{ .name }}"{{ if .required }} required{{ end }}
+                         style="width:100%;padding:14px;border:2px solid var(--border-gray);border-radius:8px;font-family:inherit;font-size:1rem;transition:border-color 0.3s ease;"
+                         onfocus="this.style.borderColor='var(--azure)'" 
+                         onblur="this.style.borderColor='var(--border-gray)'">
+                {{ end }}
+              </div>
+            {{ end }}
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">{{ .Params.form.submit_text | default "Send Message" }}</button>
+          </form>
+        </div>
       </div>
 
       <!-- Contact Info -->
       <div>
         <div class="card">
-          <h3>Email</h3>
-          <p><a href="mailto:{{ .Params.contact_info.email }}" class="card-link">{{ .Params.contact_info.email }}</a></p>
-        </div>
-        
-        {{ if .Params.contact_info.social }}
-          <div class="card" style="margin-top:1.5rem;">
-            <h3>Social</h3>
-            <p>Connect with me on LinkedIn, YouTube, and Instagram.</p>
-            <div class="footer-social">
-              {{ with .Params.contact_info.social.linkedin }}<a href="{{ . }}" class="social-icon icon-linkedin"></a>{{ end }}
-              {{ with .Params.contact_info.social.youtube }}<a href="{{ . }}" class="social-icon icon-youtube"></a>{{ end }}
-              {{ with .Params.contact_info.social.instagram }}<a href="{{ . }}" class="social-icon icon-instagram"></a>{{ end }}
+          <h3>Connect with Me</h3>
+          <div style="margin: 1.5rem 0;">
+            <div style="margin-bottom: 1rem;">
+              <strong>Email:</strong><br>
+              <a href="mailto:{{ .Params.contact_info.email }}" class="card-link">{{ .Params.contact_info.email }}</a>
             </div>
+            
+            {{ if .Params.contact_info.social }}
+              <div>
+                <strong>Social Media:</strong><br>
+                <p style="margin: 0.5rem 0;">Connect for insights and updates</p>
+                <div class="contact-social" style="display: flex; gap: 1rem; margin-top: 0.5rem; justify-content: center;">
+                  {{ with .Params.contact_info.social.linkedin }}<a href="{{ . }}" class="contact-social-icon contact-icon-linkedin" title="LinkedIn"></a>{{ end }}
+                  {{ with .Params.contact_info.social.youtube }}<a href="{{ . }}" class="contact-social-icon contact-icon-youtube" title="YouTube"></a>{{ end }}
+                  {{ with .Params.contact_info.social.instagram }}<a href="{{ . }}" class="contact-social-icon contact-icon-instagram" title="Instagram"></a>{{ end }}
+                  {{ with .Params.contact_info.social.spotify }}<a href="{{ . }}" class="contact-social-icon contact-icon-spotify" title="Spotify"></a>{{ end }}
+                  {{ with .Params.contact_info.social.whatsapp }}<a href="{{ . }}" class="contact-social-icon contact-icon-whatsapp" title="WhatsApp"></a>{{ end }}
+                </div>
+              </div>
+            {{ end }}
           </div>
-        {{ end }}
+          
+          <div style="background: var(--light-gray); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+            <strong>Response Time:</strong><br>
+            I typically respond within 24-48 hours during business days.
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -71,16 +90,115 @@
   </section>
 {{ end }}
 
-<!-- FAQ Section -->
+<!-- Custom Sections -->
+{{ range .Params.sections }}
+    {{ if eq .type "timeline" }}
+    <section class="process">
+        {{ if .header }}
+            <h2 class="process__title">{{ .header.title }}</h2>
+        {{ end }}
+        <div class="process__list">
+            {{ range .items }}
+                <div class="process__card">
+                    <div class="process__num">{{ .number }}</div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ else }}
+    <section class="{{ .class }}">
+        <div class="container">
+            {{ if .header }}
+                <div class="section-header">
+                    <h2>{{ .header.title }}</h2>
+                    {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if eq .type "highlight" }}
+                <div class="highlight-box">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | markdownify }}</p>
+                    {{ with .button }}
+                        <a href="{{ .url | relURL }}" class="btn">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "features" }}
+                <div class="feature-list">
+                    {{ range .items }}
+                        <div class="feature-item{{ if .highlight }} highlight{{ end }}">
+                            <h4>{{ .title }}</h4>
+                            <p>{{ .description | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "stats" }}
+                <div class="stats-grid">
+                    {{ range .items }}
+                        <div class="stat-card">
+                            <span class="stat-number">{{ .number }}</span>
+                            <div class="stat-label">{{ .label }}</div>
+                            {{ with .description }}
+                                <div class="stat-description">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "faq" }}
+                <div class="faq-grid">
+                    {{ range .items }}
+                        <div class="faq-item">
+                            <h3>{{ .question }}</h3>
+                            <p>{{ .answer }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "testimonials" }}
+                <div class="testimonial-grid">
+                    {{ range .items }}
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>{{ .quote }}</p>
+                                <div class="testimonial-author">— {{ .author }}</div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "grid" }}
+                <div class="{{ .grid_class | default "grid-3" }}">
+                    {{ range .items }}
+                        <div class="card">
+                            <div class="card-content">
+                                {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description | markdownify }}</p>
+                            </div>
+                            {{ with .link }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
+
+<!-- Legacy FAQ Section (for backward compatibility) -->
 {{ if .Params.faq }}
   <section class="services">
     <div class="container">
       <div class="section-header">
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div class="grid-2">
+      <div class="faq-grid">
         {{ range .Params.faq }}
-          <div class="card">
+          <div class="faq-item">
             <h3>{{ .question }}</h3>
             <p>{{ .answer | markdownify }}</p>
           </div>
@@ -90,7 +208,7 @@
   </section>
 {{ end }}
 
-<!-- Testimonials -->
+<!-- Legacy Testimonials (for backward compatibility) -->
 {{ if .Params.testimonials }}
   <section class="testimonials">
     <div class="container">

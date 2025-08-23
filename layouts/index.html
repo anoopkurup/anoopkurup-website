@@ -61,6 +61,30 @@
     </div>
 </section>
 
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.testimonials.title | default "What Clients Say" }}</h2>
+            <p>{{ .Params.testimonials.subtitle | default "Real results from businesses that transformed their marketing approach." }}</p>
+        </div>
+        <div class="testimonial-grid">
+            {{ range .Params.testimonials.items }}
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"{{ .quote }}"</p>
+                        <div class="testimonial-author">
+                            <strong>{{ .author }}</strong><br>
+                            <span style="color: var(--azure); font-size: 0.9rem;">{{ .role }}</span><br>
+                            <span style="color: var(--charcoal); opacity: 0.8; font-size: 0.85rem;">{{ .company }}</span>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
 <!-- Services Section -->
 <section id="services" class="services">
     <div class="container">
@@ -84,6 +108,53 @@
         </div>
     </div>
 </section>
+
+<!-- Blog Posts Section -->
+{{ if .Params.blog }}
+<section class="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.blog.title | default "Latest Insights" }}</h2>
+            <p>{{ .Params.blog.subtitle | default "Practical strategies and AI workflows to grow your services business." }}</p>
+        </div>
+        <div class="blog-grid">
+            {{ $posts := where .Site.RegularPages "Section" "blog" | first (.Params.blog.show_posts | default 3) }}
+            {{ range $posts }}
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="icon-article"></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Params.description | default (.Summary | truncate 120) }}</p>
+                        <div class="blog-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
+                            <span>{{ .Params.read_time | default "5 min read" }}</span>
+                            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                        </div>
+                        <a href="{{ .Permalink }}" class="card-link">Read More →</a>
+                    </div>
+                </div>
+            {{ end }}
+            {{ if eq (len $posts) 0 }}
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="icon-article"></div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Marketing Systems That Scale</h3>
+                        <p>How to build marketing processes that grow with your business without burning out your team.</p>
+                        <div class="blog-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
+                            <span>8 min read</span>
+                            <time>Coming Soon</time>
+                        </div>
+                        <a href="{{ "blog/" | relURL }}" class="card-link">Subscribe for Updates →</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
 
 <!-- Approach Section -->
 <section class="process">
@@ -113,6 +184,33 @@
         </form>
     </div>
 </section>
+
+<!-- Free Resources Section -->
+{{ if .Params.resources }}
+<section class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.resources.title | default "Free Resources" }}</h2>
+            <p>{{ .Params.resources.subtitle | default "Grab these tools and templates to start improving your marketing today." }}</p>
+        </div>
+        <div class="grid-3">
+            {{ range .Params.resources.items }}
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon icon-graduation"></div>
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                        <div style="color: var(--azure); font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">{{ .type }}</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ .link | relURL }}" class="card-link">Download Free →</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
 
 <!-- Final CTA Section -->
 <section id="contact" class="cta">

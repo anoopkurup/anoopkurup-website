@@ -9,9 +9,11 @@ theme = ""
   email = "mail@anoopkurup.com"
   
   # Social media links
-  linkedin = "#"
-  youtube = "#"
-  instagram = "#"
+  linkedin = "https://www.linkedin.com/in/anoopkurup/"
+  youtube = "https://www.youtube.com/@anoopkurup"
+  instagram = "https://www.instagram.com/anoopkurup/"
+  spotify = "https://open.spotify.com/show/anoopkurup"
+  whatsapp = "https://wa.me/1234567890"
 
 [menu]
   [[menu.main]]

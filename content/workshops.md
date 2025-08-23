@@ -19,59 +19,85 @@ sections:
         title: "Strategic + Practical"
         description: "You'll leave with clarity on what to do and the tools to actually do it."
 
-  - type: "content"
+  - type: "highlight"
     class: "services"
-    content: |
-      ## AI Lead Machine
-      ### Turn AI into your in-house marketing assistant.
-      
-      This workshop shows you how to design a marketing engine powered by AI—without losing the human creativity and judgment your business depends on.
-      
-      **You'll learn:**
-      - How to map your customer journey and align it with AI-powered execution.
-      - AI workflows for creating content, prospecting, and nurturing leads at scale.
-      - How to cut marketing costs while improving speed and consistency.
-      - Tools and prompt libraries you can immediately adapt to your business.
-      
-      **Outcomes:**
-      - A custom AI-enabled lead generation system for your business.
-      - Pre-built templates, workflows, and prompts to plug into your daily operations.
-      - Clarity on how to balance human creativity with AI automation.
+    title: "AI Lead Machine™"
+    description: "Turn AI into your in-house marketing assistant. Design a marketing engine powered by AI—without losing the human creativity and judgment your business depends on."
+    button:
+      text: "Learn More"
+      url: "workshops/ai-lead-machine/"
 
-  - type: "content"
+  - type: "features"
+    class: "services"
+    items:
+      - title: "What You'll Learn"
+        description: |
+          • Map your customer journey and align it with AI-powered execution
+          • Create AI workflows for content, prospecting, and nurturing leads at scale
+          • Cut marketing costs while improving speed and consistency
+          • Access tested prompt libraries you can immediately adapt
+      - title: "What You'll Get"
+        description: |
+          • A custom AI-enabled lead generation system for your business
+          • Pre-built templates, workflows, and prompts for daily operations
+          • Clear framework for balancing human creativity with AI automation
+        highlight: true
+
+  - type: "highlight"
     class: "audience"
-    content: |
-      ## 100 Days Lead Generation Sprint
-      ### Design, test, and implement your lead generation system in 100 days.
-      
-      This workshop is designed for businesses that want results quickly—and are ready to put in focused effort.
-      
-      **You'll learn:**
-      - How to clarify your positioning and messaging.
-      - How to pick the right channels and tactics for your market.
-      - How to design a 12-month lead generation plan, broken into 100-day sprints.
-      - How to track results and refine your system continuously.
-      
-      **Outcomes:**
-      - A 100-day actionable roadmap for consistent lead generation.
-      - Messaging frameworks and channel strategies tailored to your market.
-      - Confidence that your team can execute without constant firefighting.
+    title: "100 Days Lead Generation Sprint"
+    description: "Design, test, and implement your lead generation system in 100 days. Built for businesses that want results quickly and are ready to put in focused effort."
+    button:
+      text: "Learn More"
+      url: "workshops/100-days-sprint/"
+
+  - type: "features"
+    class: "audience"
+    items:
+      - title: "Strategic Foundation"
+        description: |
+          • Clarify your positioning and messaging for maximum impact
+          • Pick the right channels and tactics for your specific market
+          • Design a 12-month lead generation plan with 100-day sprint cycles
+          • Build tracking systems to refine and optimize continuously
+      - title: "Guaranteed Outcomes"
+        description: |
+          • A 100-day actionable roadmap for consistent lead generation
+          • Messaging frameworks and channel strategies tailored to your market
+          • Team confidence to execute systematically without firefighting
+        highlight: true
+
+  - type: "stats"
+    class: "services"
+    header:
+      title: "Workshop Results"
+      subtitle: "Real outcomes from participants who implemented the systems."
+    items:
+      - number: "5-15"
+        label: "Qualified Leads"
+        description: "Per month within 90 days"
+      - number: "35%"
+        label: "Close Rate Improvement"
+        description: "Through better positioning"
+      - number: "15hrs"
+        label: "Time Saved Weekly"
+        description: "Via AI automation"
 
   - type: "grid"
     class: "services"
     header:
-      title: "How My Workshops Run"
-      subtitle: "Choose the format that fits your team and timeline."
+      title: "Workshop Formats"
+      subtitle: "Choose the delivery method that works best for your schedule."
     items:
       - icon: "icon-handshake"
-        title: "In-Person"
-        description: "Full-day sessions with live guidance, exercises, and peer interaction."
+        title: "Live Online Sessions"
+        description: "Interactive workshops with real-time implementation and instant feedback."
       - icon: "icon-computer"
-        title: "Virtual"
-        description: "Multi-session formats with practical assignments and live Q&A."
+        title: "Self-Paced + Coaching"
+        description: "Work at your own speed with weekly check-ins and personalized guidance."
       - icon: "icon-target"
-        title: "Custom Team Sessions"
-        description: "Tailored versions for in-house teams looking to implement together."
+        title: "Custom Team Training"
+        description: "Tailored sessions for in-house teams implementing together."
 
 cta:
   title: "Ready to Build Your Lead Generation System?"

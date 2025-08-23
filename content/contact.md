@@ -3,11 +3,13 @@ title: "Contact"
 description: "Get in touch to discuss how we can work together on your marketing strategy and lead generation system."
 
 contact_info:
-  email: "anoop@example.com"
+  email: "mail@anoopkurup.com"
   social:
-    linkedin: "#"
-    youtube: "#"
-    instagram: "#"
+    linkedin: "https://www.linkedin.com/in/anoopkurup/"
+    youtube: "https://www.youtube.com/@anoopkurup"
+    instagram: "https://www.instagram.com/anoopkurup/"
+    spotify: "https://open.spotify.com/show/anoopkurup"
+    whatsapp: "https://wa.me/1234567890"
 
 form:
   action: "#" # Replace with your form handler (Formspree, Netlify Forms, etc.)
@@ -33,21 +35,24 @@ form:
   submit_text: "Send Message"
 
 sections:
-  - type: "grid"
-    class: "contact"
-    grid_class: "grid-2"
+  - type: "highlight"
+    class: "about"
+    title: "Professional, Strategic, Results-Focused"
+    description: "I work with businesses ready to move beyond scattered marketing to systematic lead generation. If you're looking for quick fixes or generic advice, we're not a fit. If you want strategic, customized solutions that create lasting results, let's talk."
+
+  - type: "features"
+    class: "about"
+    header:
+      title: "What to Expect"
+      subtitle: "Here's how I approach new client conversations and what you can expect."
     items:
-      - type: "form"
-        title: "Send a Message"
-        content: "Use the form to get in touch directly."
-      - type: "info"
-        title: "Other Ways to Connect"
-        content: |
-          **Email:** [anoop@example.com](mailto:anoop@example.com)
-          
-          **Social Media:** Connect with me on LinkedIn, YouTube, and Instagram for regular insights and updates.
-          
-          **Response Time:** I typically respond within 24-48 hours during business days.
+      - title: "Strategic Discovery"
+        description: "I'll ask detailed questions about your business, current marketing, and growth goals to understand if we're a good fit."
+      - title: "Honest Assessment"
+        description: "I'll tell you directly if I can help or if you'd be better served elsewhere. No wasted time for either of us."
+      - title: "Clear Next Steps"
+        description: "If we're aligned, I'll outline exactly how we'd work together, timeline, and investment required."
+        highlight: true
 
 # Optional: Add testimonials or FAQ
 testimonials:
@@ -70,8 +75,8 @@ faq:
     answer: "Most strategy projects take 4-8 weeks, while implementation support can extend 3-6 months. Workshops are typically 1-2 days with follow-up sessions."
 ---
 
-## Get In Touch
+## Ready to Build a Marketing System That Actually Works?
 
-Whether you're looking to fix scattered marketing, build a lead generation system, or explore AI-enabled workflows, I'm here to help.
+Whether you're tired of inconsistent lead flow, ready to scale beyond referrals, or want to integrate AI into your marketing—let's discuss if we're a good fit.
 
-Fill out the form below and I'll get back to you within 24 hours to discuss your project and see if we're a good fit to work together.
+Use the form below for project inquiries, or connect with me directly via email or social media for quick questions.

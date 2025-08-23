@@ -3,18 +3,21 @@ title: "AI Solutions"
 description: "AI tools that make marketing cheaper, faster, and consistent. Practical, proven solutions designed for professional services and tech-enabled businesses."
 
 sections:
-  - type: "content"
+  - type: "highlight"
     class: "about"
-    content: |
-      ## Why Use My AI Solutions?
-      
-      Most businesses experiment with AI tools, but end up with scattered results. I design AI solutions that are:
-      
-      - **Focused** — built for specific marketing tasks.
-      - **Customizable** — tailored to your brand and tone of voice.
-      - **Reliable** — giving you consistent output day after day.
-      
-      Instead of reinventing the wheel, you can plug these solutions directly into your marketing system.
+    title: "Why Use My AI Solutions?"
+    description: "Most businesses experiment with AI tools but get scattered results. My solutions are **focused** on specific tasks, **customizable** to your brand, and **reliable** for consistent output day after day."
+    
+  - type: "features"
+    class: "about"
+    items:
+      - title: "Focused & Purpose-Built"
+        description: "Each solution targets specific marketing challenges instead of generic content creation."
+      - title: "Brand-Customized"
+        description: "Tailored to your unique voice, style, and industry expertise—not generic AI output."
+      - title: "Plug-and-Play Reliable"
+        description: "Consistent quality results that integrate directly into your existing marketing system."
+        highlight: true
 
   - type: "grid"
     class: "services"
@@ -27,13 +30,13 @@ sections:
         description: |
           **Show up every day as a thought leader—without the daily writing struggle.**
           
-          This solution delivers a ready-to-post LinkedIn update to your inbox every day, personalized to your expertise and audience.
+          Ready-to-post LinkedIn updates delivered to your inbox daily, personalized to your expertise and audience.
           
-          - AI-crafted posts that sound like you, not a machine.
-          - Content designed to build authority and attract inbound leads.
-          - A system that ensures you never miss a day of visibility.
+          ✓ AI-crafted posts that sound authentically like you
+          ✓ Content designed to build authority and attract leads
+          ✓ Consistent posting without missing a day
           
-          Perfect for consultants, agency founders, and business leaders who want to grow their personal brand on LinkedIn.
+          *Perfect for consultants, agency founders, and business leaders growing their personal brand.*
         link:
           url: "ai-solutions/linkedin-content/"
           text: "Get LinkedIn Post Creator"
@@ -43,13 +46,13 @@ sections:
         description: |
           **Turn your website into a lead magnet with in-depth, expert articles.**
           
-          This solution creates well-researched, SEO-friendly articles for your blog—designed to position you as an industry authority and improve search rankings.
+          Well-researched, SEO-friendly articles that position you as an industry authority and improve search rankings.
           
-          - Articles that cover topics holistically, answering customer questions fully.
-          - Consistent publishing, so your blog becomes a steady source of inbound traffic.
-          - Content mapped to your marketing strategy, not random keyword stuffing.
+          ✓ Articles that answer customer questions comprehensively
+          ✓ Consistent publishing for steady inbound traffic
+          ✓ Content mapped to strategy, not random keywords
           
-          The result: a blog that builds trust, educates prospects, and drives qualified leads.
+          *Result: a blog that builds trust, educates prospects, and drives qualified leads.*
         link:
           url: "ai-solutions/blog-articles/"
           text: "Get Blog Article Writer"
@@ -59,13 +62,13 @@ sections:
         description: |
           **Engage your audience with consistent, on-brand content for Instagram.**
           
-          This solution creates post ideas, captions, and visuals tailored to your niche—so you can focus on connecting with your audience instead of constantly brainstorming.
+          Post ideas, captions, and visuals tailored to your niche—focus on connecting instead of constantly brainstorming.
           
-          - Ready-to-use Instagram content calendars.
-          - Captions crafted to drive engagement and save you hours of writing.
-          - Visual templates designed to fit your brand style.
+          ✓ Ready-to-use Instagram content calendars
+          ✓ Engaging captions that save hours of writing
+          ✓ Visual templates matching your brand style
           
-          Perfect for businesses that want to stay visible on Instagram without hiring a full-time content team.
+          *Perfect for staying visible on Instagram without a full-time content team.*
         link:
           url: "ai-solutions/instagram-content/"
           text: "Get Instagram Content Creator"
@@ -105,44 +108,63 @@ sections:
         title: "Continuously Improved"
         description: "Regular updates and refinements based on performance and feedback."
 
-  - type: "content"
+  - type: "features"
     class: "audience"
-    content: |
-      ## Perfect for These Businesses
-      
-      ### Professional Services
-      Marketing agencies, law firms, consulting practices, training companies—businesses that sell expertise and need to demonstrate thought leadership.
-      
-      ### Tech-Enabled Services
-      SaaS companies, IT service providers, digital agencies—businesses that understand technology but need marketing systems that scale.
-      
-      ### Growing Teams
-      Companies with 10-50 employees who need consistent marketing output but don't have dedicated content teams.
+    header:
+      title: "Perfect for These Businesses"
+      subtitle: "AI solutions designed specifically for knowledge-driven companies that need consistent marketing output."
+    items:
+      - title: "Professional Services"
+        description: "Marketing agencies, law firms, consulting practices, training companies—businesses that sell expertise and need to demonstrate thought leadership consistently."
+      - title: "Tech-Enabled Services"
+        description: "SaaS companies, IT service providers, digital agencies—businesses that understand technology but need marketing systems that scale efficiently."
+      - title: "Growing Teams"
+        description: "Companies with 10-50 employees who need consistent marketing output but don't have dedicated content teams or endless budgets."
+        highlight: true
 
-  - type: "content"
+  - type: "highlight"
     class: "about"
-    content: |
-      ## About These AI Solutions
-      
-      Each solution is built on 3+ years of testing AI workflows with professional service businesses. They're not generic tools—they're specialized systems designed to:
-      
-      - **Save time** while maintaining quality
-      - **Build authority** through consistent, expert content  
-      - **Generate leads** with strategically crafted messaging
-      - **Scale your voice** without losing authenticity
-      
-      ### What You Get:
-      - Custom AI workflows trained on your brand and industry
-      - Proven content frameworks that convert prospects
-      - Simple interfaces that require no technical knowledge
-      - Ongoing optimization based on performance data
-      - Direct support from me when you need adjustments
-      
-      ### What You Don't Get:
-      - Generic, one-size-fits-all AI outputs
-      - Content that sounds robotic or off-brand
-      - Complex technical setup or maintenance
-      - Hidden costs or surprise charges
+    title: "Built on 3+ Years of Real-World Testing"
+    description: "Each solution is tested with professional service businesses. They're not generic tools—they're specialized systems designed to save time, build authority, generate leads, and scale your voice authentically."
+
+  - type: "features"
+    class: "about"
+    header:
+      title: "What You Get vs. What You Don't"
+    items:
+      - title: "✓ What's Included"
+        description: |
+          • Custom AI workflows trained on your brand and industry
+          • Proven content frameworks that convert prospects
+          • Simple interfaces requiring no technical knowledge
+          • Ongoing optimization based on performance data
+          • Direct support when you need adjustments
+        highlight: true
+      - title: "✗ What's NOT Included"
+        description: |
+          • Generic, one-size-fits-all AI outputs
+          • Content that sounds robotic or off-brand
+          • Complex technical setup or maintenance
+          • Hidden costs or surprise charges
+
+  - type: "stats"
+    class: "services"
+    header:
+      title: "Real Results from AI Solutions"
+      subtitle: "Performance metrics from businesses using these AI-powered marketing systems."
+    items:
+      - number: "5hrs"
+        label: "Time Saved Weekly"
+        description: "Average per LinkedIn Post Creator user"
+      - number: "300%"
+        label: "Traffic Increase"
+        description: "Blog Article Writer results in 6 months"
+      - number: "3+ years"
+        label: "Development & Testing"
+        description: "Refined with real business feedback"
+      - number: "30 days"
+        label: "Money-Back Guarantee"
+        description: "Risk-free trial for all solutions"
 
   - type: "testimonials"
     class: "testimonials"

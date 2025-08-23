@@ -16,26 +16,13 @@ sections:
       
       Most business owners build great systems but struggle with consistent implementation and optimisation. **That ends now.**
 
-  - type: "grid"
+  - type: "highlight"
     class: "about"
-    grid_class: "about-content"
-    header:
-      title: "What is AI Lead Machine™ — 100 Day Sprint?"
-      subtitle: "A 100-day intensive program where we'll **scale your lead-generation system** through daily execution, weekly optimisation, and bi-weekly coaching."
-    items:
-      - title: "The Goal"
-        description: "You'll close **at least 5 qualified leads every month.**"
-        link:
-          url: "#apply"
-          text: "Apply for the Sprint"
-          class: "btn-primary"
-      - title: "Here's What You'll Achieve:"
-        description: |
-          ✓ 5+ qualified leads per month (or 1 enterprise client for larger targets)
-          ✓ A partially automated system that generates leads 24/7
-          ✓ Bulletproof processes for lead selection, nurturing, and closure
-          ✓ Testing protocols for continuous improvement
-          ✓ Data-driven optimisation that compounds results
+    title: "What is AI Lead Machine™ — 100 Day Sprint?"
+    description: "A 100-day intensive program where we'll create a lead generation system through daily execution, weekly optimisation, and bi-weekly coaching. The goal is to ensure you get at least 5 qualified leads every month."
+    button:
+      text: "Apply for the Sprint"
+      url: "#apply"
 
   - type: "grid"
     class: "services"
@@ -52,34 +39,44 @@ sections:
       - title: "Flexible execution"
         description: "Complete daily activities when it works for you."
 
-  - type: "content"
+  - type: "stats"
     class: "services"
-    content: |
-      ## What You Get Inside
-      
-      ### Core Program:
-      - Daily task sequences (30 min/day, Mon—Fri)
-      - Weekly strategy sessions (1 hr every Saturday)
-      - WhatsApp coordination + instant support
-      - Bi-weekly group calls (optional but recommended)
-      
-      ### Execution Bonuses (Worth ₹75,000+):
-      - ✅ Personalized Task Library — ₹8,000 value
-      - ✅ Lead Nurturing Automation Templates — ₹5,500 value
-      - ✅ Advanced Testing Frameworks — ₹6,000 value
-      - ✅ Analytics Dashboard Templates — ₹4,500 value
-      - ✅ 90-Day Post-Sprint Maintenance Guide — ₹6,000 value
-      - ✅ 1-on-1 guidance and support — ₹45,000 value
-      - ✅ Peer group for motivation — Priceless
+    header:
+      title: "Program Structure"
+    items:
+      - number: "30min"
+        label: "Daily Commitment"
+        description: "Monday-Friday task sequences"
+      - number: "1hr"
+        label: "Weekly Strategy"
+        description: "Every Saturday planning session"
+      - number: "100"
+        label: "Days to Results"
+        description: "Systematic path to 5+ leads/month"
 
-  - type: "content"
+  - type: "value-stack"
+    class: "services"
+    title: "Everything Included (Worth ₹75,000+)"
+    items:
+      - description: "Personalized Task Library & Daily Sequences"
+        value: "₹8,000"
+      - description: "Lead Nurturing Automation Templates"
+        value: "₹5,500"
+      - description: "Advanced Testing & Optimization Frameworks"
+        value: "₹6,000"
+      - description: "Analytics Dashboard & Tracking Templates"
+        value: "₹4,500"
+      - description: "90-Day Post-Sprint Maintenance Guide"
+        value: "₹6,000"
+      - description: "Personal 1-on-1 Guidance & Support"
+        value: "₹45,000"
+      - description: "Total Program Value"
+        value: "₹75,000+"
+
+  - type: "guarantee"
     class: "cta"
-    content: |
-      ## Our Results Guarantee
-      
-      If you follow the system exactly for 100 days and don't close at least 3 qualified leads by day 90, we'll work with you for an additional 30 days **at no extra cost** until you hit your 5-leads-per-month target.
-      
-      100% commitment to your success.
+    title: "Results Guarantee"
+    description: "If you follow the system exactly for 100 days and don't close at least 3 qualified leads by day 90, we'll work with you for an additional 30 days **at no extra cost** until you hit your 5-leads-per-month target. 100% commitment to your success."
 
   - type: "timeline"
     class: "approach"
@@ -96,14 +93,20 @@ sections:
         title: "Days 61—100: Predictable Results"
         description: "Daily: Automated execution, advanced tactics, scaling preparation\nWeekly: Long-term sustainability, growth planning"
 
-  - type: "content"
+  - type: "stats"
     class: "services"
-    content: |
-      ## Your Investment
-      
-      **₹11,800/month (3-month commitment = ₹35,400 total)**
-      
-      ⚠ Only 7 spots available per cohort.
+    header:
+      title: "Program Investment"
+    items:
+      - number: "₹11,800"
+        label: "Per Month"
+        description: "3-month commitment required"
+      - number: "₹35,400"
+        label: "Total Investment"
+        description: "Complete 100-day transformation"
+      - number: "7"
+        label: "Spots Available"
+        description: "Per cohort - limited enrollment"
 
   - type: "content"
     class: "about"

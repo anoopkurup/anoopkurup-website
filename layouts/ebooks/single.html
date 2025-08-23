@@ -1,152 +1,220 @@
 {{ define "main" }}
-<!-- Add inline styles to ensure they're applied -->
-<style>
-.ebooks-grid-custom {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-  gap: 2rem;
-  margin-top: 3rem;
-  justify-content: center;
-}
 
-.ebook-card-custom {
-  background: var(--white);
-  border: 1px solid var(--border-gray);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  max-width: 320px;
-  text-align: center;
-}
-
-.ebook-card-custom:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-}
-
-.ebook-image-custom {
-  padding: 2rem;
-  background: var(--azure);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 200px;
-}
-
-.ebook-cover-custom {
-  max-width: 120px;
-  max-height: 160px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-}
-
-.cover-fallback-custom {
-  width: 120px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--oxford-blue);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 8px;
-}
-
-.ebook-content-custom {
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.ebook-content-custom h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--oxford-blue);
-  font-weight: 600;
-}
-
-.ebook-content-custom h3 a {
-  color: var(--azure);
-  text-decoration: none;
-}
-
-.ebook-content-custom h3 a:hover {
-  color: var(--oxford-blue);
-}
-
-@media (max-width: 768px) {
-  .ebooks-grid-custom {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
-<!-- Hero -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
       <div class="hero-text animate-fade-in">
         <h1>{{ .Title }}</h1>
-        <p class="subtitle">{{ .Description }}</p>
+        {{ with .Description }}
+          <p class="subtitle">{{ . }}</p>
+        {{ end }}
       </div>
     </div>
   </div>
 </section>
 
-<!-- E-Books Grid -->
-<section class="ebooks" style="background: var(--white); padding: 80px 0;">
-  <div class="container">
-    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-      <h2>All E-Books</h2>
-      <p>Click a cover to view or download. Descriptions are intentionally short so you can scan fast.</p>
+<!-- Main Content -->
+{{ if .Content }}
+  <section class="about">
+    <div class="container">
+      {{ .Content }}
     </div>
+  </section>
+{{ end }}
 
-    <div class="ebooks-grid-custom">
-      {{ range .Params.ebooks }}
-        <article class="ebook-card-custom animate-fade-in">
-          <div class="ebook-image-custom">
-            {{ if .cover_image }}
-              <img class="ebook-cover-custom" src="{{ .cover_image | relURL }}" alt="{{ .title }} cover"
-                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="cover-fallback-custom" style="display: none;">E-BOOK</div>
-            {{ else }}
-              <div class="cover-fallback-custom">E-BOOK</div>
+<!-- Custom Sections -->
+{{ range .Params.sections }}
+    {{ if eq .type "timeline" }}
+    <section class="process">
+        {{ if .header }}
+            <h2 class="process__title">{{ .header.title }}</h2>
+        {{ end }}
+        <div class="process__list">
+            {{ range .items }}
+                <div class="process__card">
+                    <div class="process__num">{{ .number }}</div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
             {{ end }}
+        </div>
+    </section>
+    {{ else }}
+    <section class="{{ .class }}">
+        <div class="container">
+            {{ if .header }}
+                <div class="section-header">
+                    <h2>{{ .header.title }}</h2>
+                    {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if eq .type "highlight" }}
+                <div class="highlight-box">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | markdownify }}</p>
+                    {{ with .button }}
+                        <a href="{{ .url | relURL }}" class="btn">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "features" }}
+                <div class="feature-list">
+                    {{ range .items }}
+                        <div class="feature-item{{ if .highlight }} highlight{{ end }}">
+                            <h4>{{ .title }}</h4>
+                            <p>{{ .description | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "stats" }}
+                <div class="stats-grid">
+                    {{ range .items }}
+                        <div class="stat-card">
+                            <span class="stat-number">{{ .number }}</span>
+                            <div class="stat-label">{{ .label }}</div>
+                            {{ with .description }}
+                                <div class="stat-description">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "ebooks" }}
+                <div class="grid-3">
+                    {{ range .items }}
+                        {{ $ebook := . }}
+                        <div class="card">
+                            <div class="card-content">
+                                {{ with .cover_image }}
+                                    <div class="card-image" style="text-align: center; margin-bottom: 1rem;">
+                                        <img src="{{ . | relURL }}" alt="{{ $ebook.title }} cover" style="max-width: 120px; max-height: 160px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);"
+                                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                        <div style="display: none; width: 120px; height: 160px; background: var(--oxford-blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 8px; margin: 0 auto;">E-BOOK</div>
+                                    </div>
+                                {{ else }}
+                                    <div class="card-image" style="text-align: center; margin-bottom: 1rem;">
+                                        <div style="width: 120px; height: 160px; background: var(--oxford-blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 8px; margin: 0 auto;">E-BOOK</div>
+                                    </div>
+                                {{ end }}
+                                <h3><a href="{{ .download_url }}" target="_blank" rel="noopener" class="card-link">{{ .title }}</a></h3>
+                                <p style="font-size: 0.9rem; color: var(--charcoal); margin-bottom: 1rem;">{{ .description }}</p>
+                                
+                                {{ if .tags }}
+                                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; justify-content: center;">
+                                        {{ range .tags }}
+                                            <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                                
+                                <div style="font-size: 0.9rem; color: var(--charcoal); opacity: 0.7; text-align: center;">
+                                    {{ if .pages }}{{ .pages }} pages{{ end }}{{ if and .pages .price }} • {{ end }}{{ if .price }}{{ .price }}{{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "grid" }}
+                <div class="{{ .grid_class | default "grid-3" }}">
+                    {{ range .items }}
+                        <div class="card">
+                            <div class="card-content">
+                                {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description | markdownify }}</p>
+                            </div>
+                            {{ with .link }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "testimonials" }}
+                <div class="testimonial-grid">
+                    {{ range .items }}
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>{{ .quote }}</p>
+                                <div class="testimonial-author">— {{ .author }}</div>
+                                {{ with .ebook }}<div style="font-size: 0.9rem; color: var(--charcoal); opacity: 0.7; margin-top: 0.5rem;">{{ . }}</div>{{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "faq" }}
+                <div class="faq-grid">
+                    {{ range .items }}
+                        <div class="faq-item">
+                            <h3>{{ .question }}</h3>
+                            <p>{{ .answer | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "newsletter" }}
+                <div class="highlight-box" style="text-align: center;">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .subtitle }}</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+                        <input type="email" placeholder="{{ .placeholder }}" required />
+                        <button type="submit">{{ .button_text | default "Subscribe" }}</button>
+                    </form>
+                    {{ with .free_bonus }}<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.8;">{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
+
+<!-- E-Books Grid (Legacy Support) -->
+{{ if .Params.ebooks }}
+<section class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>All E-Books</h2>
+      <p>Practical, actionable guides you can implement immediately.</p>
+    </div>
+    <div class="grid-3">
+      {{ range .Params.ebooks }}
+        {{ $ebook := . }}
+        <div class="card">
+          <div class="card-content">
+            {{ with .cover_image }}
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <img src="{{ . | relURL }}" alt="{{ $ebook.title }} cover" style="max-width: 120px; max-height: 160px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div style="display: none; width: 120px; height: 160px; background: var(--oxford-blue); color: var(--white); align-items: center; justify-content: center; font-weight: 700; border-radius: 8px; margin: 0 auto;">E-BOOK</div>
+                </div>
+            {{ else }}
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="width: 120px; height: 160px; background: var(--oxford-blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 8px; margin: 0 auto;">E-BOOK</div>
+                </div>
+            {{ end }}
+            <h3><a href="{{ .download_url }}" target="_blank" rel="noopener" class="card-link">{{ .title }}</a></h3>
+            <p>{{ .description }}</p>
+            
+            {{ if .tags }}
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; justify-content: center;">
+                    {{ range .tags }}
+                        <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+                    {{ end }}
+                </div>
+            {{ end }}
+            
+            <div style="font-size: 0.9rem; color: var(--charcoal); opacity: 0.7; text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
+                {{ if .pages }}{{ .pages }} pages{{ end }}{{ if and .pages .price }} • {{ end }}{{ if .price }}{{ .price }}{{ end }}
+            </div>
           </div>
-          
-          <div class="ebook-content-custom">
-            <h3><a href="{{ .download_url }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
-            
-            <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">
-              By <a href="{{ "about/" | relURL }}" style="color: var(--charcoal); text-decoration: none;">Anoop Kurup</a>
-            </div>
-            
-            <p style="font-size: 0.95rem; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.6;">{{ .description }}</p>
-            
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-              {{ range .tags }}
-                <span style="font-size: 0.8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
-              {{ end }}
-            </div>
-            
-            <div style="font-size: 0.9rem; color: #6b7280; padding-top: 1rem; border-top: 1px solid var(--border-gray);">
-              {{ if .pages }}{{ .pages }} pages{{ end }}{{ if and .pages .price }} • {{ end }}{{ if .price }}{{ .price }}{{ end }}
-            </div>
-          </div>
-        </article>
+        </div>
       {{ end }}
     </div>
   </div>
 </section>
-
-{{ if .Content }}
-  <section class="about">
-    <div class="container">{{ .Content }}</div>
-  </section>
 {{ end }}
 
-<!-- Testimonials -->
+<!-- Legacy Testimonials Support -->
 {{ if .Params.testimonials }}
   <section class="testimonials">
     <div class="container">
@@ -159,7 +227,7 @@
             <div class="testimonial-content">
               <p>{{ .quote }}</p>
               <div class="testimonial-author">— {{ .author }}</div>
-              {{ with .ebook }}<div style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">{{ . }}</div>{{ end }}
+              {{ with .ebook }}<div style="font-size: 0.9rem; color: var(--charcoal); opacity: 0.7; margin-top: 0.5rem;">{{ . }}</div>{{ end }}
             </div>
           </div>
         {{ end }}
@@ -168,16 +236,16 @@
   </section>
 {{ end }}
 
-<!-- FAQ Section -->
+<!-- Legacy FAQ Support -->
 {{ if .Params.faq }}
   <section class="services">
     <div class="container">
       <div class="section-header">
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div class="grid-2">
+      <div class="faq-grid">
         {{ range .Params.faq }}
-          <div class="card">
+          <div class="faq-item">
             <h3>{{ .question }}</h3>
             <p>{{ .answer | markdownify }}</p>
           </div>
@@ -187,17 +255,31 @@
   </section>
 {{ end }}
 
-
+<!-- Legacy Newsletter Support -->
 {{ if .Params.newsletter }}
   <section class="newsletter">
     <div class="container">
-      <h2>{{ .Params.newsletter.title }}</h2>
-      <p>{{ .Params.newsletter.subtitle }}</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
-        <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
-        <button type="submit">Get Samples</button>
-      </form>
+      <div class="highlight-box" style="text-align: center;">
+        <h2>{{ .Params.newsletter.title }}</h2>
+        <p>{{ .Params.newsletter.subtitle }}</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+          <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
+          <button type="submit">Get Samples</button>
+        </form>
+        {{ with .Params.newsletter.free_bonus }}<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.8;">{{ . }}</p>{{ end }}
+      </div>
     </div>
   </section>
+{{ end }}
+
+<!-- CTA Section -->
+{{ if .Params.cta }}
+<section class="cta">
+    <div class="container">
+        <h2>{{ .Params.cta.title }}</h2>
+        <p>{{ .Params.cta.subtitle }}</p>
+        <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+</section>
 {{ end }}
 {{ end }}

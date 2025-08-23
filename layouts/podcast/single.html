@@ -1,0 +1,268 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="subtitle">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+{{ if .Content }}
+  <section class="about">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}
+
+<!-- Custom Sections -->
+{{ range .Params.sections }}
+    {{ if eq .type "timeline" }}
+    <section class="process">
+        {{ if .header }}
+            <h2 class="process__title">{{ .header.title }}</h2>
+        {{ end }}
+        <div class="process__list">
+            {{ range .items }}
+                <div class="process__card">
+                    <div class="process__num">{{ .number }}</div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ else }}
+    <section class="{{ .class }}">
+        <div class="container">
+            {{ if .header }}
+                <div class="section-header">
+                    <h2>{{ .header.title }}</h2>
+                    {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if eq .type "highlight" }}
+                <div class="highlight-box">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | markdownify }}</p>
+                    {{ with .button }}
+                        <a href="{{ .url | relURL }}" class="btn">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "features" }}
+                <div class="feature-list">
+                    {{ range .items }}
+                        <div class="feature-item{{ if .highlight }} highlight{{ end }}">
+                            <h4>{{ .title }}</h4>
+                            <p>{{ .description | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "stats" }}
+                <div class="stats-grid">
+                    {{ range .items }}
+                        <div class="stat-card">
+                            <span class="stat-number">{{ .number }}</span>
+                            <div class="stat-label">{{ .label }}</div>
+                            {{ with .description }}
+                                <div class="stat-description">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "episodes" }}
+                <div class="grid-2">
+                    {{ range .items }}
+                        <div class="card">
+                            <div class="card-content">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                    <div style="font-size: 2rem; font-weight: 700; color: var(--azure);">#{{ .number }}</div>
+                                    <div style="text-align: right; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
+                                        <div>{{ .date }}</div>
+                                        <div>{{ .duration }}</div>
+                                    </div>
+                                </div>
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description }}</p>
+                                
+                                {{ if .badges }}
+                                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0;">
+                                        {{ range .badges }}
+                                            <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="card-footer">
+                                {{ if .listen_url }}<a href="{{ .listen_url }}" class="card-link">Listen Now →</a>{{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "platforms" }}
+                <div class="grid-4">
+                    {{ range .items }}
+                        <div class="card" style="text-align: center;">
+                            <div class="card-content">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">{{ .icon }}</div>
+                                <h4>{{ .name }}</h4>
+                            </div>
+                            <div class="card-footer">
+                                <a href="{{ .url }}" class="card-link" target="_blank" rel="noopener">Subscribe</a>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "grid" }}
+                <div class="{{ .grid_class | default "grid-3" }}">
+                    {{ range .items }}
+                        <div class="card">
+                            <div class="card-content">
+                                {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description | markdownify }}</p>
+                            </div>
+                            {{ with .link }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "testimonials" }}
+                <div class="testimonial-grid">
+                    {{ range .items }}
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>{{ .quote }}</p>
+                                <div class="testimonial-author">— {{ .author }}</div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "faq" }}
+                <div class="faq-grid">
+                    {{ range .items }}
+                        <div class="faq-item">
+                            <h3>{{ .question }}</h3>
+                            <p>{{ .answer | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "newsletter" }}
+                <div class="highlight-box" style="text-align: center;">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .subtitle }}</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+                        <input type="email" placeholder="{{ .placeholder }}" required />
+                        <button type="submit">{{ .button_text | default "Subscribe" }}</button>
+                    </form>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
+
+<!-- Episodes Grid (Legacy Support) -->
+{{ if .Params.episodes }}
+<section class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Episodes</h2>
+      <p>Real conversations on strategy, positioning, and building lead engines that actually work.</p>
+    </div>
+    <div class="grid-2">
+      {{ range .Params.episodes }}
+        <div class="card">
+          <div class="card-content">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--azure);">#{{ .number }}</div>
+              <div style="text-align: right; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
+                <div>{{ .date }}</div>
+                <div>{{ .duration }}</div>
+              </div>
+            </div>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            
+            {{ if .badges }}
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0;">
+                {{ range .badges }}
+                  <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+          <div class="card-footer">
+            {{ if .listen_url }}<a href="{{ .listen_url }}" class="card-link" target="_blank" rel="noopener">Listen Now →</a>{{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Subscription Platforms (Legacy Support) -->
+{{ if .Params.subscription_platforms }}
+<section class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Subscribe & Listen</h2>
+      <p>Get new episodes delivered directly to your favorite podcast app.</p>
+    </div>
+    <div class="grid-4">
+      {{ range .Params.subscription_platforms }}
+        <div class="card" style="text-align: center;">
+          <div class="card-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">{{ .icon }}</div>
+            <h4>{{ .name }}</h4>
+          </div>
+          <div class="card-footer">
+            <a href="{{ .url }}" class="card-link" target="_blank" rel="noopener">Subscribe</a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Newsletter (Legacy Support) -->
+{{ if .Params.newsletter }}
+  <section class="newsletter">
+    <div class="container">
+      <div class="highlight-box" style="text-align: center;">
+        <h2>{{ .Params.newsletter.title }}</h2>
+        <p>{{ .Params.newsletter.subtitle }}</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
+          <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- CTA Section -->
+{{ if .Params.cta }}
+<section class="cta">
+    <div class="container">
+        <h2>{{ .Params.cta.title }}</h2>
+        <p>{{ .Params.cta.subtitle }}</p>
+        <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+</section>
+{{ end }}
+{{ end }}

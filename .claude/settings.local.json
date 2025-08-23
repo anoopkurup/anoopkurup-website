@@ -5,7 +5,11 @@
       "Bash(grep:*)",
       "Bash(rm:*)",
       "Bash(mkdir:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(hugo server:*)",
+      "Bash(hugo new:*)",
+      "Bash(hugo:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

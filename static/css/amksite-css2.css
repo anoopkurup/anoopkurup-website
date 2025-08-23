@@ -77,7 +77,7 @@ h3 {
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     color: var(--charcoal);
@@ -87,7 +87,7 @@ p {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     h3 { font-size: 1.5rem; }
-    p { font-size: 1rem; }
+    p { font-size: 1.125rem; }
 }
 
 /* Center-aligned content in main sections */
@@ -127,8 +127,17 @@ p {
 .services li,
 .audience li,
 .card li {
-    text-align: center;
-    margin-bottom: 0.5rem;
+    text-align: left;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Content lists should be left-aligned with proper spacing */
+.about ul li,
+.services ul li {
+    text-align: left;
+    padding-left: 0.5rem;
 }
 
 /* Navigation */
@@ -174,7 +183,7 @@ p {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
 }
 
 .nav-links a:hover {
@@ -235,6 +244,7 @@ p {
     padding: 0.5rem 1rem;
     color: var(--charcoal);
     transition: background 0.2s ease;
+    font-size: 1.05rem;
 }
 
 .dropdown-menu a:hover {
@@ -676,7 +686,7 @@ p {
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-bottom: 1rem;
 }
 
@@ -951,7 +961,7 @@ p {
 
 .audience-card p {
     color: var(--charcoal);
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.7;
     margin-bottom: 0;
     text-align: left;
@@ -1087,8 +1097,12 @@ p {
   padding: 40px 36px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-width: 640px;   /* Keeps desktop cards comfortably narrow */
+  width: 640px;       /* Fixed width for consistent card sizing */
   margin: 0 auto;     /* Centers the card within the list */
+  min-height: 200px;  /* Ensures consistent card heights */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .process__num {
@@ -1113,11 +1127,15 @@ p {
 }
 
 .process__card p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.7;
   color: var(--charcoal);
   max-width: 55ch;
   margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .process__cta {
@@ -1154,6 +1172,13 @@ p {
 }
 
 /* Responsive refinements */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .process__card {
+    width: 90%;     /* Consistent width on tablets */
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 768px) {
   .process {
     padding: 44px 16px;
@@ -1161,7 +1186,9 @@ p {
 
   .process__card {
     padding: 28px 22px;
-    max-width: 96%;
+    width: 95%;     /* Fixed width on mobile for consistency */
+    max-width: none;
+    min-height: 180px;  /* Slightly smaller min-height on mobile */
   }
 
   .process__card h3 {
@@ -1305,7 +1332,7 @@ p {
 }
 
 .blog-content p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--charcoal);
     margin-bottom: 1rem;
 }
@@ -1640,7 +1667,7 @@ footer nav.footer-links {
 footer .footer-links a {
     color: rgba(255, 255, 255, 0.8) !important;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     transition: color 0.2s ease;
     background: transparent !important;
     border: none !important;
@@ -1894,4 +1921,461 @@ footer .footer-links a:hover {
   .faq-item {
     padding: 1.5rem;
   }
+}
+
+/* Workshop Content Design Components */
+
+/* Highlight Box for Key Information */
+.highlight-box {
+  background: linear-gradient(135deg, var(--azure) 0%, var(--gamboge) 100%);
+  color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.highlight-box h3 {
+  color: var(--white);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.highlight-box p {
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.highlight-box .btn {
+  background: var(--white) !important;
+  color: var(--azure) !important;
+  border: 2px solid var(--white) !important;
+  font-weight: 600;
+}
+
+.highlight-box .btn:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature List for Benefits and Outcomes */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-item {
+  background: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--azure);
+  position: relative;
+}
+
+.feature-item h4 {
+  color: var(--oxford-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.feature-item p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.feature-item.highlight {
+  background: var(--azure);
+  color: var(--white);
+  border-left: 4px solid var(--gamboge);
+}
+
+.feature-item.highlight h4 {
+  color: var(--white);
+}
+
+.feature-item.highlight p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Stats Grid for Key Metrics */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: var(--white);
+  border: 2px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--azure);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--azure);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-top: 0.5rem;
+}
+
+/* Visual Checklist */
+.visual-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.visual-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-gray);
+  font-size: 1.05rem;
+}
+
+.visual-checklist li:last-child {
+  border-bottom: none;
+}
+
+.visual-checklist li::before {
+  content: "✓";
+  color: var(--azure);
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Guarantee Badge */
+.guarantee-badge {
+  background: var(--gamboge);
+  color: var(--oxford-blue);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  border: 3px solid var(--oxford-blue);
+}
+
+.guarantee-badge::before {
+  content: "🛡️";
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.guarantee-badge h4 {
+  color: var(--oxford-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.guarantee-badge p {
+  color: var(--oxford-blue);
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Value Stack Cards */
+.value-stack {
+  background: var(--light-gray);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.value-stack h4 {
+  color: var(--oxford-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.value-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.value-item:last-child {
+  border-bottom: none;
+  font-weight: 600;
+  color: var(--azure);
+  border-top: 2px solid var(--azure);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.value-description {
+  flex: 1;
+  font-size: 1.05rem;
+}
+
+.value-amount {
+  color: var(--azure);
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* Process Timeline Enhancement */
+.process-visual {
+  background: var(--oxford-blue);
+  padding: 3rem 0;
+  position: relative;
+}
+
+.process-visual .process__card {
+  background: var(--antiflash-white);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.process-visual .process__card::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--gamboge);
+  border-radius: 2px;
+}
+
+.process-visual .process__list > .process__card:first-child::before {
+  height: 50%;
+  top: 50%;
+}
+
+.process-visual .process__list > .process__card:last-child::before {
+  height: 50%;
+  top: 0;
+}
+
+/* Responsive Design for New Components */
+@media (max-width: 768px) {
+  .highlight-box {
+    padding: 1.5rem;
+  }
+  
+  .feature-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .value-stack {
+    padding: 1.5rem;
+  }
+  
+  .value-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .value-amount {
+    margin-left: 0;
+  }
+  
+  .guarantee-badge {
+    padding: 1.5rem;
+  }
+  
+  .process-visual .process__card::before {
+    display: none;
+  }
+}
+
+/* Contact Social Icons - White Background Version */
+.contact-social-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    border: 2px solid var(--border-gray);
+}
+
+.contact-social-icon:hover {
+    background: var(--azure);
+    border-color: var(--azure);
+    transform: translateY(-2px);
+}
+
+/* Contact LinkedIn Icon */
+.contact-icon-linkedin::before {
+    content: 'in';
+    color: var(--charcoal);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-icon-linkedin:hover::before {
+    color: var(--white);
+}
+
+/* Contact YouTube Icon */
+.contact-icon-youtube::before {
+    content: '';
+    width: 18px;
+    height: 12px;
+    background: var(--charcoal);
+    position: absolute;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-icon-youtube::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--white);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    position: absolute;
+    left: 18px;
+    transition: border-left-color 0.3s ease;
+}
+
+.contact-icon-youtube:hover::before {
+    background: var(--white);
+}
+
+.contact-icon-youtube:hover::after {
+    border-left-color: var(--azure);
+}
+
+/* Contact Instagram Icon */
+.contact-icon-instagram::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--charcoal);
+    border-radius: 6px;
+    position: absolute;
+    transition: border-color 0.3s ease;
+}
+
+.contact-icon-instagram::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 2px solid var(--charcoal);
+    border-radius: 50%;
+    position: absolute;
+    transition: border-color 0.3s ease;
+}
+
+.contact-icon-instagram:hover::before,
+.contact-icon-instagram:hover::after {
+    border-color: var(--white);
+}
+
+/* Contact Spotify Icon - Simple S letter */
+.contact-icon-spotify::before {
+    content: 'S';
+    color: var(--charcoal);
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s ease;
+}
+
+.contact-icon-spotify:hover::before {
+    color: var(--white);
+}
+
+/* Contact WhatsApp Icon - Simple W letter */
+.contact-icon-whatsapp::before {
+    content: 'W';
+    color: var(--charcoal);
+    font-weight: 700;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s ease;
+}
+
+.contact-icon-whatsapp:hover::before {
+    color: var(--white);
+}
+
+/* Footer Social Icons for Spotify and WhatsApp */
+.icon-spotify::before {
+    content: 'S';
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.icon-whatsapp::before {
+    content: 'W';
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
 }

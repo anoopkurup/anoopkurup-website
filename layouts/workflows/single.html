@@ -1,170 +1,131 @@
-{{ define "head" }}
-<style>
-  .workflow-header { background: var(--oxford-blue); color: var(--white); padding: 80px 0; }
-  .workflow-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 2rem; }
-  .workflow-meta-item { text-align: center; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; }
-  .workflow-meta-item .label { font-size: 0.8rem; opacity: 0.8; margin-bottom: 0.25rem; }
-  .workflow-meta-item .value { font-weight: 600; font-size: 1.1rem; }
-  .workflow-nav { background: var(--light-gray); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
-  .workflow-nav ul { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
-  .workflow-nav a { color: var(--charcoal); text-decoration: none; font-weight: 500; padding: 0.5rem 0; }
-  .workflow-nav a:hover { color: var(--azure); }
-  .starter-prompt { background: var(--light-gray); border: 2px solid var(--border-gray); border-radius: 12px; padding: 2rem; margin: 2rem 0; position: relative; }
-  .copy-button { position: absolute; top: 1rem; right: 1rem; background: var(--azure); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
-  .copy-button:hover { background: var(--oxford-blue); }
-  .workflow-content h2 { color: var(--oxford-blue); margin-top: 3rem; margin-bottom: 1rem; }
-  .workflow-content h3 { color: var(--charcoal); margin-top: 2rem; margin-bottom: 1rem; }
-  .workflow-content pre { background: var(--light-gray); padding: 1.5rem; border-radius: 8px; overflow-x: auto; border-left: 4px solid var(--azure); }
-  .workflow-content code { background: var(--antiflash-white); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-  .workflow-content pre code { background: none; padding: 0; }
-  .checklist { background: var(--antiflash-white); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-  .checklist h4 { margin-top: 0; color: var(--oxford-blue); }
-  .checklist ul { padding-left: 0; }
-  .checklist li { list-style: none; padding: 0.25rem 0; position: relative; padding-left: 1.5rem; }
-  .checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--azure); font-weight: bold; }
-  .related-workflows { background: var(--light-gray); padding: 2rem; border-radius: 12px; margin-top: 3rem; }
-  .workflow-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
-  .workflow-tag { background: var(--azure); color: white; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
-  .workflow-tag:hover { background: var(--oxford-blue); color: white; }
-  .breadcrumb { margin-bottom: 1rem; font-size: 0.9rem; }
-  .breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
-  .breadcrumb a:hover { color: white; }
-  .difficulty-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
-  .difficulty-easy { background: #10b981; color: white; }
-  .difficulty-intermediate { background: #f59e0b; color: white; }
-  .difficulty-advanced { background: #ef4444; color: white; }
-  
-  @media (max-width: 768px) {
-    .workflow-nav ul { flex-direction: column; gap: 0.5rem; }
-    .workflow-meta-grid { grid-template-columns: 1fr 1fr; }
-  }
-</style>
-{{ end }}
-
 {{ define "main" }}
-<!-- Workflow Header -->
-<header class="workflow-header">
+
+<!-- Hero Section -->
+<section class="hero" style="background: var(--oxford-blue); color: var(--white);">
   <div class="container">
-    <nav class="breadcrumb">
-      <a href="{{ "workflows/" | relURL }}">← All Workflows</a>
-    </nav>
-    
     <div class="hero-content">
-      <div class="hero-text">
+      <div class="hero-text animate-fade-in">
+        <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
+          <a href="{{ "workflows/" | relURL }}" style="color: rgba(255,255,255,0.8); text-decoration: none;">← All Workflows</a>
+        </nav>
+        
         {{ if .Params.featured }}
           <div style="margin-bottom: 1rem;">
-            <span style="background: var(--gamboge); padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600;">✨ FEATURED WORKFLOW</span>
+            <span style="background: var(--gamboge); padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; color: var(--white);">✨ FEATURED WORKFLOW</span>
           </div>
         {{ end }}
         
         <h1>{{ .Title }}</h1>
         <p class="subtitle">{{ .Description }}</p>
         
-        <div class="workflow-tags">
-          {{ range .Params.tags }}
-            <a href="{{ "workflows/" | relURL }}?tag={{ . | urlize }}" class="workflow-tag">{{ . }}</a>
-          {{ end }}
-        </div>
+        {{ if .Params.tags }}
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+            {{ range .Params.tags }}
+              <span style="background: var(--azure); color: white; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem;">{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
         
-        <div class="workflow-meta-grid">
-          <div class="workflow-meta-item">
-            <div class="label">Difficulty</div>
-            <div class="value">
-              <span class="difficulty-badge difficulty-{{ .Params.difficulty | lower }}">
-                {{ if eq (.Params.difficulty | lower) "easy" }}🟢{{ else if eq (.Params.difficulty | lower) "intermediate" }}🟡{{ else }}🔴{{ end }}
-                {{ .Params.difficulty }}
-              </span>
+        <div class="stats-grid" style="margin-top: 2rem;">
+          <div class="stat-card" style="background: rgba(255,255,255,0.1); border: none;">
+            <div class="stat-label">Difficulty</div>
+            <div class="stat-number" style="font-size: 1.2rem;">
+              {{ if eq (.Params.difficulty | lower) "easy" }}🟢{{ else if eq (.Params.difficulty | lower) "intermediate" }}🟡{{ else }}🔴{{ end }}
+              {{ .Params.difficulty }}
             </div>
           </div>
           
-          <div class="workflow-meta-item">
-            <div class="label">Time Required</div>
-            <div class="value">⏱ {{ .Params.estimated_time }}</div>
-          </div>
-          
-          {{ with .Params.popularity }}
-          <div class="workflow-meta-item">
-            <div class="label">Popularity</div>
-            <div class="value">🔥 {{ . }}%</div>
+          {{ with .Params.estimated_time }}
+          <div class="stat-card" style="background: rgba(255,255,255,0.1); border: none;">
+            <div class="stat-label">Time Required</div>
+            <div class="stat-number" style="font-size: 1.2rem;">⏱ {{ . }}</div>
           </div>
           {{ end }}
           
-          <div class="workflow-meta-item">
-            <div class="label">Last Updated</div>
-            <div class="value">📅 {{ .Date.Format "Jan 2, 2006" }}</div>
+          {{ with .Params.popularity }}
+          <div class="stat-card" style="background: rgba(255,255,255,0.1); border: none;">
+            <div class="stat-label">Popularity</div>
+            <div class="stat-number" style="font-size: 1.2rem;">🔥 {{ . }}%</div>
+          </div>
+          {{ end }}
+          
+          <div class="stat-card" style="background: rgba(255,255,255,0.1); border: none;">
+            <div class="stat-label">Last Updated</div>
+            <div class="stat-number" style="font-size: 1.2rem;">📅 {{ .Date.Format "Jan 2" }}</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</header>
+</section>
 
-<!-- Navigation -->
-<nav class="workflow-nav">
+<!-- Starter Prompt Section -->
+{{ with .Params.starter_prompt }}
+<section class="about">
   <div class="container">
-    <ul>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#starter-prompt">Starter Prompt</a></li>
-      <li><a href="#implementation">Implementation</a></li>
-      <li><a href="#resources">Resources</a></li>
-      {{ if .Params.prerequisites }}<li><a href="#prerequisites">Prerequisites</a></li>{{ end }}
-    </ul>
+    <div class="highlight-box" style="position: relative;">
+      <h2 style="margin-top: 0;">🚀 Starter Prompt</h2>
+      <p>Copy this prompt to get started immediately:</p>
+      <pre style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; overflow-x: auto; border-left: 4px solid var(--azure); white-space: pre-wrap; font-family: 'Courier New', monospace; line-height: 1.5; margin: 1rem 0;"><code>{{ . }}</code></pre>
+      <button onclick="copyStarterPrompt()" style="position: absolute; top: 1rem; right: 1rem; background: var(--azure); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">📋 Copy Prompt</button>
+    </div>
   </div>
-</nav>
+</section>
+{{ end }}
+
+<!-- Prerequisites -->
+{{ with .Params.prerequisites }}
+<section class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>📋 Prerequisites</h2>
+      <p>Before starting this workflow, make sure you have:</p>
+    </div>
+    <div class="feature-list">
+      {{ range . }}
+        <div class="feature-item">
+          <h4>✅ {{ . }}</h4>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Tools Needed -->
+{{ with .Params.tools_needed }}
+<section class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>🛠 Tools & Resources Needed</h2>
+    </div>
+    <div class="grid-3">
+      {{ range . }}
+        <div class="card">
+          <div class="card-content">
+            <h4>✅ {{ . }}</h4>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
 <!-- Main Content -->
-<main class="workflow-content">
+<section class="about">
   <div class="container">
-    
-    <!-- Starter Prompt Section -->
-    {{ with .Params.starter_prompt }}
-    <section id="starter-prompt" class="starter-prompt">
-      <h3 style="margin-top: 0; color: var(--oxford-blue);">🚀 Starter Prompt</h3>
-      <p style="margin-bottom: 1rem; color: #666;">Copy this prompt to get started immediately:</p>
-      <pre style="margin: 0; white-space: pre-wrap; font-family: 'Courier New', monospace; line-height: 1.5;"><code>{{ . }}</code></pre>
-      <button class="copy-button" onclick="copyStarterPrompt()">📋 Copy Prompt</button>
-    </section>
-    {{ end }}
+    {{ .Content }}
+  </div>
+</section>
 
-    <!-- Prerequisites -->
-    {{ with .Params.prerequisites }}
-    <section id="prerequisites">
-      <h2>📋 Prerequisites</h2>
-      <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gamboge);">
-        <p><strong>Before starting this workflow, make sure you have:</strong></p>
-        <ul>
-          {{ range . }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-      </div>
-    </section>
-    {{ end }}
-
-    <!-- Tools Needed -->
-    {{ with .Params.tools_needed }}
-    <section>
-      <h2>🛠 Tools & Resources Needed</h2>
-      <div style="background: var(--antiflash-white); padding: 1.5rem; border-radius: 8px;">
-        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin: 0;">
-          {{ range . }}
-            <li style="list-style: none; padding: 0.5rem; background: white; border-radius: 4px; border: 1px solid var(--border-gray);">✅ {{ . }}</li>
-          {{ end }}
-        </ul>
-      </div>
-    </section>
-    {{ end }}
-
-    <!-- Main Content -->
-    <section id="implementation">
-      {{ .Content }}
-    </section>
-
-    <!-- Implementation Checklist -->
-    <div class="checklist">
-      <h4>📝 Quick Implementation Checklist</h4>
+<!-- Implementation Checklist -->
+<section class="services">
+  <div class="container">
+    <div class="highlight-box">
+      <h3>📝 Quick Implementation Checklist</h3>
       <p>Use this checklist to track your progress:</p>
-      <ul>
+      <ul class="visual-checklist">
         <li>Copy and customize the starter prompt</li>
         <li>Gather all required tools and resources</li>
         <li>Follow the step-by-step implementation guide</li>
@@ -173,39 +134,53 @@
         <li>Share feedback or questions in the community</li>
       </ul>
     </div>
+  </div>
+</section>
 
-    <!-- Related Workflows -->
-    <div class="related-workflows">
-      <h3 style="margin-top: 0; color: var(--oxford-blue);">🔗 Related Workflows</h3>
+<!-- Related Workflows -->
+<section class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>🔗 Related Workflows</h2>
       <p>These workflows work well together or solve similar challenges:</p>
-      
-      <div class="grid-3" style="margin-top: 1.5rem;">
-        <!-- We'll need to manually curate these based on content relationships -->
-        {{ $currentTitle := .Title }}
-        {{ range first 3 (where .Site.Pages "Section" "workflows") }}
-          {{ if ne .Title $currentTitle }}
-            <div class="card">
-              <div class="card-content">
-                <div class="card-icon icon-robot"></div>
-                <h4><a href="{{ .RelPermalink }}" class="card-link">{{ .Title }}</a></h4>
-                <p>{{ .Description | truncate 100 }}</p>
-                <div style="margin-top: 0.5rem;">
-                  <span class="badge">{{ .Params.difficulty }}</span>
-                  <span class="badge">{{ .Params.estimated_time }}</span>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-        {{ end }}
-      </div>
-      
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="{{ "workflows/" | relURL }}" class="btn btn-secondary">View All Workflows</a>
-      </div>
     </div>
+    
+    <div class="grid-3">
+      {{ $currentTitle := .Title }}
+      {{ range first 3 (where .Site.Pages "Section" "workflows") }}
+        {{ if ne .Title $currentTitle }}
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon icon-robot"></div>
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Description | truncate 100 }}</p>
+              {{ if .Params.difficulty }}
+                <div style="margin-top: 1rem;">
+                  <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal);">{{ .Params.difficulty }}</span>
+                  {{ with .Params.estimated_time }}
+                    <span style="font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 20px; background: var(--light-gray); color: var(--charcoal); margin-left: 0.5rem;">{{ . }}</span>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+            <div class="card-footer">
+              <a href="{{ .RelPermalink }}" class="card-link">View Workflow →</a>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ "workflows/" | relURL }}" class="btn btn-secondary">View All Workflows</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Navigation -->
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-gray);">
+<!-- Navigation -->
+<section class="about">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-top: 1px solid var(--border-gray);">
       <div>
         {{ with .PrevInSection }}
           <a href="{{ .RelPermalink }}" class="btn btn-secondary">← {{ .Title | truncate 30 }}</a>
@@ -221,82 +196,43 @@
       </div>
     </div>
   </div>
-</main>
+</section>
 
 <!-- Newsletter CTA -->
 <section class="newsletter">
   <div class="container">
-    <h2>Get Weekly AI Workflows</h2>
-    <p>New workflows, prompts, and implementation tips delivered to your inbox every Tuesday.</p>
-    <form class="newsletter-form" action="#" method="post">
-      <input type="email" placeholder="you@company.com" required />
-      <button type="submit">Subscribe</button>
-    </form>
+    <div class="highlight-box" style="text-align: center;">
+      <h2>Get Weekly AI Workflows</h2>
+      <p>New workflows, prompts, and implementation tips delivered to your inbox every Tuesday.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="you@company.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
   </div>
 </section>
+
 {{ end }}
 
 {{ define "scripts" }}
 <script>
   // Copy starter prompt functionality
   function copyStarterPrompt() {
-    const promptText = document.querySelector('.starter-prompt pre code').textContent;
+    const promptText = document.querySelector('.highlight-box pre code').textContent;
     
     navigator.clipboard.writeText(promptText).then(function() {
-      const button = document.querySelector('.copy-button');
+      const button = event.target;
       const originalText = button.innerHTML;
       button.innerHTML = '✅ Copied!';
       button.style.background = '#10b981';
       
       setTimeout(function() {
         button.innerHTML = originalText;
-        button.style.background = '';
+        button.style.background = 'var(--azure)';
       }, 2000);
     }).catch(function() {
       alert('Could not copy to clipboard. Please select and copy manually.');
     });
   }
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('.workflow-nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
-
-  // Highlight active navigation item on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.workflow-nav a[href^="#"]');
-  
-  function highlightActiveSection() {
-    let current = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-    
-    navLinks.forEach(link => {
-      link.style.color = '';
-      link.style.fontWeight = '';
-      if (link.getAttribute('href') === '#' + current) {
-        link.style.color = 'var(--azure)';
-        link.style.fontWeight = '600';
-      }
-    });
-  }
-  
-  window.addEventListener('scroll', highlightActiveSection);
-  highlightActiveSection(); // Initial call
 </script>
 {{ end }}

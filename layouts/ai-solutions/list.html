@@ -1,0 +1,226 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="subtitle">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+{{ if .Content }}
+  <section class="about">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+{{ end }}
+
+<!-- Custom Sections from Front Matter -->
+{{ range .Params.sections }}
+    {{ if eq .type "timeline" }}
+    <section class="process">
+        {{ if .header }}
+            <h2 class="process__title">{{ .header.title }}</h2>
+        {{ end }}
+        <div class="process__list">
+            {{ range .items }}
+                <div class="process__card">
+                    <div class="process__num">{{ .number }}</div>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ else }}
+    <section class="{{ .class }}">
+        <div class="container">
+            {{ if .header }}
+                <div class="section-header">
+                    <h2>{{ .header.title }}</h2>
+                    {{ with .header.subtitle }}<p>{{ . }}</p>{{ end }}
+                </div>
+            {{ end }}
+            
+            {{ if eq .type "grid" }}
+                <div class="{{ .grid_class | default "grid-3" }}">
+                    {{ range .items }}
+                        <div class="card">
+                            <div class="card-content">
+                                {{ with .icon }}<div class="card-icon {{ . }}"></div>{{ end }}
+                                <h3>{{ .title }}</h3>
+                                <p>{{ .description | markdownify }}</p>
+                            </div>
+                            {{ with .link }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="card-link">{{ .text | default "Learn More" }} →</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "content" }}
+                {{ .content | markdownify }}
+            {{ else if eq .type "testimonials" }}
+                <div class="testimonial-grid">
+                    {{ range .items }}
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>{{ .quote }}</p>
+                                <div class="testimonial-author">{{ .author }}</div>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "faq" }}
+                <div class="faq-grid">
+                    {{ range .items }}
+                        <div class="faq-item">
+                            <h3>{{ .question }}</h3>
+                            <p>{{ .answer }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "pricing" }}
+                <div class="pricing-grid">
+                    {{ range .items }}
+                        <div class="pricing-card{{ if .featured }} pricing-card--featured{{ end }}">
+                            <div class="card-content">
+                                <div class="pricing-header">
+                                    <h3>{{ .name }}</h3>
+                                    <div class="pricing-price">{{ .price }}</div>
+                                </div>
+                                <ul class="pricing-features">
+                                    {{ range .features }}
+                                        <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                            {{ with .button }}
+                                <div class="card-footer">
+                                    <a href="{{ .url | relURL }}" class="btn {{ .class | default "btn-primary" }}">{{ .text }}</a>
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "highlight" }}
+                <div class="highlight-box">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | markdownify }}</p>
+                    {{ with .button }}
+                        <a href="{{ .url | relURL }}" class="btn">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "features" }}
+                <div class="feature-list">
+                    {{ range .items }}
+                        <div class="feature-item{{ if .highlight }} highlight{{ end }}">
+                            <h4>{{ .title }}</h4>
+                            <p>{{ .description | markdownify }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "stats" }}
+                <div class="stats-grid">
+                    {{ range .items }}
+                        <div class="stat-card">
+                            <span class="stat-number">{{ .number }}</span>
+                            <div class="stat-label">{{ .label }}</div>
+                            {{ with .description }}
+                                <div class="stat-description">{{ . }}</div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else if eq .type "checklist" }}
+                <ul class="visual-checklist">
+                    {{ range .items }}
+                        <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            {{ else if eq .type "guarantee" }}
+                <div class="guarantee-badge">
+                    <h4>{{ .title }}</h4>
+                    <p>{{ .description | markdownify }}</p>
+                </div>
+            {{ else if eq .type "value-stack" }}
+                <div class="value-stack">
+                    <h4>{{ .title }}</h4>
+                    {{ range .items }}
+                        <div class="value-item">
+                            <span class="value-description">{{ .description }}</span>
+                            <span class="value-amount">{{ .value }}</span>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
+
+<!-- AI Solutions Grid -->
+{{ if .Pages }}
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ .Params.list_title | default "Available AI Solutions" }}</h2>
+        {{ with .Params.list_subtitle }}
+          <p>{{ . }}</p>
+        {{ end }}
+      </div>
+      
+      <div class="grid-3">
+        {{ range .Pages }}
+          <div class="card animate-fade-in">
+            <div class="card-content">
+              {{ with .Params.icon }}
+                <div class="card-icon {{ . }}"></div>
+              {{ end }}
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Description | default .Summary }}</p>
+              
+              <!-- Solution metadata -->
+              {{ with .Params.price }}
+                <div style="margin: 1rem 0;">
+                  <span style="color: var(--azure); font-weight: 600; font-size: 1.1rem;">{{ . }}</span>
+                </div>
+              {{ end }}
+              
+            </div>
+            
+            <div class="card-footer">
+              {{ if eq .Params.status "coming-soon" }}
+                <span class="card-link" style="color: var(--charcoal); opacity: 0.6;">Coming Soon</span>
+              {{ else if eq .Params.status "beta" }}
+                <a href="{{ .RelPermalink }}" class="card-link">Try Beta Version →</a>
+              {{ else }}
+                <a href="{{ .RelPermalink }}" class="card-link">Learn More →</a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+<!-- CTA Section (if defined) -->
+{{ if .Params.cta }}
+  <section class="cta">
+    <div class="container">
+      <h2>{{ .Params.cta.title }}</h2>
+      <p>{{ .Params.cta.subtitle }}</p>
+      <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+  </section>
+{{ end }}
+{{ end }}

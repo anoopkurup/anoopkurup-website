@@ -17,24 +17,24 @@ sections:
       You're not alone. Most service firms lack a systematic way to generate consistent, qualified leads.
       **That ends now.**
 
-  - type: "grid"
+  - type: "highlight"
     class: "about"
-    grid_class: "about-content"
+    title: "What is AI Lead Machine™?"
+    description: "A hands-on, live workshop where we'll **build your entire lead-generation system**—powered by AI and automation—so you never have to wonder where your next client is coming from."
+    button:
+      text: "Join AI Lead Machine™"
+      url: "#pricing"
+
+  - type: "checklist"
+    class: "about"
     header:
-      title: "What is AI Lead Machine™?"
-      subtitle: "A hands-on, live workshop where we'll **build your entire lead-generation system**—powered by AI and automation—so you never have to wonder where your next client is coming from."
+      title: "What You'll Build During the Workshop"
     items:
-      - title: "What You'll Build:"
-        description: |
-          ✓ Your perfect niche and high-value offers
-          ✓ A lead magnet that attracts your ideal clients  
-          ✓ A targeted lead list using free tools
-          ✓ Personalised cold & warm outreach sequences
-          ✓ A KPI dashboard to track and optimise your pipeline
-        link:
-          url: "#pricing"
-          text: "Join AI Lead Machine™"
-          class: "btn-primary"
+      - "Your perfect niche and high-value offers that attract premium clients"
+      - "A lead magnet that your ideal clients actually want to download"
+      - "A targeted lead list using completely free tools and databases"
+      - "Personalized cold & warm outreach sequences that get responses"
+      - "A KPI dashboard to track, measure, and optimize your pipeline"
 
   - type: "grid"
     class: "services"
@@ -52,41 +52,57 @@ sections:
         title: "No wasted time"
         description: "Quick wins—you'll launch your first outreach campaign before the workshop ends."
 
-  - type: "grid"
+  - type: "stats"
     class: "services"
     header:
-      title: "What You Get Inside"
-    grid_class: "grid-2"
+      title: "Core Workshop Details"
     items:
-      - title: "Core Training:"
-        description: |
-          - 2 live sessions (2.5 hrs each)
-          - Interactive exercises + implementation support
-      - title: "Premium Bonuses (Worth ₹19,000+):"
-        description: |
-          ✅ AI Prompt Library (ICP, Offers, Outreach, Follow-ups) — ₹5,000 value
-          ✅ Lead Magnet & Offer Framework — ₹3,500 value
-          ✅ LinkedIn Prospecting Guide — ₹4,000 value
-          ✅ 90-Day AI Content Calendar — ₹3,500 value
-          ✅ KPI Tracker & Workflow Templates — ₹3,000 value
+      - number: "2"
+        label: "Live Sessions"
+        description: "2.5 hours each with real-time implementation"
+      - number: "6hrs"
+        label: "Total Training"
+        description: "Interactive exercises + implementation support"
+      - number: "₹19,000+"
+        label: "Bonus Value"
+        description: "Premium templates and resources included"
 
-  - type: "content"
-    class: "testimonials"
-    content: |
-      ## 100% Risk-Free Guarantee
-      
-      If you don't generate at least 5 qualified leads or book 2 calls within 30 days of completing the workshop (and following the methods taught), I'll personally work with you for free until you do.
-      
-      **Or I'll give you double your money back.**
-      
-      That's how confident I am in this system.
-
-  - type: "content"
+  - type: "value-stack"
     class: "services"
-    content: |
-      ## Your Price: ₹4,500
-      
-      ⚠ Only 15 seats available. Registration closes when spots fill up.
+    title: "Premium Bonuses Included (Worth ₹19,000+)"
+    items:
+      - description: "AI Prompt Library (ICP, Offers, Outreach, Follow-ups)"
+        value: "₹5,000"
+      - description: "Lead Magnet & Offer Framework Templates"
+        value: "₹3,500"
+      - description: "LinkedIn Prospecting Guide & Scripts"
+        value: "₹4,000"
+      - description: "90-Day AI Content Calendar"
+        value: "₹3,500"
+      - description: "KPI Tracker & Workflow Templates"
+        value: "₹3,000"
+      - description: "Total Bonus Value"
+        value: "₹19,000+"
+
+  - type: "guarantee"
+    class: "testimonials"
+    title: "100% Risk-Free Guarantee"
+    description: "If you don't generate at least 5 qualified leads or book 2 calls within 30 days of completing the workshop (and following the methods taught), I'll personally work with you for free until you do. **Or I'll give you double your money back.**"
+
+  - type: "stats"
+    class: "services"
+    header:
+      title: "Workshop Investment"
+    items:
+      - number: "₹4,500"
+        label: "Complete Workshop"
+        description: "Everything included, no hidden costs"
+      - number: "15"
+        label: "Seats Available"
+        description: "Registration closes when full"
+      - number: "30 days"
+        label: "Money-Back Guarantee"
+        description: "Risk-free participation"
 
   - type: "content"
     class: "about"

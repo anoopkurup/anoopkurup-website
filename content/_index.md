@@ -30,6 +30,23 @@ audience:
       description: "Independent professionals, boutique consultancies, and subject matter experts earning $150K+ annually who are ready to scale beyond personal capacity. These are recognized experts in their fields who've outgrown the feast-or-famine cycle of networking and referrals. They want to build personal brands and systematic lead generation that attracts ideal clients automatically, without constant networking, speaking, or cold outreach that doesn't scale."
       results: "Typical results: 2-3x increase in inbound inquiries, 50-70% improvement in project value and client quality."
 
+testimonials:
+  title: "What Clients Say"
+  subtitle: "Real results from businesses that transformed their marketing approach."
+  items:
+    - quote: "Anoop helped us move from chaotic, reactive marketing to a systematic approach that consistently generates qualified leads. Our close rate improved by 35% within 90 days."
+      author: "Sarah Chen"
+      role: "Founder, Strategic Marketing Partners"
+      company: "Marketing Agency, 25 employees"
+    - quote: "The AI workflows Anoop designed save our team 15 hours per week on content creation while maintaining quality. It's like having an extra team member focused on marketing."
+      author: "Michael Rodriguez"
+      role: "CEO"
+      company: "TechFlow Solutions, SaaS Platform"
+    - quote: "Finally, marketing that makes sense for professional services. Anoop's approach helped us articulate our value clearly and build a pipeline that doesn't depend on just referrals."
+      author: "David Thompson"
+      role: "Managing Partner"
+      company: "Thompson Legal Advisors"
+
 services:
   title: "What I Offer"
   subtitle: "Multiple ways to work together, tailored to your needs and stage of growth."
@@ -49,6 +66,28 @@ services:
       description: "AI-enabled tools that make marketing faster, cheaper, and more consistent."
       link: "ai-solutions/"
       link_text: "Explore Tools"
+
+blog:
+  title: "Latest Insights"
+  subtitle: "Practical strategies and AI workflows to grow your services business."
+  show_posts: 3
+
+resources:
+  title: "Free Resources"
+  subtitle: "Grab these tools and templates to start improving your marketing today."
+  items:
+    - title: "Marketing System Blueprint"
+      description: "A 12-page guide to building your lead generation system from strategy to execution."
+      link: "ebooks/"
+      type: "PDF Guide"
+    - title: "AI Content Workflows"
+      description: "Ready-to-use prompts and workflows for creating marketing content with AI."
+      link: "ai-workflows/"
+      type: "Templates"
+    - title: "Lead Qualification Framework"
+      description: "Simple framework to identify and qualify your best prospects systematically."
+      link: "ebooks/"
+      type: "Worksheet"
 
 approach:
   title: "My Approach"
