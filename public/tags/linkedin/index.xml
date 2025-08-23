@@ -1,26 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>LinkedIn on Anoop Kurup</title>
-    <link>http://localhost:1316/tags/linkedin/</link>
-    <description>Recent content in LinkedIn on Anoop Kurup</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1316/tags/linkedin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>LinkedIn Post Creator — Daily Expert Posts</title>
-      <link>http://localhost:1316/workflows/linkedin-post-creator/</link>
-      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1316/workflows/linkedin-post-creator/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The LinkedIn Post Creator workflow transforms topic ideas into engaging, authority-building posts that generate meaningful engagement without being salesy. Perfect for consultants, agency founders, and business leaders who want consistent LinkedIn presence.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-create&#34;&gt;What You&amp;rsquo;ll Create&lt;/h3&gt;&#xA;&lt;p&gt;Each use of this workflow produces:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engaging hook&lt;/strong&gt; that stops the scroll&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;1-2 valuable insights&lt;/strong&gt; that demonstrate expertise&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clear takeaway&lt;/strong&gt; readers can implement&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Soft call-to-action&lt;/strong&gt; to build following&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Optimized formatting&lt;/strong&gt; for LinkedIn algorithm&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-core-workflow&#34;&gt;The Core Workflow&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-topic--angle-selection-3-minutes&#34;&gt;Step 1: Topic + Angle Selection (3 minutes)&lt;/h3&gt;&#xA;&lt;p&gt;Start with this prompt to brainstorm topics:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LinkedIn Post Creator</title>
-      <link>http://localhost:1316/ai-solutions/linkedin-content/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1316/ai-solutions/linkedin-content/</guid>
-      <description>&lt;!-- Main content area - can include additional markdown content here if needed --&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LinkedIn on Anoop Kurup</title><link>https://anoopkurup.com/tags/linkedin/</link><description>Recent content in LinkedIn on Anoop Kurup</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://anoopkurup.com/tags/linkedin/index.xml" rel="self" type="application/rss+xml"/><item><title>LinkedIn Post Creator — Daily Expert Posts</title><link>https://anoopkurup.com/workflows/linkedin-post-creator/</link><pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate><guid>https://anoopkurup.com/workflows/linkedin-post-creator/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>The LinkedIn Post Creator workflow transforms topic ideas into engaging, authority-building posts that generate meaningful engagement without being salesy. Perfect for consultants, agency founders, and business leaders who want consistent LinkedIn presence.&lt;/p>
+&lt;h3 id="what-youll-create">What You&amp;rsquo;ll Create&lt;/h3>
+&lt;p>Each use of this workflow produces:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Engaging hook&lt;/strong> that stops the scroll&lt;/li>
+&lt;li>&lt;strong>1-2 valuable insights&lt;/strong> that demonstrate expertise&lt;/li>
+&lt;li>&lt;strong>Clear takeaway&lt;/strong> readers can implement&lt;/li>
+&lt;li>&lt;strong>Soft call-to-action&lt;/strong> to build following&lt;/li>
+&lt;li>&lt;strong>Optimized formatting&lt;/strong> for LinkedIn algorithm&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-core-workflow">The Core Workflow&lt;/h2>
+&lt;h3 id="step-1-topic--angle-selection-3-minutes">Step 1: Topic + Angle Selection (3 minutes)&lt;/h3>
+&lt;p>Start with this prompt to brainstorm topics:&lt;/p></description></item><item><title>LinkedIn Post Creator</title><link>https://anoopkurup.com/ai-solutions/linkedin-content/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://anoopkurup.com/ai-solutions/linkedin-content/</guid><description>&lt;!-- Main content area - can include additional markdown content here if needed --></description></item></channel></rss>

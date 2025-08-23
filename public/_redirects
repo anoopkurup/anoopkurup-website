@@ -1,0 +1,54 @@
+# Netlify redirects file
+# Format: /old-path /new-path [HTTP-status-code]
+
+# Legal pages - exact path changes
+/privacy-policy/ /legal/privacy-policy/ 301
+/terms-and-conditions/ /legal/terms-conditions/ 301
+/refund-return-policy/ /legal/terms-conditions/ 301
+
+# Blog redirects
+/blog-2/ /blog/ 301
+/category/blog/ /blog/ 301
+
+# Workshop and service redirects
+/lead-generation-strategy-workshop/ /workshops/ai-lead-machine/ 301
+/linkedin-marketing/ /ai-solutions/linkedin-content/ 301
+/linkedin-thoughtleadership/ /ai-solutions/linkedin-content/ 301
+/content-factory-creators-membership/ /workshops/ 301
+/find-your-tg/ /consulting/ 301
+
+# Blog post redirect - specific post
+/do-followers-on-social-media-translate-into-future-clients/ /blog/ 301
+
+# Category and taxonomy redirects
+/docs-category/getting-started/ /workshops/ 301
+/docs-category/configurations/ /ai-solutions/ 301
+/docs-category/linkedin/ /ai-solutions/linkedin-content/ 301
+/docs-category/audio/ /podcast/ 301
+/docs-category/idea-generation/ /ai-solutions/ 301
+/docs-category/misc/ /blog/ 301
+
+# Author pages
+/author/clientmagnet-in/ /about/ 301
+/author/* /about/ 301
+
+# Thank you pages - redirect to homepage with success parameter
+/thank-you-for-subscribing/ /contact/?success=newsletter 301
+/thank-you-linkedin/ /contact/?success=linkedin 301
+/thank-you-membership-content-factory-creators/ /workshops/?success=membership 301
+/thank-you-getting-started-with-linkedin/ /ai-solutions/linkedin-content/?success=guide 301
+/thank-you-for-subscribing-to-the-newsletter/ /contact/?success=newsletter 301
+/thank-you-lead-gen-workshop/ /workshops/ai-lead-machine/?success=workshop 301
+/thank-you-for-filling-the-form/ /contact/?success=form 301
+/thank-you-linkedin-thought-leadership/ /ai-solutions/linkedin-content/?success=leadership 301
+
+# WordPress specific redirects
+/wp-sitemap*.xml /sitemap.xml 301
+/wp-content/* / 301
+/wp-admin/* / 301
+
+# Catch-all for any remaining WordPress paths
+/wp-* / 301
+
+# 404 fallback - should be last
+/* /404.html 404

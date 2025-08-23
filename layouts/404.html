@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text animate-fade-in">
+        <h1>Page Not Found</h1>
+        <p class="subtitle">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+        <div style="margin-top: 2rem;">
+          <a href="{{ .Site.BaseURL }}" class="btn btn-primary">Go to Homepage</a>
+          <a href="/contact/" class="btn btn-secondary" style="margin-left: 1rem;">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Looking for something specific?</h2>
+      <p>Here are some popular pages that might help:</p>
+    </div>
+    
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-content">
+          <h3>Workshops</h3>
+          <p>Join our AI Lead Machine and 100 Day Sprint programs</p>
+        </div>
+        <div class="card-footer">
+          <a href="/workshops/" class="card-link">View Workshops →</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <h3>AI Solutions</h3>
+          <p>LinkedIn content, Instagram posts, and blog article services</p>
+        </div>
+        <div class="card-footer">
+          <a href="/ai-solutions/" class="card-link">Explore Solutions →</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <h3>Consulting</h3>
+          <p>Fix your marketing with personalized business consulting</p>
+        </div>
+        <div class="card-footer">
+          <a href="/consulting/" class="card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

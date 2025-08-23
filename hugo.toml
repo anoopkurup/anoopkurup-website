@@ -134,3 +134,40 @@ theme = ""
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# URL redirects and aliases
+[[redirects]]
+  from = "/privacy-policy/"
+  to = "/legal/privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/terms-and-conditions/"
+  to = "/legal/terms-conditions/"
+  status = 301
+
+[[redirects]]
+  from = "/blog-2/"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/lead-generation-strategy-workshop/"
+  to = "/workshops/ai-lead-machine/"
+  status = 301
+
+[[redirects]]
+  from = "/linkedin-marketing/"
+  to = "/ai-solutions/linkedin-content/"
+  status = 301
+
+[[redirects]]
+  from = "/linkedin-thoughtleadership/"
+  to = "/ai-solutions/linkedin-content/"
+  status = 301
+
+# Generate XML sitemap
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"

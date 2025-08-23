@@ -1600,49 +1600,48 @@ footer .social-icon:hover {
 
 /* LinkedIn Icon */
 .icon-linkedin::before {
-    content: 'in';
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1rem;
+    content: '';
+    background-image: url('/icons/linkedin.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
 }
 
 /* YouTube Icon */
 .icon-youtube::before {
     content: '';
+    background-image: url('/icons/youtube.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 18px;
-    height: 12px;
-    background: var(--white);
+    height: 18px;
+    filter: brightness(0) invert(1);
     position: absolute;
-    border-radius: 2px;
 }
 
 .icon-youtube::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 8px solid var(--charcoal);
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    position: absolute;
+    display: none;
 }
 
 /* Instagram Icon */
 .icon-instagram::before {
     content: '';
+    background-image: url('/icons/instagram.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--white);
-    border-radius: 6px;
+    filter: brightness(0) invert(1);
     position: absolute;
 }
 
 .icon-instagram::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border: 2px solid var(--white);
-    border-radius: 50%;
-    position: absolute;
+    display: none;
 }
 
 footer nav {
@@ -2263,119 +2262,126 @@ footer .footer-links a:hover {
 
 /* Contact LinkedIn Icon */
 .contact-icon-linkedin::before {
-    content: 'in';
-    color: var(--charcoal);
-    font-weight: 700;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    content: '';
+    background-image: url('/icons/linkedin.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
 }
 
 .contact-icon-linkedin:hover::before {
-    color: var(--white);
+    filter: brightness(0) invert(1);
 }
 
 /* Contact YouTube Icon */
 .contact-icon-youtube::before {
     content: '';
+    background-image: url('/icons/youtube.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 18px;
-    height: 12px;
-    background: var(--charcoal);
+    height: 18px;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
     position: absolute;
-    border-radius: 2px;
-    transition: background-color 0.3s ease;
 }
 
 .contact-icon-youtube::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 8px solid var(--white);
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    position: absolute;
-    left: 18px;
-    transition: border-left-color 0.3s ease;
+    display: none;
 }
 
 .contact-icon-youtube:hover::before {
-    background: var(--white);
-}
-
-.contact-icon-youtube:hover::after {
-    border-left-color: var(--azure);
+    filter: brightness(0) invert(1);
 }
 
 /* Contact Instagram Icon */
 .contact-icon-instagram::before {
     content: '';
+    background-image: url('/icons/instagram.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--charcoal);
-    border-radius: 6px;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
     position: absolute;
-    transition: border-color 0.3s ease;
 }
 
 .contact-icon-instagram::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border: 2px solid var(--charcoal);
-    border-radius: 50%;
-    position: absolute;
-    transition: border-color 0.3s ease;
+    display: none;
 }
 
-.contact-icon-instagram:hover::before,
-.contact-icon-instagram:hover::after {
-    border-color: var(--white);
+.contact-icon-instagram:hover::before {
+    filter: brightness(0) invert(1);
 }
 
-/* Contact Spotify Icon - Simple S letter */
+/* Contact Spotify Icon */
 .contact-icon-spotify::before {
-    content: 'S';
-    color: var(--charcoal);
-    font-weight: 700;
-    font-size: 18px;
+    content: '';
+    background-image: url('/icons/spotify.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: color 0.3s ease;
 }
 
 .contact-icon-spotify:hover::before {
-    color: var(--white);
+    filter: brightness(0) invert(1);
 }
 
-/* Contact WhatsApp Icon - Simple W letter */
+/* Contact WhatsApp Icon */
 .contact-icon-whatsapp::before {
-    content: 'W';
-    color: var(--charcoal);
-    font-weight: 700;
-    font-size: 18px;
+    content: '';
+    background-image: url('/icons/whatsapp.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0);
+    transition: filter 0.3s ease;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: color 0.3s ease;
 }
 
 .contact-icon-whatsapp:hover::before {
-    color: var(--white);
+    filter: brightness(0) invert(1);
 }
 
 /* Footer Social Icons for Spotify and WhatsApp */
 .icon-spotify::before {
-    content: 'S';
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1rem;
+    content: '';
+    background-image: url('/icons/spotify.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
 }
 
 .icon-whatsapp::before {
-    content: 'W';
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1rem;
+    content: '';
+    background-image: url('/icons/whatsapp.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
 }
