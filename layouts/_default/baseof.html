@@ -3,7 +3,7 @@
 <head>
     {{ partial "head.html" . }}
 </head>
-<body>
+<body{{ if eq .Section "blog" }} class="blog-single"{{ end }}>
     {{ partial "header.html" . }}
     
     <main>

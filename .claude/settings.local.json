@@ -10,7 +10,8 @@
       "Bash(hugo new:*)",
       "Bash(hugo:*)",
       "Bash(find:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Read(//Users/anoopkurup/Movies/**)"
     ],
     "deny": [],
     "ask": []

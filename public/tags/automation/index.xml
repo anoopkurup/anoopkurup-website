@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automation on Anoop Kurup</title>
-    <link>http://localhost:1313/tags/automation/</link>
+    <link>http://localhost:64092/tags/automation/</link>
     <description>Recent content in Automation on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64092/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Lead Machine — End-to-End Demand System</title>
-      <link>http://localhost:1313/workflows/ai-lead-machine/</link>
+      <link>http://localhost:64092/workflows/ai-lead-machine/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/workflows/ai-lead-machine/</guid>
+      <guid>http://localhost:64092/workflows/ai-lead-machine/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The AI Lead Machine is a comprehensive workflow that transforms scattered marketing efforts into a systematic lead generation engine. This workflow combines strategic planning with AI-powered execution to create predictable, scalable demand for B2B service businesses.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-build&#34;&gt;What You&amp;rsquo;ll Build&lt;/h3&gt;&#xA;&lt;p&gt;By the end of this workflow, you&amp;rsquo;ll have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Complete ICP (Ideal Customer Profile)&lt;/strong&gt; with detailed buyer personas&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Messaging map&lt;/strong&gt; aligned to awareness stages&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;90-day content calendar&lt;/strong&gt; with specific topics and angles&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Lead magnets&lt;/strong&gt; designed for each funnel stage&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Distribution strategy&lt;/strong&gt; across LinkedIn, email, and content marketing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tracking system&lt;/strong&gt; to measure and optimize performance&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;step-by-step-implementation&#34;&gt;Step-by-Step Implementation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;phase-1-foundation-setup-30-minutes&#34;&gt;Phase 1: Foundation Setup (30 minutes)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;step-1-define-your-icp&#34;&gt;Step 1: Define Your ICP&lt;/h4&gt;&#xA;&lt;p&gt;Use this prompt to create a detailed ideal customer profile:&lt;/p&gt;</description>
     </item>
     <item>
       <title>LinkedIn Post Creator — Daily Expert Posts</title>
-      <link>http://localhost:1313/workflows/linkedin-post-creator/</link>
+      <link>http://localhost:64092/workflows/linkedin-post-creator/</link>
       <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/workflows/linkedin-post-creator/</guid>
+      <guid>http://localhost:64092/workflows/linkedin-post-creator/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The LinkedIn Post Creator workflow transforms topic ideas into engaging, authority-building posts that generate meaningful engagement without being salesy. Perfect for consultants, agency founders, and business leaders who want consistent LinkedIn presence.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-create&#34;&gt;What You&amp;rsquo;ll Create&lt;/h3&gt;&#xA;&lt;p&gt;Each use of this workflow produces:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Engaging hook&lt;/strong&gt; that stops the scroll&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;1-2 valuable insights&lt;/strong&gt; that demonstrate expertise&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clear takeaway&lt;/strong&gt; readers can implement&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Soft call-to-action&lt;/strong&gt; to build following&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Optimized formatting&lt;/strong&gt; for LinkedIn algorithm&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-core-workflow&#34;&gt;The Core Workflow&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-topic--angle-selection-3-minutes&#34;&gt;Step 1: Topic + Angle Selection (3 minutes)&lt;/h3&gt;&#xA;&lt;p&gt;Start with this prompt to brainstorm topics:&lt;/p&gt;</description>
     </item>
   </channel>

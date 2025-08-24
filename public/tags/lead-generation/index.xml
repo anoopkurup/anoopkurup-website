@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lead Generation on Anoop Kurup</title>
-    <link>http://localhost:1313/tags/lead-generation/</link>
+    <link>http://localhost:64092/tags/lead-generation/</link>
     <description>Recent content in Lead Generation on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Aug 2025 20:54:19 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/lead-generation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64092/tags/lead-generation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Blog Article Writer</title>
-      <link>http://localhost:1313/ai-solutions/blog-articles/</link>
+      <link>http://localhost:64092/ai-solutions/blog-articles/</link>
       <pubDate>Sat, 23 Aug 2025 20:54:19 +0530</pubDate>
-      <guid>http://localhost:1313/ai-solutions/blog-articles/</guid>
+      <guid>http://localhost:64092/ai-solutions/blog-articles/</guid>
       <description>&lt;!-- Main content area - can include additional markdown content here if needed --&gt;</description>
+    </item>
+    <item>
+      <title>Do Followers on Social Media Translate Into Future Clients?</title>
+      <link>http://localhost:64092/blog/posts/social-media-followers-to-clients/</link>
+      <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:64092/blog/posts/social-media-followers-to-clients/</guid>
+      <description>&lt;p&gt;We follow people on social media who entertain, educate, inspire, or inform. We follow brands we like, purchase from regular, or aspire to buy products from at some point in the future.&lt;/p&gt;&#xA;&lt;p&gt;Rarely do we follow someone in the services industry, or agencies with the intent of becoming their clients. “I want to buy services from this person, let me follow their social media accounts”, said no one, ever.&lt;/p&gt;&#xA;&lt;p&gt;In my experience a vast majority of followers, specially in the services industry, are there to learn from you. They are probably a level below your level of knowledge and understanding. They follow you to get more insights and lessons. Learning from your experience and expertise. As professionals, there are few opportunities to learn new things, and upgrade your knowledge. Following an experienced person in the industry gives them the necessary insights in bite size chunks on various platforms. At least that is the hypothesis.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

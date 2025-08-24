@@ -102,16 +102,7 @@
 
 <!-- Newsletter CTA (if enabled) -->
 {{ if .Params.newsletter }}
-  <section class="newsletter">
-    <div class="container">
-      <h2>{{ .Params.newsletter.title }}</h2>
-      <p>{{ .Params.newsletter.subtitle }}</p>
-      <form class="newsletter-form" action="#" method="post">
-        <input type="email" placeholder="{{ .Params.newsletter.placeholder | default "you@example.com" }}" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
+  {{ partial "newsletter.html" .Params.newsletter }}
 {{ end }}
 
 <!-- CTA Section (if defined) -->

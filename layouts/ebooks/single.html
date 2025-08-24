@@ -153,15 +153,7 @@
                     {{ end }}
                 </div>
             {{ else if eq .type "newsletter" }}
-                <div class="highlight-box" style="text-align: center;">
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .subtitle }}</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
-                        <input type="email" placeholder="{{ .placeholder }}" required />
-                        <button type="submit">{{ .button_text | default "Subscribe" }}</button>
-                    </form>
-                    {{ with .free_bonus }}<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.8;">{{ . }}</p>{{ end }}
-                </div>
+                {{ partial "newsletter.html" . }}
             {{ end }}
         </div>
     </section>
@@ -255,21 +247,11 @@
   </section>
 {{ end }}
 
-<!-- Legacy Newsletter Support -->
+<!-- Newsletter -->
 {{ if .Params.newsletter }}
-  <section class="newsletter">
-    <div class="container">
-      <div class="highlight-box" style="text-align: center;">
-        <h2>{{ .Params.newsletter.title }}</h2>
-        <p>{{ .Params.newsletter.subtitle }}</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
-          <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
-          <button type="submit">Get Samples</button>
-        </form>
-        {{ with .Params.newsletter.free_bonus }}<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.8;">{{ . }}</p>{{ end }}
-      </div>
-    </div>
-  </section>
+  {{ partial "newsletter.html" .Params.newsletter }}
+{{ else }}
+  {{ partial "newsletter.html" (dict "title" "Get Free Resource Samples" "subtitle" "Join the newsletter and get sample pages from all our e-books plus weekly marketing strategies." "button_text" "Get Free Samples" "bonus_text" "You'll receive sample pages immediately after subscribing.") }}
 {{ end }}
 
 <!-- CTA Section -->

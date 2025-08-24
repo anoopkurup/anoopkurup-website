@@ -153,26 +153,33 @@
         {{ range .Pages }}
           <article class="blog-card animate-fade-in">
             <div class="blog-image">
-              <div class="icon-article" aria-hidden="true"></div>
+              {{ if .Params.hero_image }}
+                <img src="{{ .Params.hero_image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="icon-article" aria-hidden="true" style="display: none;"></div>
+              {{ else }}
+                <div class="icon-article" aria-hidden="true"></div>
+              {{ end }}
             </div>
             <div class="blog-content">
-              <div style="display: flex; gap: .75rem; align-items: center; font-size: .9rem; color: #6b7280; margin-bottom: .5rem;">
+              <!-- Title - Most Important -->
+              <h3 class="blog-title"><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              
+              <!-- Content Description - Second Most Important -->
+              <p class="blog-description">{{ .Params.description | default .Summary | truncate 140 }}</p>
+              
+              <!-- Meta Information - Supporting Details -->
+              <div class="blog-meta">
                 <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-                <span style="width: 4px; height: 4px; background: #cbd5e1; border-radius: 50%; display: inline-block;"></span>
+                <span class="meta-dot">•</span>
                 <span>{{ .Params.read_time | default "5 min read" }}</span>
+                <span class="meta-dot">•</span>
+                <span>By <a href="{{ "about/" | relURL }}" class="author-link">{{ .Params.author | default "Anoop Kurup" }}</a></span>
               </div>
-              <h3><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <p>{{ .Summary }}</p>
-              {{ if .Params.tags }}
-                <div style="display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem;">
-                  {{ range .Params.tags }}
-                    <span style="font-size: .8rem; padding: 6px 10px; border-radius: 999px; background: var(--light-gray); color: var(--charcoal);">{{ . }}</span>
-                  {{ end }}
-                </div>
-              {{ end }}
-            <div class="blog-author">
-              By <a href="{{ "about/" | relURL }}" class="author-link">{{ .Params.author | default "Anoop Kurup" }}</a>
-            </div>
+              
+              <!-- Call to Action -->
+              <div class="blog-footer">
+                <a href="{{ .RelPermalink }}" class="continue-reading-btn">Continue reading →</a>
+              </div>
             </div>
           </article>
         {{ end }}
@@ -181,15 +188,6 @@
   </section>
 
   <!-- Newsletter CTA -->
-  <section class="newsletter">
-    <div class="container">
-      <h2>Get the Lead Machine Newsletter</h2>
-      <p>Actionable ideas on strategy, positioning, and AI workflows. No fluff—just systems that work.</p>
-      <form class="newsletter-form" action="#" method="post">
-        <input type="email" placeholder="you@company.com" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
+  {{ partial "newsletter.html" (dict "title" "Get the Lead Machine Newsletter" "subtitle" "Actionable ideas on strategy, positioning, and AI workflows. No fluff—just systems that work." "placeholder" "you@company.com") }}
 </main>
 {{ end }}

@@ -1,0 +1,36 @@
+{{/* Newsletter signup section - standardized across all pages */}}
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2>{{ .title | default "Practical Marketing Newsletter" }}</h2>
+                <p>{{ .subtitle | default "Weekly strategies, frameworks, and AI workflows that actually work. Practical insights for professional service businesses—no fluff, just systems that scale." }}</p>
+                <div class="newsletter-features">
+                    <div class="feature">✓ Strategic frameworks that work</div>
+                    <div class="feature">✓ AI-powered workflows</div>
+                    <div class="feature">✓ No spam, just value</div>
+                </div>
+            </div>
+            <div class="newsletter-form-container">
+                <h3>Join 2,500+ subscribers</h3>
+                <form class="newsletter-form" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" placeholder="{{ .placeholder | default "Enter your email address" }}" required />
+                        <button type="submit">{{ .button_text | default "Join Newsletter" }}</button>
+                    </div>
+                    {{ with .bonus_text }}
+                        <p class="form-note">{{ . }}</p>
+                    {{ else }}
+                        <p class="form-note">Free forever. Unsubscribe anytime.</p>
+                    {{ end }}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Anoop Kurup</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>http://localhost:64092/blog/</link>
     <description>Recent content in Blog on Anoop Kurup</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64092/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Your Blog Post Title</title>
-      <link>http://localhost:1313/blog/posts/testpost/</link>
+      <title>Do Followers on Social Media Translate Into Future Clients?</title>
+      <link>http://localhost:64092/blog/posts/social-media-followers-to-clients/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/testpost/</guid>
-      <description>&lt;p&gt;Your blog post content here&amp;hellip;&lt;/p&gt;</description>
+      <guid>http://localhost:64092/blog/posts/social-media-followers-to-clients/</guid>
+      <description>&lt;p&gt;We follow people on social media who entertain, educate, inspire, or inform. We follow brands we like, purchase from regular, or aspire to buy products from at some point in the future.&lt;/p&gt;&#xA;&lt;p&gt;Rarely do we follow someone in the services industry, or agencies with the intent of becoming their clients. “I want to buy services from this person, let me follow their social media accounts”, said no one, ever.&lt;/p&gt;&#xA;&lt;p&gt;In my experience a vast majority of followers, specially in the services industry, are there to learn from you. They are probably a level below your level of knowledge and understanding. They follow you to get more insights and lessons. Learning from your experience and expertise. As professionals, there are few opportunities to learn new things, and upgrade your knowledge. Following an experienced person in the industry gives them the necessary insights in bite size chunks on various platforms. At least that is the hypothesis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Your Blog Post Title 2</title>
-      <link>http://localhost:1313/blog/posts/testpost2/</link>
+      <link>http://localhost:64092/blog/posts/testpost2/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/testpost2/</guid>
+      <guid>http://localhost:64092/blog/posts/testpost2/</guid>
       <description>&lt;p&gt;Your blog post content here&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Your Blog Post Title 3</title>
-      <link>http://localhost:1313/blog/posts/testpost3/</link>
+      <link>http://localhost:64092/blog/posts/testpost3/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/posts/testpost3/</guid>
+      <guid>http://localhost:64092/blog/posts/testpost3/</guid>
       <description>&lt;p&gt;Your blog post content here&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>

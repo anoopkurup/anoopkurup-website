@@ -20,7 +20,13 @@
     <div class="container">
         <div class="about-content">
             <div class="about-image">
-                <div class="icon-person"></div>
+                {{ if .Params.about.image }}
+                    <img src="{{ .Params.about.image | relURL }}" alt="{{ .Params.about.name | default "Anoop Kurup" }}" class="profile-image">
+                {{ else }}
+                    <div class="image-placeholder">
+                        <span class="initials">{{ .Params.about.initials | default "AK" }}</span>
+                    </div>
+                {{ end }}
             </div>
             <div class="about-text">
                 <h2>{{ .Params.about.title | default "About Me" }}</h2>
@@ -61,30 +67,6 @@
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2>{{ .Params.testimonials.title | default "What Clients Say" }}</h2>
-            <p>{{ .Params.testimonials.subtitle | default "Real results from businesses that transformed their marketing approach." }}</p>
-        </div>
-        <div class="testimonial-grid">
-            {{ range .Params.testimonials.items }}
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"{{ .quote }}"</p>
-                        <div class="testimonial-author">
-                            <strong>{{ .author }}</strong><br>
-                            <span style="color: var(--azure); font-size: 0.9rem;">{{ .role }}</span><br>
-                            <span style="color: var(--charcoal); opacity: 0.8; font-size: 0.85rem;">{{ .company }}</span>
-                        </div>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
-    </div>
-</section>
-
 <!-- Services Section -->
 <section id="services" class="services">
     <div class="container">
@@ -109,53 +91,6 @@
     </div>
 </section>
 
-<!-- Blog Posts Section -->
-{{ if .Params.blog }}
-<section class="blog">
-    <div class="container">
-        <div class="section-header">
-            <h2>{{ .Params.blog.title | default "Latest Insights" }}</h2>
-            <p>{{ .Params.blog.subtitle | default "Practical strategies and AI workflows to grow your services business." }}</p>
-        </div>
-        <div class="blog-grid">
-            {{ $posts := where .Site.RegularPages "Section" "blog" | first (.Params.blog.show_posts | default 3) }}
-            {{ range $posts }}
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="icon-article"></div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>{{ .Title }}</h3>
-                        <p>{{ .Params.description | default (.Summary | truncate 120) }}</p>
-                        <div class="blog-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
-                            <span>{{ .Params.read_time | default "5 min read" }}</span>
-                            <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                        </div>
-                        <a href="{{ .Permalink }}" class="card-link">Read More →</a>
-                    </div>
-                </div>
-            {{ end }}
-            {{ if eq (len $posts) 0 }}
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <div class="icon-article"></div>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Marketing Systems That Scale</h3>
-                        <p>How to build marketing processes that grow with your business without burning out your team.</p>
-                        <div class="blog-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
-                            <span>8 min read</span>
-                            <time>Coming Soon</time>
-                        </div>
-                        <a href="{{ "blog/" | relURL }}" class="card-link">Subscribe for Updates →</a>
-                    </div>
-                </div>
-            {{ end }}
-        </div>
-    </div>
-</section>
-{{ end }}
-
 <!-- Approach Section -->
 <section class="process">
     <h2 class="process__title">{{ .Params.approach.title | default "My Approach" }}</h2>
@@ -173,17 +108,96 @@
     </div>
 </section>
 
-<!-- Newsletter Section -->
-<section id="newsletter" class="newsletter">
+<!-- Testimonials Section -->
+<section class="testimonials">
     <div class="container">
-        <h2>{{ .Params.newsletter.title | default "Join the Practical Marketing Newsletter" }}</h2>
-        <p>{{ .Params.newsletter.subtitle | default "Get weekly strategies, templates, and AI workflows to grow your services business. Practical insights, no fluff." }}</p>
-        <form class="newsletter-form" action="#" method="post">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Join Newsletter</button>
-        </form>
+        <div class="section-header">
+            <h2>{{ .Params.testimonials.title | default "What Clients Say" }}</h2>
+            <p>{{ .Params.testimonials.subtitle | default "Real results from businesses that transformed their marketing approach." }}</p>
+        </div>
+        <div class="testimonial-grid">
+            {{ range .Params.testimonials.items }}
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"{{ .quote }}"</p>
+                        <div class="testimonial-author">
+                            <strong>{{ .author }}</strong><br>
+                            <span style="color: var(--azure); font-size: 0.9rem;">{{ .role }}</span><br>
+                            <span style="color: var(--charcoal); opacity: 0.8; font-size: 0.85rem;">{{ .company }}</span>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
     </div>
 </section>
+
+<!-- Newsletter Section -->
+<section id="newsletter">
+    {{ partial "newsletter.html" (.Params.newsletter | default (dict)) }}
+</section>
+
+<!-- Blog Posts Section -->
+{{ if .Params.blog }}
+<section class="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.blog.title | default "Latest Insights" }}</h2>
+            <p>{{ .Params.blog.subtitle | default "Practical strategies and AI workflows to grow your services business." }}</p>
+        </div>
+        <div class="blog-grid">
+            {{ $posts := where .Site.RegularPages "Section" "blog" | first (.Params.blog.show_posts | default 3) }}
+            {{ range $posts }}
+                <article class="blog-card animate-fade-in">
+                    <div class="blog-image">
+                        {{ if .Params.hero_image }}
+                            <img src="{{ .Params.hero_image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="icon-article" aria-hidden="true" style="display: none;"></div>
+                        {{ else }}
+                            <div class="icon-article" aria-hidden="true"></div>
+                        {{ end }}
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                            <span class="meta-dot">•</span>
+                            <span>{{ .Params.read_time | default "5 min read" }}</span>
+                            <span class="meta-dot">•</span>
+                            <span>By <a href="{{ "about/" | relURL }}" class="author-link">{{ .Params.author | default "Anoop Kurup" }}</a></span>
+                        </div>
+                        <h3 class="blog-title"><a class="card-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="blog-description">{{ .Params.description | default .Summary | truncate 140 }}</p>
+                        <div class="blog-footer">
+                            <a href="{{ .RelPermalink }}" class="continue-reading-btn">Continue reading →</a>
+                        </div>
+                    </div>
+                </article>
+            {{ end }}
+            {{ if eq (len $posts) 0 }}
+                <article class="blog-card animate-fade-in">
+                    <div class="blog-image">
+                        <div class="icon-article" aria-hidden="true"></div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Coming Soon</span>
+                            <span class="meta-dot">•</span>
+                            <span>8 min read</span>
+                            <span class="meta-dot">•</span>
+                            <span>By <a href="{{ "about/" | relURL }}" class="author-link">Anoop Kurup</a></span>
+                        </div>
+                        <h3 class="blog-title"><a class="card-link" href="{{ "blog/" | relURL }}">Marketing Systems That Scale</a></h3>
+                        <p class="blog-description">How to build marketing processes that grow with your business without burning out your team. Subscribe to get notified when this and other insights are published.</p>
+                        <div class="blog-footer">
+                            <a href="{{ "blog/" | relURL }}" class="continue-reading-btn">Subscribe for Updates →</a>
+                        </div>
+                    </div>
+                </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
 
 <!-- Free Resources Section -->
 {{ if .Params.resources }}

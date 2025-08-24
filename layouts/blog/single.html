@@ -1,0 +1,67 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="blog-hero{{ if .Params.hero_image }} blog-hero--with-image{{ end }}">
+    {{ if .Params.hero_image }}
+        <div class="blog-hero-image" style="background-image: url('{{ .Params.hero_image | relURL }}');"></div>
+        <div class="blog-hero-overlay"></div>
+    {{ end }}
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text animate-fade-in" style="text-align: center; position: relative; z-index: 2;">
+                {{ if .Params.category }}
+                    <div style="margin-bottom: 1rem;">
+                        <span style="background: var(--azure); color: var(--white); padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600;">{{ .Params.category }}</span>
+                    </div>
+                {{ end }}
+                <h1>{{ .Title }}</h1>
+                {{ with .Description }}
+                    <p class="subtitle">{{ . }}</p>
+                {{ end }}
+                
+                <!-- Article metadata -->
+                <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; margin-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.8); flex-wrap: wrap;">
+                    <span>{{ .Date.Format "January 2, 2006" }}</span>
+                    <span>•</span>
+                    <span>{{ .Params.read_time | default "5 min read" }}</span>
+                    <span>•</span>
+                    <span>By {{ .Params.author | default "Anoop Kurup" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content - Using blog-specific classes -->
+<section class="blog-post-container">
+    <div class="container">
+        <div class="blog-post-content">
+            {{ .Content }}
+            
+            <!-- Author Bio -->
+            <div class="blog-author-bio">
+                <p>By <a href="{{ "about/" | relURL }}" class="author-link">{{ .Params.author | default "Anoop Kurup" }}</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter CTA -->
+{{ partial "newsletter.html" (dict "title" "Get More Insights Like This" "subtitle" "Join the newsletter for weekly strategies, templates, and AI workflows to grow your services business." "placeholder" "you@company.com") }}
+
+<!-- CTA Section -->
+{{ if .Params.cta }}
+<section class="cta">
+    <div class="container">
+        <h2>{{ .Params.cta.title }}</h2>
+        <p>{{ .Params.cta.subtitle }}</p>
+        <a href="{{ .Params.cta.button.url | relURL }}" class="btn btn-primary">{{ .Params.cta.button.text }}</a>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ define "head" }}
+<!-- Blog-specific CSS loaded after main CSS -->
+<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
+{{ end }}
+

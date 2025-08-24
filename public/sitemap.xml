@@ -2,243 +2,244 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>http://localhost:64092/tags/ai/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:64092/ai-solutions/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/instagram/</loc>
+    <loc>http://localhost:64092/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-solutions/instagram-content/</loc>
+    <loc>http://localhost:64092/tags/instagram/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/social-media/</loc>
+    <loc>http://localhost:64092/ai-solutions/instagram-content/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:64092/tags/social-media/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/visual-content/</loc>
+    <loc>http://localhost:64092/tags/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-solutions/blog-articles/</loc>
+    <loc>http://localhost:64092/tags/visual-content/</loc>
+    <lastmod>2025-08-24T01:35:51+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:64092/ai-solutions/blog-articles/</loc>
     <lastmod>2025-08-23T20:54:19+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/blog-writing/</loc>
+    <loc>http://localhost:64092/tags/blog-writing/</loc>
     <lastmod>2025-08-23T20:54:19+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/lead-generation/</loc>
+    <loc>http://localhost:64092/tags/lead-generation/</loc>
     <lastmod>2025-08-23T20:54:19+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/seo-content/</loc>
+    <loc>http://localhost:64092/tags/seo-content/</loc>
     <lastmod>2025-08-23T20:54:19+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:64092/blog/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/strategy/</loc>
+    <loc>http://localhost:64092/blog/posts/social-media-followers-to-clients/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/testpost/</loc>
+    <loc>http://localhost:64092/tags/linkedin/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/testpost2/</loc>
+    <loc>http://localhost:64092/tags/strategy/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/testpost3/</loc>
+    <loc>http://localhost:64092/blog/posts/testpost2/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workflows/ai-lead-machine/</loc>
+    <loc>http://localhost:64092/blog/posts/testpost3/</loc>
+    <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:64092/workflows/ai-lead-machine/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workflows/</loc>
+    <loc>http://localhost:64092/workflows/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/automation/</loc>
+    <loc>http://localhost:64092/categories/automation/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/automation/</loc>
+    <loc>http://localhost:64092/tags/automation/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/blog/</loc>
+    <loc>http://localhost:64092/categories/blog/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:64092/categories/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/email/</loc>
+    <loc>http://localhost:64092/categories/email/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/instagram/</loc>
+    <loc>http://localhost:64092/categories/instagram/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/linkedin/</loc>
+    <loc>http://localhost:64092/categories/linkedin/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/research/</loc>
+    <loc>http://localhost:64092/categories/research/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/seo/</loc>
+    <loc>http://localhost:64092/categories/seo/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/strategy/</loc>
+    <loc>http://localhost:64092/categories/strategy/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/linkedin/</loc>
+    <loc>http://localhost:64092/workflows/linkedin-post-creator/</loc>
     <lastmod>2025-08-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workflows/linkedin-post-creator/</loc>
-    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>http://localhost:64092/tags/blog/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workflows/blog-article-writer/</loc>
+    <loc>http://localhost:64092/workflows/blog-article-writer/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/seo/</loc>
+    <loc>http://localhost:64092/tags/seo/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/content-creation/</loc>
+    <loc>http://localhost:64092/tags/content-creation/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-solutions/linkedin-content/</loc>
+    <loc>http://localhost:64092/ai-solutions/linkedin-content/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/personal-branding/</loc>
+    <loc>http://localhost:64092/tags/personal-branding/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/legal/privacy-policy/</loc>
+    <loc>http://localhost:64092/legal/privacy-policy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/legal/terms-conditions/</loc>
+    <loc>http://localhost:64092/legal/terms-conditions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workshops/100-days-sprint/</loc>
+    <loc>http://localhost:64092/workshops/100-days-sprint/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:64092/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/workshops/ai-lead-machine/</loc>
+    <loc>http://localhost:64092/workshops/ai-lead-machine/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-solutions/</loc>
+    <loc>http://localhost:64092/ai-workflows/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-workflows/</loc>
+    <loc>http://localhost:64092/podcast/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/podcast/</loc>
+    <loc>http://localhost:64092/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>http://localhost:64092/ebooks/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ebooks/</loc>
+    <loc>http://localhost:64092/consulting/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/consulting/</loc>
+    <loc>http://localhost:64092/legal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/legal/</loc>
+    <loc>http://localhost:64092/thank-you/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/thank-you/</loc>
+    <loc>http://localhost:64092/approach/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/approach/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/workshops/</loc>
+    <loc>http://localhost:64092/workshops/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

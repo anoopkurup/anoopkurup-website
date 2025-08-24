@@ -133,16 +133,9 @@
 
 <!-- Newsletter CTA -->
 {{ if .Params.newsletter }}
-  <section class="newsletter">
-    <div class="container">
-      <h2>{{ .Params.newsletter.title }}</h2>
-      <p>{{ .Params.newsletter.subtitle }}</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" aria-label="Email address" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
+  {{ partial "newsletter.html" .Params.newsletter }}
+{{ else }}
+  {{ partial "newsletter.html" (dict "title" "Get Weekly AI Workflows" "subtitle" "New workflows, prompts, and implementation tips delivered to your inbox every Tuesday.") }}
 {{ end }}
 {{ end }}
 

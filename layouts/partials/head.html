@@ -5,6 +5,10 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="{{ "css/amksite-css2.css" | relURL }}">
+{{ if eq .Section "blog" }}
+<!-- Blog-specific CSS -->
+<link rel="stylesheet" href="{{ "css/blog.css" | relURL }}">
+{{ end }}
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">

@@ -199,18 +199,7 @@
 </section>
 
 <!-- Newsletter CTA -->
-<section class="newsletter">
-  <div class="container">
-    <div class="highlight-box" style="text-align: center;">
-      <h2>Get Weekly AI Workflows</h2>
-      <p>New workflows, prompts, and implementation tips delivered to your inbox every Tuesday.</p>
-      <form class="newsletter-form" action="#" method="post">
-        <input type="email" placeholder="you@company.com" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
-</section>
+{{ partial "newsletter.html" (dict "title" "Get Weekly AI Workflows" "subtitle" "New workflows, prompts, and implementation tips delivered to your inbox every Tuesday." "placeholder" "you@company.com") }}
 
 {{ end }}
 

@@ -160,14 +160,7 @@
                     {{ end }}
                 </div>
             {{ else if eq .type "newsletter" }}
-                <div class="highlight-box" style="text-align: center;">
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .subtitle }}</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
-                        <input type="email" placeholder="{{ .placeholder }}" required />
-                        <button type="submit">{{ .button_text | default "Subscribe" }}</button>
-                    </form>
-                </div>
+                {{ partial "newsletter.html" . }}
             {{ end }}
         </div>
     </section>
@@ -239,20 +232,11 @@
 </section>
 {{ end }}
 
-<!-- Newsletter (Legacy Support) -->
+<!-- Newsletter -->
 {{ if .Params.newsletter }}
-  <section class="newsletter">
-    <div class="container">
-      <div class="highlight-box" style="text-align: center;">
-        <h2>{{ .Params.newsletter.title }}</h2>
-        <p>{{ .Params.newsletter.subtitle }}</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks!');">
-          <input type="email" placeholder="{{ .Params.newsletter.placeholder }}" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
+  {{ partial "newsletter.html" .Params.newsletter }}
+{{ else }}
+  {{ partial "newsletter.html" (dict "title" "Get New Episodes in Your Inbox" "subtitle" "Never miss a new episode. Get practical insights delivered directly to your inbox every week.") }}
 {{ end }}
 
 <!-- CTA Section -->
