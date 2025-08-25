@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Case Studies on Anoop Kurup</title>
+    <link>http://localhost:1313/case-studies/</link>
+    <description>Recent content in Case Studies on Anoop Kurup</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Consultants &amp; Experts Case Studies</title>
+      <link>http://localhost:1313/case-studies/consultants-experts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/consultants-experts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Financial &amp; Business Advisor Case Studies</title>
+      <link>http://localhost:1313/case-studies/financial-advisors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/financial-advisors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IT Service Provider Case Studies</title>
+      <link>http://localhost:1313/case-studies/it-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/it-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Legal &amp; IP Firm Case Studies</title>
+      <link>http://localhost:1313/case-studies/legal-firms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/legal-firms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Marketing Agency Case Studies</title>
+      <link>http://localhost:1313/case-studies/marketing-agencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/marketing-agencies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productized Service Case Studies</title>
+      <link>http://localhost:1313/case-studies/productized-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/productized-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Professional Service Firms Case Studies</title>
+      <link>http://localhost:1313/case-studies/professional-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/professional-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SaaS &amp; Software Company Case Studies</title>
+      <link>http://localhost:1313/case-studies/saas-companies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/saas-companies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Strategy &amp; Management Consultant Case Studies</title>
+      <link>http://localhost:1313/case-studies/strategy-consultants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/strategy-consultants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech-Enabled Business Case Studies</title>
+      <link>http://localhost:1313/case-studies/tech-enabled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/tech-enabled/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology &amp; Digital Consultant Case Studies</title>
+      <link>http://localhost:1313/case-studies/tech-consultants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/tech-consultants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Training &amp; Education Company Case Studies</title>
+      <link>http://localhost:1313/case-studies/training-companies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/training-companies/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

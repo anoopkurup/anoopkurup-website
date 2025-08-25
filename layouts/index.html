@@ -61,6 +61,11 @@
                             <p class="audience-results"><strong>{{ . }}</strong></p>
                         {{ end }}
                     </div>
+                    {{ with .link }}
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <a href="{{ .url | relURL }}" class="card-link">{{ .text }}</a>
+                        </div>
+                    {{ end }}
                 </div>
             {{ end }}
         </div>
@@ -201,7 +206,7 @@
 
 <!-- Free Resources Section -->
 {{ if .Params.resources }}
-<section class="services">
+<section class="services resources">
     <div class="container">
         <div class="section-header">
             <h2>{{ .Params.resources.title | default "Free Resources" }}</h2>
