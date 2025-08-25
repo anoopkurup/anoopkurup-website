@@ -5,6 +5,7 @@ description: "I help professional service and tech-enabled businesses create cle
 
 about:
   title: "About Me"
+  image: "images/anoop-bw.jpg"
   content: |
     I'm Anoop Kurup — a strategist, consultant, and builder. Over the years, I've worked with founders of knowledge services, technical services, and consulting companies to simplify lead generation and marketing.
     
