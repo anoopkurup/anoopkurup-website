@@ -24,7 +24,7 @@
       <div>
         <div class="card">
           <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
-          <form action="{{ .Params.form.action }}" method="{{ .Params.form.method | default "POST" }}">
+          <form name="contact" data-netlify="true" method="{{ .Params.form.method | default "POST" }}">
             {{ range .Params.form.fields }}
               <div style="margin-bottom: 1.5rem;">
                 <label for="{{ .name }}" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--charcoal);">{{ .label }}</label>

@@ -1,19 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>SEO on Anoop Kurup</title>
-    <link>http://localhost:1313/tags/seo/</link>
-    <description>Recent content in SEO on Anoop Kurup</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/seo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blog Article Writer — Topic to Draft</title>
-      <link>http://localhost:1313/workflows/blog-article-writer/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/workflows/blog-article-writer/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Transform topic ideas into comprehensive, SEO-optimized blog articles that build authority and drive organic traffic. This workflow focuses on creating in-depth content that satisfies search intent while maintaining readability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-by-step-process&#34;&gt;Step-by-Step Process&lt;/h2&gt;&#xA;&lt;h3 id=&#34;phase-1-research--planning-20-minutes&#34;&gt;Phase 1: Research &amp;amp; Planning (20 minutes)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;step-1-keyword-research--intent-analysis&#34;&gt;Step 1: Keyword Research &amp;amp; Intent Analysis&lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I want to write a blog post about [TOPIC] for [TARGET AUDIENCE].&#xA;&#xA;Analyze this topic and provide:&#xA;1. Primary keyword and 3-5 related long-tail keywords&#xA;2. Search intent (informational/navigational/transactional)&#xA;3. Content angle that best serves this intent&#xA;4. Competitive landscape overview&#xA;5. Unique angle we can take&#xA;&#xA;Target audience: [DESCRIBE YOUR ICP]&#xA;Our expertise: [YOUR AREA OF SPECIALIZATION]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;step-2-create-detailed-outline&#34;&gt;Step 2: Create Detailed Outline&lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Create a comprehensive outline for a blog post targeting the keyword &amp;#34;[PRIMARY KEYWORD]&amp;#34;.&#xA;&#xA;Article should be 2000-2500 words and include:&#xA;&#xA;STRUCTURE:&#xA;- Compelling title (include primary keyword)&#xA;- Meta description (150-160 characters)&#xA;- Introduction (hook + problem + solution preview)&#xA;- 5-7 main sections (H2s) with 2-3 subsections each (H3s)&#xA;- FAQ section (5-7 questions)&#xA;- Conclusion with clear CTA&#xA;&#xA;CONTENT REQUIREMENTS:&#xA;- Address search intent completely&#xA;- Include relevant examples and case studies&#xA;- Provide actionable takeaways&#xA;- Natural keyword integration&#xA;- Internal linking opportunities&#xA;&#xA;Target audience: [YOUR ICP]&#xA;Brand voice: [Professional/Conversational/Technical]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;phase-2-content-creation-30-minutes&#34;&gt;Phase 2: Content Creation (30 minutes)&lt;/h3&gt;&#xA;&lt;h4 id=&#34;step-3-write-introduction--main-sections&#34;&gt;Step 3: Write Introduction &amp;amp; Main Sections&lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Using this outline: [PASTE OUTLINE]&#xA;&#xA;Write the introduction and first main section for this blog post.&#xA;&#xA;INTRODUCTION REQUIREMENTS:&#xA;- Hook that addresses the reader&amp;#39;s pain point&#xA;- Establish credibility and relevance&#xA;- Preview what they&amp;#39;ll learn&#xA;- 150-200 words&#xA;&#xA;MAIN SECTION REQUIREMENTS:&#xA;- Start with clear H2 headline&#xA;- Include specific examples or data&#xA;- Break up with H3 subheadings&#xA;- End each section with key takeaway&#xA;- 300-400 words per main section&#xA;&#xA;Write in a [TONE: professional but conversational] tone for [TARGET AUDIENCE].&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Continue this process for each main section, or batch multiple sections:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Anoop Kurup</title><link>https://anoopkurup.com/tags/seo/</link><description>Recent content in SEO on Anoop Kurup</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://anoopkurup.com/tags/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog Article Writer — Topic to Draft</title><link>https://anoopkurup.com/workflows/blog-article-writer/</link><pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate><guid>https://anoopkurup.com/workflows/blog-article-writer/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Transform topic ideas into comprehensive, SEO-optimized blog articles that build authority and drive organic traffic. This workflow focuses on creating in-depth content that satisfies search intent while maintaining readability.&lt;/p>
+&lt;h2 id="step-by-step-process">Step-by-Step Process&lt;/h2>
+&lt;h3 id="phase-1-research--planning-20-minutes">Phase 1: Research &amp;amp; Planning (20 minutes)&lt;/h3>
+&lt;h4 id="step-1-keyword-research--intent-analysis">Step 1: Keyword Research &amp;amp; Intent Analysis&lt;/h4>
+&lt;pre tabindex="0">&lt;code>I want to write a blog post about [TOPIC] for [TARGET AUDIENCE].
+
+Analyze this topic and provide:
+1. Primary keyword and 3-5 related long-tail keywords
+2. Search intent (informational/navigational/transactional)
+3. Content angle that best serves this intent
+4. Competitive landscape overview
+5. Unique angle we can take
+
+Target audience: [DESCRIBE YOUR ICP]
+Our expertise: [YOUR AREA OF SPECIALIZATION]
+&lt;/code>&lt;/pre>&lt;h4 id="step-2-create-detailed-outline">Step 2: Create Detailed Outline&lt;/h4>
+&lt;pre tabindex="0">&lt;code>Create a comprehensive outline for a blog post targeting the keyword &amp;#34;[PRIMARY KEYWORD]&amp;#34;.
+
+Article should be 2000-2500 words and include:
+
+STRUCTURE:
+- Compelling title (include primary keyword)
+- Meta description (150-160 characters)
+- Introduction (hook + problem + solution preview)
+- 5-7 main sections (H2s) with 2-3 subsections each (H3s)
+- FAQ section (5-7 questions)
+- Conclusion with clear CTA
+
+CONTENT REQUIREMENTS:
+- Address search intent completely
+- Include relevant examples and case studies
+- Provide actionable takeaways
+- Natural keyword integration
+- Internal linking opportunities
+
+Target audience: [YOUR ICP]
+Brand voice: [Professional/Conversational/Technical]
+&lt;/code>&lt;/pre>&lt;h3 id="phase-2-content-creation-30-minutes">Phase 2: Content Creation (30 minutes)&lt;/h3>
+&lt;h4 id="step-3-write-introduction--main-sections">Step 3: Write Introduction &amp;amp; Main Sections&lt;/h4>
+&lt;pre tabindex="0">&lt;code>Using this outline: [PASTE OUTLINE]
+
+Write the introduction and first main section for this blog post.
+
+INTRODUCTION REQUIREMENTS:
+- Hook that addresses the reader&amp;#39;s pain point
+- Establish credibility and relevance
+- Preview what they&amp;#39;ll learn
+- 150-200 words
+
+MAIN SECTION REQUIREMENTS:
+- Start with clear H2 headline
+- Include specific examples or data
+- Break up with H3 subheadings
+- End each section with key takeaway
+- 300-400 words per main section
+
+Write in a [TONE: professional but conversational] tone for [TARGET AUDIENCE].
+&lt;/code>&lt;/pre>&lt;p>Continue this process for each main section, or batch multiple sections:&lt;/p></description></item></channel></rss>

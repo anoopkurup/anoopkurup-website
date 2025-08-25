@@ -12,7 +12,6 @@ contact_info:
     whatsapp: "https://wa.me/1234567890"
 
 form:
-  action: "#" # Replace with your form handler (Formspree, Netlify Forms, etc.)
   method: "POST"
   fields:
     - name: "name"

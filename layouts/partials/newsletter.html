@@ -19,9 +19,9 @@
             </div>
             <div class="newsletter-form-container">
                 <h3>Join 2,500+ subscribers</h3>
-                <form class="newsletter-form" action="#" method="post">
+                <form class="newsletter-form" name="newsletter" data-netlify="true" method="post">
                     <div class="form-group">
-                        <input type="email" placeholder="{{ .placeholder | default "Enter your email address" }}" required />
+                        <input type="email" name="email" placeholder="{{ .placeholder | default "Enter your email address" }}" required />
                         <button type="submit">{{ .button_text | default "Join Newsletter" }}</button>
                     </div>
                     {{ with .bonus_text }}

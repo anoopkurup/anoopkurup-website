@@ -1,19 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Strategy on Anoop Kurup</title>
-    <link>http://localhost:1313/categories/strategy/</link>
-    <description>Recent content in Strategy on Anoop Kurup</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/strategy/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI Workflows &amp; Prompt Library</title>
-      <link>http://localhost:1313/workflows/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/workflows/</guid>
-      <description>&lt;h2 id=&#34;about-the-workflow-library&#34;&gt;About the Workflow Library&lt;/h2&gt;&#xA;&lt;p&gt;This collection represents 3+ years of testing, refining, and implementing AI workflows with professional service businesses. Each workflow is battle-tested and includes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Starter prompts&lt;/strong&gt; you can copy and paste immediately&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Step-by-step instructions&lt;/strong&gt; for customization&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real examples&lt;/strong&gt; from successful implementations&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Variation suggestions&lt;/strong&gt; for different use cases&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance tips&lt;/strong&gt; to get better results&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-these-work&#34;&gt;Why These Work&lt;/h3&gt;&#xA;&lt;p&gt;Unlike generic AI prompts you find online, these workflows are designed specifically for B2B service businesses. They account for:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Strategy on Anoop Kurup</title><link>https://anoopkurup.com/categories/strategy/</link><description>Recent content in Strategy on Anoop Kurup</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://anoopkurup.com/categories/strategy/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Workflows &amp; Prompt Library</title><link>https://anoopkurup.com/workflows/</link><pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate><guid>https://anoopkurup.com/workflows/</guid><description>&lt;h2 id="about-the-workflow-library">About the Workflow Library&lt;/h2>
+&lt;p>This collection represents 3+ years of testing, refining, and implementing AI workflows with professional service businesses. Each workflow is battle-tested and includes:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Starter prompts&lt;/strong> you can copy and paste immediately&lt;/li>
+&lt;li>&lt;strong>Step-by-step instructions&lt;/strong> for customization&lt;/li>
+&lt;li>&lt;strong>Real examples&lt;/strong> from successful implementations&lt;/li>
+&lt;li>&lt;strong>Variation suggestions&lt;/strong> for different use cases&lt;/li>
+&lt;li>&lt;strong>Performance tips&lt;/strong> to get better results&lt;/li>
+&lt;/ul>
+&lt;h3 id="why-these-work">Why These Work&lt;/h3>
+&lt;p>Unlike generic AI prompts you find online, these workflows are designed specifically for B2B service businesses. They account for:&lt;/p></description></item></channel></rss>
