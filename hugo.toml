@@ -1,7 +1,6 @@
 baseURL = "https://anoopkurup.com"
 languageCode = "en-us"
 title = "Anoop Kurup"
-theme = ""
 
 [params]
   description = "I help professional service and tech-enabled businesses create clear, consistent, and cost-effective marketing systems — powered by fundamentals, AI, and smart execution."

@@ -11,7 +11,9 @@
       "Bash(hugo:*)",
       "Bash(find:*)",
       "Bash(git commit:*)",
-      "Read(//Users/anoopkurup/Movies/**)"
+      "Read(//Users/anoopkurup/Movies/**)",
+      "Bash(/opt/homebrew/bin/hugo --minify)",
+      "Bash(/opt/homebrew/bin/hugo server --port 1313 --bind 127.0.0.1 --buildDrafts=false --disableFastRender)"
     ],
     "deny": [],
     "ask": []
