@@ -29,3 +29,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Writing instructions and internal documentation
+Blog-Writing-Instructions.md

@@ -14,7 +14,10 @@
       "Read(//Users/anoopkurup/Movies/**)",
       "Bash(/opt/homebrew/bin/hugo --minify)",
       "Bash(/opt/homebrew/bin/hugo server --port 1313 --bind 127.0.0.1 --buildDrafts=false --disableFastRender)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:anoopkurup.netlify.app)",
+      "Read(//Users/anoopkurup/Downloads/AMK-WebsiteCopywriting/**)"
     ],
     "deny": [],
     "ask": []

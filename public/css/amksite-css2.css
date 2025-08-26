@@ -42,10 +42,23 @@ section {
     padding: 80px 0;
 }
 
+/* Reduced padding for content-heavy sections */
+section.about:not(.alt-bg), 
+section.approach.alt-bg {
+    padding: 40px 0;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 50px 0;
     }
+    
+    /* Reduced padding for content-heavy sections on mobile */
+    section.about:not(.alt-bg), 
+    section.approach.alt-bg {
+        padding: 30px 0;
+    }
+    
     .container {
         padding: 0 20px;
     }
@@ -454,24 +467,14 @@ p {
     align-items: center !important;
     justify-content: center !important;
     padding: 120px 0 0 !important;
-    background: linear-gradient(135deg, var(--oxford-blue) 0%, var(--azure) 100%) !important;
+    background: linear-gradient(135deg, var(--oxford-blue) 0%, var(--azure) 100%);
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
     color: var(--white) !important;
 }
 
-/* Hero background image support */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 37, 64, 0.7);
-    z-index: 1;
-}
+/* Hero background image support - removed ::before overlay to allow background image to show */
 
 .hero-content {
     position: relative !important;
