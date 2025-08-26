@@ -42,10 +42,23 @@ section {
     padding: 80px 0;
 }
 
+/* Reduced padding for content-heavy sections */
+section.about:not(.alt-bg), 
+section.approach.alt-bg {
+    padding: 40px 0;
+}
+
 @media (max-width: 768px) {
     section {
         padding: 50px 0;
     }
+    
+    /* Reduced padding for content-heavy sections on mobile */
+    section.about:not(.alt-bg), 
+    section.approach.alt-bg {
+        padding: 30px 0;
+    }
+    
     .container {
         padding: 0 20px;
     }
