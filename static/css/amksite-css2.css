@@ -454,6 +454,7 @@ p {
     align-items: center !important;
     justify-content: center !important;
     padding: 120px 0 0 !important;
+    background: linear-gradient(135deg, var(--oxford-blue) 0%, var(--azure) 100%);
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
