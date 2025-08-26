@@ -9,6 +9,34 @@
     <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI Workflows</title>
+      <link>http://localhost:1313/tags/ai-workflows/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai-workflows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>B2B Services</title>
+      <link>http://localhost:1313/tags/b2b-services/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/b2b-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Content Systems</title>
+      <link>http://localhost:1313/tags/content-systems/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/content-systems/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Lead Generation</title>
       <link>http://localhost:1313/tags/lead-generation/</link>
       <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
@@ -16,10 +44,45 @@
       <description></description>
     </item>
     <item>
+      <title>LinkedIn</title>
+      <link>http://localhost:1313/tags/linkedin/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linkedin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Marketing</title>
+      <link>http://localhost:1313/tags/marketing/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/marketing/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Offers</title>
       <link>http://localhost:1313/tags/offers/</link>
       <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/offers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Positioning</title>
+      <link>http://localhost:1313/tags/positioning/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/positioning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pricing</title>
+      <link>http://localhost:1313/tags/pricing/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pricing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sales Process</title>
+      <link>http://localhost:1313/tags/sales-process/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sales-process/</guid>
       <description></description>
     </item>
     <item>
@@ -69,20 +132,6 @@
       <link>http://localhost:1313/tags/seo-content/</link>
       <pubDate>Sat, 23 Aug 2025 20:54:19 +0530</pubDate>
       <guid>http://localhost:1313/tags/seo-content/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LinkedIn</title>
-      <link>http://localhost:1313/tags/linkedin/</link>
-      <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linkedin/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
       <description></description>
     </item>
     <item>

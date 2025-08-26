@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sales Process on Anoop Kurup</title>
+    <link>http://localhost:1313/tags/sales-process/</link>
+    <description>Recent content in Sales Process on Anoop Kurup</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sales-process/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The MQL-SQL Handshake: Fixing the Drop-Off</title>
+      <link>http://localhost:1313/blog/posts/mql-sql-handshake-fixing-drop-off/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/mql-sql-handshake-fixing-drop-off/</guid>
+      <description>&lt;p&gt;I was reviewing a SaaS company&amp;rsquo;s pipeline data last month when I discovered a shocking statistic: they were losing 67% of their marketing qualified leads before sales ever contacted them.&lt;/p&gt;&#xA;&lt;p&gt;Their marketing team was celebrating record MQL numbers while their sales team complained about lead quality. Both sides blamed the other for poor performance, but the real problem was hiding in the handoff process between the two teams.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t unique to that company. I see the same pattern across dozens of B2B organizations: sophisticated lead generation systems that fall apart at the critical moment when marketing passes leads to sales.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

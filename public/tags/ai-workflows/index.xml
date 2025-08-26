@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Workflows on Anoop Kurup</title>
+    <link>http://localhost:1313/tags/ai-workflows/</link>
+    <description>Recent content in AI Workflows on Anoop Kurup</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai-workflows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From AIDA to AI: Turn Frameworks into Marketing Workflows</title>
+      <link>http://localhost:1313/blog/posts/aida-to-ai-messaging-frameworks-workflows/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/aida-to-ai-messaging-frameworks-workflows/</guid>
+      <description>&lt;p&gt;Every marketing consultant I know can recite AIDA in their sleep: Attention, Interest, Desire, Action. They know PAS (Problem, Agitate, Solution), StoryBrand frameworks, and Before/After/Bridge structures by heart.&lt;/p&gt;&#xA;&lt;p&gt;Yet when it comes time to write that sales email, create social media content, or draft website copy, they still stare at blank pages. They know the frameworks but struggle to apply them consistently across dozens of pieces of content each month.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

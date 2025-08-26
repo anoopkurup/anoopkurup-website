@@ -17,7 +17,12 @@
       "Bash(curl:*)",
       "WebFetch(domain:localhost)",
       "WebFetch(domain:anoopkurup.netlify.app)",
-      "Read(//Users/anoopkurup/Downloads/AMK-WebsiteCopywriting/**)"
+      "Read(//Users/anoopkurup/Downloads/AMK-WebsiteCopywriting/**)",
+      "Bash(/opt/homebrew/bin/hugo new content/blog/posts/positioning-matrix-b2b-services.md)",
+      "Bash(/opt/homebrew/bin/hugo new content/blog/posts/aida-to-ai-messaging-frameworks-workflows.md)",
+      "Bash(/opt/homebrew/bin/hugo new content/blog/posts/linkedin-content-system-scales-without-burnout.md)",
+      "Bash(/opt/homebrew/bin/hugo new content/blog/posts/pricing-signals-what-your-rates-tell-prospects.md)",
+      "Bash(/opt/homebrew/bin/hugo new content/blog/posts/mql-sql-handshake-fixing-drop-off.md)"
     ],
     "deny": [],
     "ask": []
