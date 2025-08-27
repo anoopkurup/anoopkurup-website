@@ -1,0 +1,306 @@
+{{ define "main" }}
+<!-- Load Refined Design CSS and FontAwesome -->
+<link rel="stylesheet" href="{{ "css/refined-design.css" | relURL }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1 class="display-xl">
+                    {{ $title := .Params.hero.title }}
+                    {{ $highlight := .Params.hero.title_highlight }}
+                    {{ $title | replaceRE $highlight (printf `<span class="text-highlight">%s</span>` $highlight) | safeHTML }}
+                </h1>
+                <p class="text-xl">{{ .Params.hero.subtitle }}</p>
+                <div class="btn-group">
+                    <a href="{{ .Params.hero.primary_cta.url }}" class="btn btn-primary">
+                        {{ .Params.hero.primary_cta.text }}
+                    </a>
+                    <a href="{{ .Params.hero.secondary_cta.url }}" class="btn btn-secondary">
+                        {{ .Params.hero.secondary_cta.text }}
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{{ .Params.hero.image.url }}" alt="{{ .Params.hero.image.alt }}" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="trust-section">
+    <div class="container">
+        <h2 class="display-md">{{ .Params.trust_section.title }}</h2>
+        
+        <div class="business-types-grid">
+            {{ range .Params.trust_section.business_types }}
+            <div class="business-type-card">
+                <i class="{{ .icon }}"></i>
+                <p class="business-type-name">{{ .type }}</p>
+            </div>
+            {{ end }}
+        </div>
+        
+        <div class="podcast-highlight">
+            <i class="{{ .Params.trust_section.podcast.icon }}"></i>
+            <div class="podcast-content">
+                <p class="podcast-title">{{ .Params.trust_section.podcast.title }}</p>
+                <p class="podcast-subtitle">{{ .Params.trust_section.podcast.subtitle }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.services.title }}</h2>
+            <p class="text-lg">{{ .Params.services.subtitle }}</p>
+        </div>
+        
+        <div class="services-grid">
+            {{ range .Params.services.items }}
+            <div class="service-card">
+                <div class="service-icon-circle {{ .icon_color }}">
+                    <i class="{{ .icon }} fa-2x"></i>
+                </div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <a href="{{ .cta.url }}" class="service-cta">
+                    {{ .cta.text }} <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Audience Section -->
+<section class="audience-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.audience.title }}</h2>
+            <p class="text-lg">{{ .Params.audience.subtitle }}</p>
+            <p class="text-base mt-lg">{{ .Params.audience.intro }}</p>
+        </div>
+        
+        <div class="audience-grid">
+            {{ range .Params.audience.items }}
+            <div class="audience-card">
+                <div class="service-icon">
+                    {{ if eq .icon "professional-services" }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                    {{ else if eq .icon "tech-enabled" }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    {{ else if eq .icon "consultants-experts" }}
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                    {{ end }}
+                </div>
+                <h3>{{ .title }}</h3>
+                <p class="audience-subheading">{{ .subheading }}</p>
+                <p>{{ .description }}</p>
+                <p class="results-text"><strong>{{ .results }}</strong></p>
+                <a href="{{ .cta.url }}" class="btn btn-outline">{{ .cta.text }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Workshop Highlight Section -->
+<section class="workshop-section">
+    <div class="container">
+        <div class="workshop-content">
+            <h2 class="display-md">{{ .Params.workshop_highlight.title }}</h2>
+            <p class="text-xl">{{ .Params.workshop_highlight.subtitle }}</p>
+            
+            <div class="workshop-features">
+                {{ range .Params.workshop_highlight.features }}
+                <div class="workshop-feature">
+                    <div class="workshop-feature-icon">
+                        <i class="{{ .icon }} fa-3x"></i>
+                    </div>
+                    <h4>{{ .title }}</h4>
+                    <p>{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+            
+            <div class="workshop-details">
+                <p><strong>{{ .Params.workshop_highlight.next_batch }}</strong></p>
+                <p class="text-sm">{{ .Params.workshop_highlight.location }}</p>
+            </div>
+            
+            <div class="btn-group">
+                <a href="{{ .Params.workshop_highlight.cta.url }}" class="btn btn-primary">
+                    {{ .Params.workshop_highlight.cta.text }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.testimonials.title }}</h2>
+            <p class="text-lg">{{ .Params.testimonials.subtitle }}</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            {{ range .Params.testimonials.items }}
+            <div class="testimonial-card">
+                <blockquote class="testimonial-quote">
+                    "{{ .quote }}"
+                </blockquote>
+                <div class="testimonial-author">
+                    <strong>{{ .author }}</strong><br>
+                    <span class="testimonial-role">{{ .role }}</span><br>
+                    <span class="testimonial-company">{{ .company }}</span>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Insights Section -->
+<section class="insights-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.insights.title }}</h2>
+            <p class="text-lg">{{ .Params.insights.subtitle }}</p>
+        </div>
+        
+        <div class="insights-grid">
+            {{ range .Params.insights.featured_posts }}
+            <article class="insight-card">
+                <div class="insight-image">
+                    <img src="{{ .image }}" alt="{{ .image_alt }}" loading="lazy">
+                </div>
+                <div class="insight-content">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                    <a href="{{ .cta.url }}" class="insight-cta">
+                        {{ .cta.text }} <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section -->
+<section class="resources-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.resources.title }}</h2>
+            <p class="text-lg">{{ .Params.resources.subtitle }}</p>
+        </div>
+        
+        <div class="resources-grid">
+            {{ range .Params.resources.items }}
+            <div class="resource-card">
+                <div class="resource-type">{{ .type }}</div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+                <a href="{{ .cta.url }}" class="btn btn-primary">{{ .cta.text }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>{{ .Params.about.title }}</h2>
+                <p class="about-lead">{{ .Params.about.lead }}</p>
+                <p>{{ .Params.about.content | markdownify }}</p>
+                <a href="{{ .Params.about.cta.url }}" class="about-cta">
+                    {{ .Params.about.cta.text }}
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="about-image-container">
+                <img src="{{ .Params.about.image.url }}" alt="{{ .Params.about.image.alt }}" loading="lazy" class="about-image">
+                <div class="experience-badge">
+                    <div class="experience-number">{{ .Params.about.years_experience }}</div>
+                    <div class="experience-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Approach Section -->
+<section class="approach-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="display-md">{{ .Params.approach.title }}</h2>
+            <p class="text-lg">{{ .Params.approach.subtitle }}</p>
+        </div>
+        
+        <div class="approach-grid">
+            {{ range .Params.approach.items }}
+            <div class="approach-card">
+                <div class="approach-number">{{ .number }}</div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2 class="display-md">{{ .Params.newsletter.title }}</h2>
+            <p>{{ .Params.newsletter.subtitle }}</p>
+            
+            <form class="newsletter-form" action="{{ .Params.newsletter.form_action }}" method="post">
+                <input type="email" name="email" placeholder="{{ .Params.newsletter.placeholder }}" required>
+                <button type="submit">{{ .Params.newsletter.button_text }}</button>
+            </form>
+            
+            <p class="trust-note">
+                <i class="{{ .Params.newsletter.trust_note.icon }}"></i>
+                {{ .Params.newsletter.trust_note.text }}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="display-md">{{ .Params.cta.title }}</h2>
+            <p>{{ .Params.cta.subtitle }}</p>
+            
+            <div class="btn-group">
+                <a href="{{ .Params.cta.cta.url }}" class="btn btn-primary">
+                    {{ .Params.cta.cta.text }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

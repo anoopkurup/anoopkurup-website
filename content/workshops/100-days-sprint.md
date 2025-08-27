@@ -40,7 +40,7 @@ sections:
     class: "services alt-bg"
     header:
       title: "Why This Works (And Why You'll Love It)"
-      subtitle: "This isn't theory or motivation. It's **100 days of systematic execution with proven frameworks**."
+      subtitle: "This isn't theory or motivation. It's 100 days of systematic execution with proven frameworks."
     items:
       - icon: "icon-target"
         title: "Daily Focus"
@@ -67,8 +67,8 @@ sections:
         label: "Weekly Strategy"
         description: "Every Saturday planning session"
       - number: "100"
-        label: "Days to Results"
-        description: "Systematic path to 5+ leads/month"
+        label: "Days to Freedom"
+        description: "System to get 10+ leads/month"
 
   - type: "value-stack"
     class: "services alt-bg"

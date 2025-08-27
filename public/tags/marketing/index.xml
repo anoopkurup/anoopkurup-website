@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/blog/posts/aida-to-ai-messaging-frameworks-workflows/</guid>
       <description>&lt;p&gt;Every marketing consultant I know can recite AIDA in their sleep: Attention, Interest, Desire, Action. They know PAS (Problem, Agitate, Solution), StoryBrand frameworks, and Before/After/Bridge structures by heart.&lt;/p&gt;&#xA;&lt;p&gt;Yet when it comes time to write that sales email, create social media content, or draft website copy, they still stare at blank pages. They know the frameworks but struggle to apply them consistently across dozens of pieces of content each month.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>The MQL-SQL Handshake: Fixing the Drop-Off</title>
+      <link>http://localhost:1313/blog/posts/mql-sql-handshake-fixing-drop-off/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/mql-sql-handshake-fixing-drop-off/</guid>
+      <description>&lt;p&gt;I was reviewing a SaaS company&amp;rsquo;s pipeline data last month when I discovered a shocking statistic: they were losing 67% of their marketing qualified leads before sales ever contacted them.&lt;/p&gt;&#xA;&lt;p&gt;Their marketing team was celebrating record MQL numbers while their sales team complained about lead quality. Both sides blamed the other for poor performance, but the real problem was hiding in the handoff process between the two teams.&lt;/p&gt;&#xA;&lt;p&gt;This isn&amp;rsquo;t unique to that company. I see the same pattern across dozens of B2B organizations: sophisticated lead generation systems that fall apart at the critical moment when marketing passes leads to sales.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

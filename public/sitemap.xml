@@ -112,11 +112,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/ai-solutions/</loc>
-    <lastmod>2025-08-24T01:35:51+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/tags/instagram/</loc>
     <lastmod>2025-08-24T01:35:51+05:30</lastmod>
     <changefreq>monthly</changefreq>
@@ -267,6 +262,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/ai-solutions/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/ai-workflows/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -296,6 +295,10 @@
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/consulting/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/sample-homepage/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
